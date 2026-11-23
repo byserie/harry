@@ -1,0 +1,41 @@
+import React from "react";
+import { Composition } from "remotion";
+import { AudioData } from "../engine/Part";
+import { PartSpec } from "../engine/types";
+import { Short, ShortDef, shortTiming, HookAudio } from "./Short";
+import list from "./list.json";
+import hooksData from "../data/hooks.json";
+import { p1full, p1fullAudio } from "../peli1d/full";
+import { p2full, p2fullAudio } from "../peli2d/full";
+import { p3full, p3fullAudio } from "../peli3/full";
+import { p4full, p4fullAudio } from "../peli4/full";
+import { p5full, p5fullAudio } from "../peli5/full";
+import { p6full, p6fullAudio } from "../peli6/full";
+import { p7full, p7fullAudio } from "../peli7/full";
+import { p8full, p8fullAudio } from "../peli8/full";
+
+const FILMS: Record<number, { spec: PartSpec; audio: AudioData; file: string }> = {
+  1: { spec: p1full, audio: p1fullAudio, file: "audio/p1full.wav" },
+  2: { spec: p2full, audio: p2fullAudio as AudioData, file: "audio/p2full.wav" },
+  3: { spec: p3full, audio: p3fullAudio, file: "audio/p3full.wav" },
+  4: { spec: p4full, audio: p4fullAudio, file: "audio/p4full.wav" },
+  5: { spec: p5full, audio: p5fullAudio, file: "audio/p5full.wav" },
+  6: { spec: p6full, audio: p6fullAudio, file: "audio/p6full.wav" },
+  7: { spec: p7full, audio: p7fullAudio, file: "audio/p7full.wav" },
+  8: { spec: p8full, audio: p8fullAudio, file: "audio/p8full.wav" },
+};
+const hooks = hooksData as Record<string, HookAudio>;
+
+const comps = (list as ShortDef[]).map((def) => {
+  const film = FILMS[def.film];
+  const C: React.FC = () => <Short def={def} spec={film.spec} audio={film.audio} audioFile={film.file} hook={hooks[def.id]} />;
+  return { id: `Short-${def.id}`, C, total: shortTiming(def, film.audio, hooks[def.id]).total };
+});
+
+export const ShortCompositions: React.FC = () => (
+  <>
+    {comps.map(({ id, C, total }) => (
+      <Composition key={id} id={id} component={C} durationInFrames={total} fps={30} width={1080} height={1920} />
+    ))}
+  </>
+);
