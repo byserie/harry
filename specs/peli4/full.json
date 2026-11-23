@@ -1,0 +1,83 @@
+{
+ "id": "p4full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y el cáliz de fuego. Un torneo mortal, un cáliz mágico que elige a los campeones… y un nombre que nadie debería haber puesto: Harry Potter. Y al final de este año, Voldemort vuelve. De verdad."
+  },
+  {
+   "id": "mundial",
+   "text": "Todo empieza en el mundial de quidditch. Harry va con los Weasley y Hermione: estadio gigante, cien mil magos gritando, fuegos artificiales. Pero esa noche, un grupo de magos encapuchados, los mortífagos, ataca el campamento. Y en el cielo aparece una calavera verde con una serpiente: la marca tenebrosa, la señal de Voldemort."
+  },
+  {
+   "id": "torneo",
+   "text": "En Hogwarts, Dumbledore anuncia algo increíble: el torneo de los tres magos. Llegan dos colegios: las chicas de Beauxbatons, en un carruaje tirado por caballos alados, y los chicos de Durmstrang, en un barco que sale del fondo del lago."
+  },
+  {
+   "id": "moody",
+   "text": "El nuevo profesor de defensa es Ojoloco Moody, un auror lleno de cicatrices, con un ojo mágico que gira para todos lados. En su primera clase les muestra las maldiciones prohibidas… usando una araña."
+  },
+  {
+   "id": "caliz",
+   "text": "Los alumnos mayores ponen su nombre en el cáliz de fuego, y el cáliz elige a los campeones: Fleur, de Beauxbatons. Krum, de Durmstrang. Y Cedric, de Hogwarts. Pero entonces, el cáliz se enciende otra vez… y escupe un cuarto nombre: ¡Harry Potter!"
+  },
+  {
+   "id": "enojo",
+   "text": "Harry no puso su nombre, pero nadie le cree. Todos piensan que hizo trampa para ser famoso. Hasta Ron se enoja y deja de hablarle. Harry nunca estuvo tan solo."
+  },
+  {
+   "id": "dragon",
+   "text": "Primera prueba: robarle un huevo de oro a un dragón. Harry tiene una idea: con un hechizo convoca su escoba, sale volando, y el dragón rompe sus cadenas y lo persigue por los techos del castillo. Pero Harry es el mejor volando… ¡y atrapa el huevo!"
+  },
+  {
+   "id": "amigos",
+   "text": "Después de ver lo peligroso que es el torneo, Ron le pide perdón. Y vuelven a ser amigos, como siempre."
+  },
+  {
+   "id": "baile",
+   "text": "Llega el baile de Navidad, y todos necesitan pareja. Harry y Ron no consiguen a nadie. Pero Hermione aparece bajando la escalera, hermosa, del brazo de Krum. Todos se quedan con la boca abierta… y Ron se muere de celos."
+  },
+  {
+   "id": "huevo",
+   "text": "El huevo de oro esconde la pista de la segunda prueba, pero cuando lo abre, solo grita. Cedric le da un consejo: abrirlo debajo del agua. Y ahí, el huevo canta: alguien muy querido va a estar en el fondo del lago."
+  },
+  {
+   "id": "lago",
+   "text": "Segunda prueba: una hora bajo el agua. Harry come una planta mágica, le salen branquias y nada hasta el fondo. Ahí están Ron, Hermione y otros rehenes atados. Harry rescata a Ron… y también a la hermanita de Fleur. Llega último, pero gana puntos por su nobleza."
+  },
+  {
+   "id": "laberinto",
+   "text": "La tercera prueba es un laberinto gigante lleno de criaturas. Krum, hechizado, ataca a Cedric, y Harry lo salva. Juntos llegan al centro, donde brilla la copa. Y deciden tocarla al mismo tiempo, para ganar los dos."
+  },
+  {
+   "id": "traslador",
+   "text": "Pero la copa era una trampa: un traslador. Apenas la tocan, los arrastra por el aire… y aparecen en un cementerio oscuro, lejos de Hogwarts."
+  },
+  {
+   "id": "cedric",
+   "text": "De la niebla sale Colagusano, el traidor Pettigrew, cargando algo envuelto en trapos. Una voz helada da una orden… un rayo verde… y Cedric cae al suelo. Harry no puede hacer nada."
+  },
+  {
+   "id": "ritual",
+   "text": "Colagusano ata a Harry a una lápida. Prende un caldero gigante y arroja un hueso, su propia mano… y la sangre de Harry. El caldero hierve, explota en humo… y de adentro sale Lord Voldemort, con un cuerpo nuevo."
+  },
+  {
+   "id": "mortifagos",
+   "text": "Voldemort toca la marca en el brazo de Colagusano, y aparecen sus seguidores, los mortífagos, entre ellos Lucius Malfoy. Voldemort les cuenta su plan… y desafía a Harry a un duelo."
+  },
+  {
+   "id": "duelo",
+   "text": "Los dos lanzan sus hechizos al mismo tiempo, y los rayos se unen en un hilo dorado. Las varitas vibran, y de la de Voldemort salen los ecos de las personas que mató… entre ellos, los padres de Harry, que lo protegen. Harry corre, agarra el cuerpo de Cedric y toca la copa. ¡Escapa!"
+  },
+  {
+   "id": "moody2",
+   "text": "De vuelta en Hogwarts, Moody se lleva a Harry a su oficina… y le confiesa todo: él puso su nombre en el cáliz. Justo cuando lo va a atacar, entran Dumbledore, Snape y McGonagall. Moody era un impostor: Barty Crouch, un mortífago disfrazado con poción multijugos. El verdadero Moody estaba encerrado en un baúl."
+  },
+  {
+   "id": "final",
+   "text": "Dumbledore anuncia a todos la verdad: Voldemort volvió. El colegio despide a Cedric en silencio. Harry, Ron y Hermione saben que ya nada va a ser igual: la guerra acaba de empezar. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

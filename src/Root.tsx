@@ -5,6 +5,7 @@ import { p2full, p2fullAudio } from "./peli2d/full";
 import { p1full, p1fullAudio } from "./peli1d/full";
 import { LandCtx } from "./engine/layout";
 import { p3full, p3fullAudio } from "./peli3/full";
+import { p4full, p4fullAudio } from "./peli4/full";
 import { TestScene } from "./scenes/TestScene";
 import { Part } from "./engine/Part";
 import { part1, part1Audio } from "./scenes/part1";
@@ -76,6 +77,13 @@ const P3FullLand = () => (
   </LandCtx.Provider>
 );
 
+const P4Full = () => <Part spec={p4full} audio={p4fullAudio} audioFile="audio/p4full.wav" />;
+const P4FullLand = () => (
+  <LandCtx.Provider value>
+    <P4Full />
+  </LandCtx.Provider>
+);
+
 const V = { fps: 30, width: 1080, height: 1920 };
 
 export const RemotionRoot: React.FC = () => {
@@ -109,6 +117,7 @@ export const RemotionRoot: React.FC = () => {
       <Still id="Miniatura1" component={Miniatura1} width={1280} height={720} />
       <Composition id="P3Full" component={P3Full} durationInFrames={p3fullAudio.durationInFrames} {...V} />
       <Composition id="P3FullYT" component={P3FullLand} durationInFrames={p3fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
+      <Composition id="P4FullYT" component={P4FullLand} durationInFrames={p4fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
     </>
   );
 };

@@ -10,7 +10,9 @@ export type Extra =
   | "mustache"
   | "elfEars"
   | "catFace"
-  | "longHair";
+  | "longHair"
+  | "magicEye"
+  | "redEyes";
 
 export type HairStyle = "none" | "messy" | "short" | "bushy" | "slick" | "curtains" | "bun" | "curly";
 
@@ -61,6 +63,12 @@ export const CAST = {
   pettigrew: { name: "Pettigrew", color: "#b5a642", head: "#f7f3dc", hair: "#9e9e7a", hairStyle: "none", height: 0.85, width: 0.7, extras: [] },
   trelawney: { name: "Trelawney", color: "#d35dbf", head: "#fbe7f7", hair: "#8a6d3b", hairStyle: "bushy", height: 1, width: 0, extras: ["glasses", "pearls"] },
   marge: { name: "Tía Marge", color: "#e57373", head: "#ffe6e6", hair: "#6d5c4d", hairStyle: "short", height: 1.0, width: 0.95, extras: [] },
+  cedric: { name: "Cedric", color: "#f4d03f", head: "#fffbe6", hair: "#6b4a2b", hairStyle: "short", height: 1.08, width: 0, extras: [] },
+  krum: { name: "Krum", color: "#9b1c1c", head: "#fbe3e3", hair: "#1a1a1a", hairStyle: "short", height: 1.1, width: 0.3, extras: [] },
+  fleur: { name: "Fleur", color: "#5dade2", head: "#eaf6ff", hair: "#f5e6a8", hairStyle: "curtains", height: 1.02, width: 0, extras: ["longHair"] },
+  moody: { name: "Moody", color: "#7f6b5a", head: "#efe6dc", hair: "#7a7a7a", hairStyle: "curly", height: 1.08, width: 0.2, extras: ["magicEye"] },
+  barty: { name: "Barty Crouch", color: "#5d6d3e", head: "#eef2e2", hair: "#c9a25e", hairStyle: "messy", height: 1.03, width: 0, extras: [] },
+  voldemort: { name: "Voldemort", color: "#1b1b1b", head: "#f2f4f2", hair: "#000000", hairStyle: "none", height: 1.12, width: 0, extras: ["redEyes"] },
 } satisfies Record<string, CharDef>;
 
 export type CharId = keyof typeof CAST;

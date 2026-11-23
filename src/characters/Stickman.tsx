@@ -367,6 +367,20 @@ const Head: React.FC<{
           <line x1={fx + 10} y1={16} x2={fx + 44} y2={20} />
         </g>
       ) : null}
+      {ex.includes("magicEye") ? (
+        <g>
+          <circle cx={fx + sp} cy={eyeY} r={16} fill="#bfefff" stroke={INK} strokeWidth={4} />
+          <circle cx={fx + sp + Math.sin(frame * 0.3) * 6} cy={eyeY + Math.cos(frame * 0.23) * 6} r={6} fill="#2f6fe4" />
+          <path d={`M ${fx - sp - 14} ${-30} L ${fx - sp + 8} 6`} stroke="#c0392b" strokeWidth={4} />
+        </g>
+      ) : null}
+      {ex.includes("redEyes") ? (
+        <g>
+          <ellipse cx={fx - sp} cy={eyeY} rx={9} ry={6} fill="#ff2020" />
+          <ellipse cx={fx + sp} cy={eyeY} rx={9} ry={6} fill="#ff2020" />
+          <path d={`M ${fx - 4} 6 L ${fx - 8} 12 M ${fx + 4} 6 L ${fx + 8} 12`} stroke={INK} strokeWidth={3} />
+        </g>
+      ) : null}
       {ex.includes("mustache") ? (
         <path d={`M ${fx - 22} 12 Q ${fx} 2 ${fx + 22} 12 Q ${fx} 8 ${fx - 22} 12 Z`} fill={c.hair} stroke={INK} strokeWidth={4} />
       ) : null}

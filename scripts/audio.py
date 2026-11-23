@@ -119,6 +119,8 @@ PRONUNCIA = {
     "Azkaban": "Ázcaban", "bludger": "bláyer",
     "Sirius": "Sírius", "Lupin": "Lúpin", "Pettigrew": "Pétigru", "Trelawney": "Trelóni", "Buckbeak": "Bákbik",
     "Hogsmeade": "Jógsmid", "Marge": "Márch", "patronus": "patrónus", "boggart": "bógart", "Scabbers": "Escábers",
+    "Beauxbatons": "Bobatón", "Durmstrang": "Dúrmstrang", "Moody": "Múdi", "Ojoloco": "Ojoloco", "Fleur": "Flér",
+    "Krum": "Krum", "Cedric": "Sédric", "Colagusano": "Colagusano", "Barty": "Bárti", "Crouch": "Cráuch",
     "quidditch": "quídich", "snitch": "esních", "Flamel": "Flamél", "Potter": "Póter",
 }
 
