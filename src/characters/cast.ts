@@ -56,6 +56,11 @@ export const CAST = {
   hermionecat: { name: "Hermione", color: "#8a4fe0", head: "#efe6ff", hair: "#7a4a2a", hairStyle: "bushy", height: 0.97, width: 0, extras: ["catFace"] },
   crabbe: { name: "Crabbe", color: "#4f5d4f", head: "#e6ebe6", hair: "#3a3a3a", hairStyle: "short", height: 1.08, width: 0.9, extras: [] },
   goyle: { name: "Goyle", color: "#4f5d4f", head: "#e6ebe6", hair: "#2a2a2a", hairStyle: "short", height: 1.1, width: 0.95, extras: [] },
+  sirius: { name: "Sirius", color: "#1f3a5f", head: "#e6ecf3", hair: "#141418", hairStyle: "curtains", height: 1.07, width: 0, extras: [] },
+  lupin: { name: "Lupin", color: "#a1887f", head: "#f3ece8", hair: "#8d6e63", hairStyle: "short", height: 1.04, width: 0, extras: [] },
+  pettigrew: { name: "Pettigrew", color: "#b5a642", head: "#f7f3dc", hair: "#9e9e7a", hairStyle: "none", height: 0.85, width: 0.7, extras: [] },
+  trelawney: { name: "Trelawney", color: "#d35dbf", head: "#fbe7f7", hair: "#8a6d3b", hairStyle: "bushy", height: 1, width: 0, extras: ["glasses", "pearls"] },
+  marge: { name: "Tía Marge", color: "#e57373", head: "#ffe6e6", hair: "#6d5c4d", hairStyle: "short", height: 1.0, width: 0.95, extras: [] },
 } satisfies Record<string, CharDef>;
 
 export type CharId = keyof typeof CAST;

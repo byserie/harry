@@ -4,6 +4,7 @@ import { Avatar, Banner } from "./Brand";
 import { p2full, p2fullAudio } from "./peli2d/full";
 import { p1full, p1fullAudio } from "./peli1d/full";
 import { LandCtx } from "./engine/layout";
+import { p3full, p3fullAudio } from "./peli3/full";
 import { TestScene } from "./scenes/TestScene";
 import { Part } from "./engine/Part";
 import { part1, part1Audio } from "./scenes/part1";
@@ -68,6 +69,13 @@ const P2FullLand = () => (
   </LandCtx.Provider>
 );
 
+const P3Full = () => <Part spec={p3full} audio={p3fullAudio} audioFile="audio/p3full.wav" />;
+const P3FullLand = () => (
+  <LandCtx.Provider value>
+    <P3Full />
+  </LandCtx.Provider>
+);
+
 const V = { fps: 30, width: 1080, height: 1920 };
 
 export const RemotionRoot: React.FC = () => {
@@ -99,6 +107,8 @@ export const RemotionRoot: React.FC = () => {
       <Still id="Avatar" component={Avatar} width={800} height={800} />
       <Still id="BannerCanal" component={Banner} width={2560} height={1440} />
       <Still id="Miniatura1" component={Miniatura1} width={1280} height={720} />
+      <Composition id="P3Full" component={P3Full} durationInFrames={p3fullAudio.durationInFrames} {...V} />
+      <Composition id="P3FullYT" component={P3FullLand} durationInFrames={p3fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
     </>
   );
 };
