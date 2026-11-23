@@ -1,0 +1,155 @@
+{
+ "id": "p2full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "full_hook",
+   "text": "Película: Harry Potter y la cámara secreta. Un elfo loco, un auto que vuela, un monstruo escondido en el castillo… y una advertencia que da escalofríos: ¡este año, Harry no tiene que volver a Hogwarts!"
+  },
+  {
+   "id": "p1_verano",
+   "text": "Arranca el verano y Harry está peor que nunca: encerrado con los Dursley, sin magia y sin amigos. Ni Ron ni Hermione le mandaron una sola carta. ¡Nada! Hasta su lechuza se muere de aburrimiento."
+  },
+  {
+   "id": "p1_dobby",
+   "text": "Y de repente… ¡puf! Sobre su cama aparece Dobby, un elfo de orejas gigantes y ojos enormes. Le ruega que no vuelva al colegio, porque corre peligro de muerte. ¿Y lo peor? Fue él quien le robó todas sus cartas."
+  },
+  {
+   "id": "p1_torta",
+   "text": "Harry dice que no, y Dobby se enoja. Con un chasquido hace levitar una torta gigante… que cae, ¡plaf!, justo en la cabeza de los invitados del tío Vernon. Furioso, Vernon le pone rejas a la ventana. Harry queda preso."
+  },
+  {
+   "id": "p1_auto",
+   "text": "Pero a medianoche, algo brilla afuera: ¡un auto azul que vuela! Adentro están Ron y sus hermanos gemelos. Atan las rejas, aceleran, las arrancan de un tirón… ¡y Harry escapa por la ventana!"
+  },
+  {
+   "id": "p1_madriguera",
+   "text": "Aterrizan en la Madriguera, la casa de los Weasley, donde todo es mágico: los platos se lavan solos y el reloj dice dónde está cada uno. La señora Weasley los reta a los gritos… y después le sirve a Harry el mejor desayuno de su vida."
+  },
+  {
+   "id": "p1_cierre",
+   "text": "Por primera vez, Harry se siente en casa. Pero la advertencia de Dobby no se le va de la cabeza… y tenía razón."
+  },
+  {
+   "id": "p2_polvos",
+   "text": "Para viajar, los Weasley usan polvos mágicos y entran a la chimenea. Harry tose, pronuncia mal el destino y… ¡zas! Aparece en un callejón oscuro, lleno de cosas tenebrosas. Por suerte, Hagrid lo rescata justo a tiempo."
+  },
+  {
+   "id": "p2_lockhart",
+   "text": "En la librería está Gilderoy Lockhart, el mago más famoso y más creído del mundo. Firma libros, sonríe para las fotos… y anuncia que va a ser su nuevo profesor. Ron no lo soporta."
+  },
+  {
+   "id": "p2_lucius",
+   "text": "Y entonces llega Lucius Malfoy, el papá de Draco. Discute con el señor Weasley, casi se pelean… y en el lío, desliza un cuaderno viejo en el caldero de Ginny, la hermanita de Ron. Nadie se da cuenta."
+  },
+  {
+   "id": "p2_anden",
+   "text": "Primero de septiembre. Harry y Ron corren contra la pared del andén… ¡y se estrellan! El paso está cerrado. Y el tren se va sin ellos."
+  },
+  {
+   "id": "p2_vuelo",
+   "text": "¿Solución? ¡El auto volador! Persiguen al tren por el cielo, entre las nubes. Pero al llegar, el motor se apaga y caen sobre el sauce boxeador, un árbol que reparte golpes como loco."
+  },
+  {
+   "id": "p2_vociferador",
+   "text": "Al otro día, Ron recibe un vociferador: una carta roja que le grita delante de todo el colegio. ¡Es su mamá, furiosa!"
+  },
+  {
+   "id": "p2_cierre",
+   "text": "Se salvaron de la expulsión por un pelo. Pero lo peor todavía no empezó."
+  },
+  {
+   "id": "p3_duendecillos",
+   "text": "La primera clase de Lockhart es un caos total: abre una jaula de duendecillos azules que vuelan por todos lados, rompen todo… y él sale corriendo. Hermione los congela con un solo hechizo. ¡Crack!"
+  },
+  {
+   "id": "p3_voz",
+   "text": "Una noche, Harry escucha una voz helada dentro de las paredes. Habla de cazar… y de matar. Pero cuando pregunta, nadie más la escuchó."
+  },
+  {
+   "id": "p3_mensaje",
+   "text": "Sigue la voz y encuentra a la gata del conserje colgada, dura como una piedra. Y en la pared, un mensaje en rojo: la cámara de los secretos ha sido abierta."
+  },
+  {
+   "id": "p3_leyenda",
+   "text": "McGonagall cuenta la leyenda: hace mil años, Salazar Slytherin escondió una cámara secreta en el castillo, con un monstruo adentro que solo su heredero puede controlar."
+  },
+  {
+   "id": "p3_duelo",
+   "text": "En el club de duelo, Draco hace aparecer una serpiente. Harry le habla para frenarla… y todos se quedan helados: ¡habla pársel, el idioma de las serpientes, igual que Slytherin!"
+  },
+  {
+   "id": "p3_sospecha",
+   "text": "Desde ese día, todos le tienen miedo. Murmuran a su paso, se alejan… creen que Harry es el heredero de Slytherin."
+  },
+  {
+   "id": "p3_cierre",
+   "text": "Pero Harry sabe que no es él. Entonces… ¿quién abrió la cámara?"
+  },
+  {
+   "id": "p4_pocion",
+   "text": "Para espiar a Draco, Hermione prepara la poción multijugos. Harry y Ron se transforman en los gorilas de Malfoy… pero Hermione, por error, ¡se convierte en una gata!"
+  },
+  {
+   "id": "p4_bludger",
+   "text": "En el quidditch, una bludger embrujada persigue a Harry por todo el estadio, ¡y le rompe el brazo! Lockhart intenta curarlo y… le hace desaparecer todos los huesos."
+  },
+  {
+   "id": "p4_diario",
+   "text": "Después, Harry encuentra un diario en blanco que le contesta cuando escribe. Es de Tom Riddle, un alumno de hace cincuenta años. Y le muestra un recuerdo: culpa a Hagrid de abrir la cámara."
+  },
+  {
+   "id": "p4_hermione",
+   "text": "Los ataques siguen, y la víctima más terrible es Hermione: aparece petrificada, inmóvil, con un papel arrugado en la mano."
+  },
+  {
+   "id": "p4_hagrid",
+   "text": "Se llevan a Hagrid a Azkaban, la prisión de los magos. Antes de irse, deja una pista: sigan a las arañas."
+  },
+  {
+   "id": "p4_aragog",
+   "text": "Harry y Ron entran al bosque prohibido y encuentran a Aragog, una araña gigante. Les jura que Hagrid es inocente… y deja que cientos de arañas intenten comérselos. ¡Pero el auto volador aparece y los rescata!"
+  },
+  {
+   "id": "p4_cierre",
+   "text": "Hagrid no era el culpable. El verdadero monstruo sigue suelto… y está más cerca de lo que creen."
+  },
+  {
+   "id": "p5_basilisco",
+   "text": "Harry lee el papel de Hermione y se le congela la sangre: el monstruo es un basilisco, una serpiente enorme que mata con la mirada y viaja por las cañerías."
+  },
+  {
+   "id": "p5_ginny",
+   "text": "Aparece un nuevo mensaje: el monstruo se llevó a Ginny a la cámara. Y Lockhart, el gran héroe, intenta escapar: confiesa que todas sus hazañas eran mentira."
+  },
+  {
+   "id": "p5_entrada",
+   "text": "La entrada está en el baño de Myrtle, la fantasma llorona. Harry habla en pársel y ¡el lavamanos se abre! Lockhart intenta borrarles la memoria, pero el hechizo rebota al revés… y se olvida hasta de su nombre."
+  },
+  {
+   "id": "p5_riddle",
+   "text": "Abajo, Harry encuentra a Ginny desmayada y a Tom Riddle, el chico del diario. Y Riddle revela la verdad: ¡él es Lord Voldemort!"
+  },
+  {
+   "id": "p5_fenix",
+   "text": "De pronto llega Fawkes, el fénix de Dumbledore, con el sombrero seleccionador. Y del sombrero, Harry saca una espada brillante: ¡la espada de Gryffindor!"
+  },
+  {
+   "id": "p5_lucha",
+   "text": "El basilisco ataca. Fawkes le arranca los ojos, Harry esquiva y le clava la espada en la boca. Pero un colmillo le atraviesa el brazo… y solo las lágrimas del fénix lo salvan."
+  },
+  {
+   "id": "p5_diario",
+   "text": "Harry agarra el colmillo y lo clava en el diario. ¡Riddle grita, desaparece… y Ginny despierta!"
+  },
+  {
+   "id": "p5_dobby",
+   "text": "Y el final perfecto: Harry engaña a Lucius Malfoy para que le dé una media a Dobby. Con esa prenda, el elfo queda libre para siempre."
+  },
+  {
+   "id": "p5_cierre",
+   "text": "Y así termina el segundo año de Harry en Hogwarts. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

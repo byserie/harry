@@ -1,0 +1,35 @@
+{
+ "id": "p2dpart1",
+ "part": 1,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la cámara secreta. Parte uno. Un elfo loco aparece en su cuarto, un auto vuela por el cielo… y una advertencia que da escalofríos: ¡este año, Harry no tiene que volver a Hogwarts!"
+  },
+  {
+   "id": "verano",
+   "text": "Arranca el verano y Harry está peor que nunca: encerrado con los Dursley, sin magia y sin amigos. Ni Ron ni Hermione le mandaron una sola carta. ¡Nada! Hasta su lechuza se muere de aburrimiento."
+  },
+  {
+   "id": "dobby",
+   "text": "Y de repente… ¡puf! Sobre su cama aparece Dobby, un elfo de orejas gigantes y ojos enormes. Le ruega que no vuelva al colegio, porque corre peligro de muerte. ¿Y lo peor? Fue él quien le robó todas sus cartas."
+  },
+  {
+   "id": "torta",
+   "text": "Harry dice que no, y Dobby se enoja. Con un chasquido hace levitar una torta gigante… que cae, ¡plaf!, justo en la cabeza de los invitados del tío Vernon. Furioso, Vernon le pone rejas a la ventana. Harry queda preso."
+  },
+  {
+   "id": "auto",
+   "text": "Pero a medianoche, algo brilla afuera: ¡un auto azul que vuela! Adentro están Ron y sus hermanos gemelos. Atan las rejas, aceleran, las arrancan de un tirón… ¡y Harry escapa por la ventana!"
+  },
+  {
+   "id": "madriguera",
+   "text": "Aterrizan en la Madriguera, la casa de los Weasley, donde todo es mágico: los platos se lavan solos y el reloj dice dónde está cada uno. La señora Weasley los reta a los gritos… y después le sirve a Harry el mejor desayuno de su vida."
+  },
+  {
+   "id": "cierre",
+   "text": "Por primera vez, Harry se siente en casa. Pero la advertencia de Dobby no se le va de la cabeza… y tenía razón. Seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

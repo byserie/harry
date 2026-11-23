@@ -1,0 +1,71 @@
+{
+ "words": [
+  {
+   "text": "Harry,",
+   "start": 0.35,
+   "end": 0.766
+  },
+  {
+   "text": "Ron",
+   "start": 0.766,
+   "end": 0.969
+  },
+  {
+   "text": "y",
+   "start": 0.969,
+   "end": 1.082
+  },
+  {
+   "text": "Hermione",
+   "start": 1.082,
+   "end": 1.51
+  },
+  {
+   "text": "llegan",
+   "start": 1.51,
+   "end": 1.917
+  },
+  {
+   "text": "al",
+   "start": 1.917,
+   "end": 2.075
+  },
+  {
+   "text": "castillo…",
+   "start": 2.075,
+   "end": 2.647
+  },
+  {
+   "text": "¡y",
+   "start": 2.647,
+   "end": 2.76
+  },
+  {
+   "text": "la",
+   "start": 2.76,
+   "end": 2.917
+  },
+  {
+   "text": "magia",
+   "start": 2.917,
+   "end": 3.326
+  },
+  {
+   "text": "empieza",
+   "start": 3.326,
+   "end": 3.77
+  },
+  {
+   "text": "ahora!",
+   "start": 3.77,
+   "end": 4.063
+  }
+ ],
+ "lines": [
+  {
+   "start": 0.35,
+   "end": 4.176
+  }
+ ],
+ "duration": 5.0
+}

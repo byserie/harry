@@ -1,0 +1,47 @@
+{
+ "id": "p2dpart5",
+ "part": 5,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la cámara secreta. Parte cinco. Un monstruo gigante, una chica atrapada bajo tierra y el regreso de un enemigo que nadie esperaba. ¡Llegó el final!"
+  },
+  {
+   "id": "basilisco",
+   "text": "Harry lee el papel de Hermione y se le congela la sangre: el monstruo es un basilisco, una serpiente enorme que mata con la mirada y viaja por las cañerías."
+  },
+  {
+   "id": "ginny",
+   "text": "Aparece un nuevo mensaje: el monstruo se llevó a Ginny a la cámara. Y Lockhart, el gran héroe, intenta escapar: confiesa que todas sus hazañas eran mentira."
+  },
+  {
+   "id": "entrada",
+   "text": "La entrada está en el baño de Myrtle, la fantasma llorona. Harry habla en pársel y ¡el lavamanos se abre! Lockhart intenta borrarles la memoria, pero el hechizo rebota al revés… y se olvida hasta de su nombre."
+  },
+  {
+   "id": "riddle",
+   "text": "Abajo, Harry encuentra a Ginny desmayada y a Tom Riddle, el chico del diario. Y Riddle revela la verdad: ¡él es Lord Voldemort!"
+  },
+  {
+   "id": "fenix",
+   "text": "De pronto llega Fawkes, el fénix de Dumbledore, con el sombrero seleccionador. Y del sombrero, Harry saca una espada brillante: ¡la espada de Gryffindor!"
+  },
+  {
+   "id": "lucha",
+   "text": "El basilisco ataca. Fawkes le arranca los ojos, Harry esquiva y le clava la espada en la boca. Pero un colmillo le atraviesa el brazo… y solo las lágrimas del fénix lo salvan."
+  },
+  {
+   "id": "diario",
+   "text": "Harry agarra el colmillo y lo clava en el diario. ¡Riddle grita, desaparece… y Ginny despierta!"
+  },
+  {
+   "id": "dobby",
+   "text": "Y el final perfecto: Harry engaña a Lucius Malfoy para que le dé una media a Dobby. Con esa prenda, el elfo queda libre para siempre."
+  },
+  {
+   "id": "cierre",
+   "text": "Así termina el segundo año de Harry en Hogwarts. Seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

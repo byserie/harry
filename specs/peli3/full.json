@@ -1,0 +1,107 @@
+{
+ "id": "p3full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y el prisionero de Azkaban. Un asesino escapó de la prisión más terrible del mundo mágico. Nadie sabe cómo lo hizo… pero todos dicen lo mismo: viene a buscar a Harry. Y esta vez, el peligro no es Voldemort."
+  },
+  {
+   "id": "marge",
+   "text": "Arranca el verano y la tía Marge, la hermana del tío Vernon, visita a los Dursley. Es insoportable: se burla de Harry todo el tiempo. Insulta a sus padres una vez… dos veces… y ¡zas! Harry pierde el control: la tía empieza a inflarse como un globo gigante y sale volando por el cielo, mientras Vernon intenta agarrarla de los pies."
+  },
+  {
+   "id": "autobus",
+   "text": "Asustado, Harry agarra su baúl y huye en plena noche. Está solo, en una calle oscura, sin saber adónde ir. Entre los arbustos, un perro negro gigante lo mira fijo con ojos brillantes. Y de repente, ¡bum! Aparece un autobús violeta de tres pisos que maneja como loco, esquiva autos, se achica entre los postes… y frena de golpe."
+  },
+  {
+   "id": "sirius",
+   "text": "En Londres, todos hablan de lo mismo: Sirius Black escapó de Azkaban, la cárcel de los magos, custodiada por criaturas terribles. Su cara grita desde los carteles de búsqueda. Dicen que mató a trece personas con un solo hechizo. Y el rumor más escalofriante: viene por Harry."
+  },
+  {
+   "id": "tren",
+   "text": "En el tren a Hogwarts, de repente, todo se congela: las ventanas se escarchan y las luces se apagan. Entra un dementor, un guardia encapuchado de Azkaban que se alimenta de la felicidad de las personas. Harry escucha gritos en su cabeza… y se desmaya. Un profesor nuevo, Lupin, lo espanta con una luz plateada y después le da chocolate para recuperarse."
+  },
+  {
+   "id": "trelawney",
+   "text": "Ya en el colegio, la clase de adivinación es rarísima. La profesora Trelawney, con sus anteojos gigantes, mira la taza de té de Harry y se pone pálida: entre las hojas ve un perro negro gigante, ¡un presagio de muerte! Toda la clase mira a Harry en silencio."
+  },
+  {
+   "id": "hipogrifo",
+   "text": "En la clase de Hagrid aparece Buckbeak, un hipogrifo mitad águila y mitad caballo, orgulloso y peligroso. Harry le hace una reverencia, se gana su confianza y vuela en su lomo sobre el lago. Pero Draco lo insulta, el hipogrifo lo ataca con sus garras… y el papá de Malfoy exige que lo ejecuten."
+  },
+  {
+   "id": "boggart",
+   "text": "Por suerte, la clase de Lupin es la mejor. Les enseña a enfrentar un boggart, un monstruo que se convierte en tu peor miedo. La clave es imaginarlo ridículo y reírse. Para Ron es una araña gigante… ¡y le pone patines! Pero frente a Harry, el boggart se transforma en un dementor."
+  },
+  {
+   "id": "torre",
+   "text": "Una noche, Sirius Black logra entrar al castillo. Destroza el retrato que custodia la torre de Gryffindor, y más tarde aparece junto a la cama de Ron con un cuchillo. Ron grita, Sirius escapa… y nadie entiende cómo entró."
+  },
+  {
+   "id": "quidditch",
+   "text": "En un partido de quidditch bajo una tormenta brutal, aparecen cientos de dementores sobre el estadio. Harry escucha otra vez esos gritos, se desmaya y cae desde lo más alto. Dumbledore lo frena en el aire justo a tiempo, pero su escoba termina destrozada por el sauce boxeador."
+  },
+  {
+   "id": "mapa",
+   "text": "Para animarlo, Fred y George le regalan un tesoro: un mapa mágico que muestra a todas las personas del castillo, en tiempo real, y todos los pasadizos secretos. Con él, Harry se escapa a Hogsmeade, el pueblo de los magos, y con su capa invisible le tira bolas de nieve a Draco."
+  },
+  {
+   "id": "traicion",
+   "text": "Pero ahí escucha un secreto terrible: Sirius Black era el mejor amigo de sus padres y su padrino… y fue quien los traicionó, entregándolos a Voldemort. Harry se queda helado, y después, furioso: quiere encontrarlo."
+  },
+  {
+   "id": "patronus",
+   "text": "Lupin le enseña a Harry el encantamiento patronus, la única defensa contra los dementores: con un recuerdo muy feliz, de la varita sale un escudo de luz plateada. Al principio no le sale… pero Harry practica y practica."
+  },
+  {
+   "id": "pettigrew",
+   "text": "Una noche, revisando el mapa, Harry ve un nombre imposible caminando por el castillo: Peter Pettigrew. Pero Pettigrew murió hace doce años, asesinado por Sirius Black… ¿o no?"
+  },
+  {
+   "id": "draco",
+   "text": "Mientras tanto, condenan a muerte a Buckbeak. Draco se burla de Hagrid, y Hermione, harta, ¡le da una piña en la cara! Draco sale corriendo."
+  },
+  {
+   "id": "condena",
+   "text": "Los chicos van a la cabaña de Hagrid a despedirse del hipogrifo. Y ahí, escondida en una jarra, reaparece Scabbers, la rata de Ron, que estaba perdida desde hacía semanas."
+  },
+  {
+   "id": "perro",
+   "text": "Al salir, el perro negro gigante salta de la nada, agarra a Ron de la pierna y lo arrastra hasta un túnel debajo del sauce boxeador. Harry y Hermione lo siguen y llegan a una casa abandonada, oscura y llena de polvo."
+  },
+  {
+   "id": "revelacion",
+   "text": "Y ahí, frente a ellos, el perro se convierte en Sirius Black. Harry le apunta con la varita. Pero llega Lupin, y por fin sale la verdad: Sirius es inocente. El verdadero traidor era Pettigrew, ¡escondido doce años como la rata de Ron! Con un hechizo, la rata vuelve a ser hombre."
+  },
+  {
+   "id": "lobo",
+   "text": "Pero al salir del túnel, aparece la luna llena… y Lupin se transforma en hombre lobo. Aúlla, ataca, y en medio del caos Pettigrew vuelve a ser rata y escapa entre el pasto."
+  },
+  {
+   "id": "lago",
+   "text": "Junto al lago, cientos de dementores rodean a Harry y a Sirius. El agua se congela, Harry no tiene fuerzas. Cuando todo parece perdido, un patronus brillante aparece del otro lado del lago y los salva. Harry alcanza a ver una figura… y se desmaya."
+  },
+  {
+   "id": "giratiempo",
+   "text": "Despierta en la enfermería: atraparon a Sirius y lo van a entregar a los dementores. Dumbledore les da una pista misteriosa. Y Hermione revela su secreto: un giratiempo, un reloj mágico para viajar en el tiempo, que usaba para ir a más clases. ¡Retroceden tres horas!"
+  },
+  {
+   "id": "rescate",
+   "text": "Primero, se esconden detrás de la cabaña y salvan a Buckbeak segundos antes de la ejecución."
+  },
+  {
+   "id": "ciervo",
+   "text": "Después, en el lago, Harry espera ver aparecer a su padre para lanzar aquel patronus… pero nadie aparece. Y entiende que fue él mismo. Levanta la varita y conjura un ciervo plateado gigante. ¡Los dementores huyen!"
+  },
+  {
+   "id": "libre",
+   "text": "Por último, vuelan en Buckbeak hasta la torre donde está encerrado Sirius y lo liberan. Sirius escapa volando por el cielo. ¡Por fin es libre!"
+  },
+  {
+   "id": "final",
+   "text": "Al final, Sirius le manda a Harry la escoba más rápida del mundo y una carta. Harry ya no está solo: tiene un padrino, una familia. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

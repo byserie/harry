@@ -1,0 +1,39 @@
+{
+ "id": "p1dpart1",
+ "part": 1,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la piedra filosofal. ¿Y si un día descubrieras que toda tu vida fue una mentira… y que en realidad sos un mago?"
+  },
+  {
+   "id": "bebe",
+   "text": "Todo empieza una noche, en un barrio común. Dumbledore, McGonagall y el gigante Hagrid dejan a un bebé en la puerta de una casa. Es Harry Potter… y tiene en la frente una cicatriz con forma de rayo."
+  },
+  {
+   "id": "dursley",
+   "text": "Diez años después, Harry vive con sus tíos, los Dursley, que lo tratan como un estorbo. ¡Duerme en una alacena debajo de la escalera! Mientras tanto, su primo Dudley tiene dos cuartos llenos de juguetes."
+  },
+  {
+   "id": "zoo",
+   "text": "Pero en el zoológico pasa algo rarísimo: Harry habla con una serpiente, el vidrio desaparece de golpe… ¡y Dudley termina en el agua! Nadie entiende cómo, pero el castigado es Harry."
+  },
+  {
+   "id": "cartas",
+   "text": "Un día llega una carta para Harry, y el tío Vernon la rompe sin dejarlo leer. Al día siguiente llegan diez. Después, cien… ¡hasta que una lluvia de cartas entra por la chimenea!"
+  },
+  {
+   "id": "cabana",
+   "text": "Desesperado, Vernon escapa con la familia a una cabaña en medio del mar. En plena tormenta, justo a medianoche, Harry cumple once años."
+  },
+  {
+   "id": "hagrid",
+   "text": "Y entonces… ¡bum! La puerta se cae al piso. Entra Hagrid, enorme, con una torta de cumpleaños. Le cuenta la verdad: sus padres eran magos, no murieron en ningún accidente… ¡y Harry también es mago!"
+  },
+  {
+   "id": "cierre",
+   "text": "Lo esperan en Hogwarts, el colegio de magia. Su nueva vida está por empezar… y nada va a ser igual."
+  }
+ ]
+}

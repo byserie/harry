@@ -1,0 +1,43 @@
+{
+ "id": "p1dpart4",
+ "part": 4,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la piedra filosofal. Parte cuatro. Una escoba embrujada, un perro de tres cabezas y un espejo que muestra lo que más deseás."
+  },
+  {
+   "id": "quidditch",
+   "text": "Primer partido de quidditch. Harry persigue la snitch dorada… cuando de repente, su escoba empieza a sacudirse como loca. ¡Lo quiere tirar!"
+  },
+  {
+   "id": "fuego",
+   "text": "Hermione ve a Snape mirando fijo a Harry y murmurando. ¡Le prende fuego la capa! La escoba se calma, Harry se tira en picada y atrapa la snitch… ¡casi se la traga! Gryffindor gana."
+  },
+  {
+   "id": "perro",
+   "text": "Los chicos ya habían visto un perro gigante de tres cabezas cuidando una trampilla. Y a Hagrid se le escapa un nombre: Nicolás Flamel."
+  },
+  {
+   "id": "flamel",
+   "text": "Buscan ese nombre durante semanas, hasta que Hermione lo encuentra: Flamel creó la piedra filosofal, ¡que da vida eterna! Eso es lo que cuida el perro."
+  },
+  {
+   "id": "espejo",
+   "text": "En Navidad, Harry recibe una capa de invisibilidad. Explorando de noche, encuentra un espejo donde ve a sus padres sonriéndole. Dumbledore le explica que muestra lo que más deseamos… y que no sirve quedarse soñando frente a él."
+  },
+  {
+   "id": "castigo",
+   "text": "Después, los chicos se meten en problemas y terminan castigados: tienen que entrar de noche al bosque prohibido con Hagrid."
+  },
+  {
+   "id": "bosque",
+   "text": "Allí encuentran un unicornio herido y una sombra encapuchada que se acerca. Un centauro salva a Harry y le advierte: es Voldemort, que busca la piedra para volver."
+  },
+  {
+   "id": "cierre",
+   "text": "Ahora Harry está seguro: alguien va a intentar robar la piedra… y muy pronto."
+  }
+ ]
+}

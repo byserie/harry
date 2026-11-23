@@ -1,0 +1,39 @@
+{
+ "id": "p2dpart4",
+ "part": 4,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la cámara secreta. Parte cuatro. Una poción para robar caras, un diario que contesta solo y una araña gigante que te quiere comer."
+  },
+  {
+   "id": "pocion",
+   "text": "Para espiar a Draco, Hermione prepara la poción multijugos. Harry y Ron se transforman en los gorilas de Malfoy… pero Hermione, por error, ¡se convierte en una gata!"
+  },
+  {
+   "id": "bludger",
+   "text": "En el quidditch, una bludger embrujada persigue a Harry por todo el estadio, ¡y le rompe el brazo! Lockhart intenta curarlo y… le hace desaparecer todos los huesos."
+  },
+  {
+   "id": "diario",
+   "text": "Después, Harry encuentra un diario en blanco que le contesta cuando escribe. Es de Tom Riddle, un alumno de hace cincuenta años. Y le muestra un recuerdo: culpa a Hagrid de abrir la cámara."
+  },
+  {
+   "id": "hermione",
+   "text": "Los ataques siguen, y la víctima más terrible es Hermione: aparece petrificada, inmóvil, con un papel arrugado en la mano."
+  },
+  {
+   "id": "hagrid",
+   "text": "Se llevan a Hagrid a Azkaban, la prisión de los magos. Antes de irse, deja una pista: sigan a las arañas."
+  },
+  {
+   "id": "aragog",
+   "text": "Harry y Ron entran al bosque prohibido y encuentran a Aragog, una araña gigante. Les jura que Hagrid es inocente… y deja que cientos de arañas intenten comérselos. ¡Pero el auto volador aparece y los rescata!"
+  },
+  {
+   "id": "cierre",
+   "text": "Hagrid no era el culpable. El verdadero monstruo sigue suelto… y está más cerca de lo que creen. Seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

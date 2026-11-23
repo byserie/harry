@@ -1,0 +1,39 @@
+{
+ "id": "p2dpart2",
+ "part": 2,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la cámara secreta. Parte dos. Un escritor famoso que miente, un cuaderno maldito escondido en un caldero… y un choque brutal contra un árbol que pega trompadas."
+  },
+  {
+   "id": "polvos",
+   "text": "Para viajar, los Weasley usan polvos mágicos y entran a la chimenea. Harry tose, pronuncia mal el destino y… ¡zas! Aparece en un callejón oscuro, lleno de cosas tenebrosas. Por suerte, Hagrid lo rescata justo a tiempo."
+  },
+  {
+   "id": "lockhart",
+   "text": "En la librería está Gilderoy Lockhart, el mago más famoso y más creído del mundo. Firma libros, sonríe para las fotos… y anuncia que va a ser su nuevo profesor. Ron no lo soporta."
+  },
+  {
+   "id": "lucius",
+   "text": "Y entonces llega Lucius Malfoy, el papá de Draco. Discute con el señor Weasley, casi se pelean… y en el lío, desliza un cuaderno viejo en el caldero de Ginny, la hermanita de Ron. Nadie se da cuenta."
+  },
+  {
+   "id": "anden",
+   "text": "Primero de septiembre. Harry y Ron corren contra la pared del andén… ¡y se estrellan! El paso está cerrado. Y el tren se va sin ellos."
+  },
+  {
+   "id": "vuelo",
+   "text": "¿Solución? ¡El auto volador! Persiguen al tren por el cielo, entre las nubes. Pero al llegar, el motor se apaga y caen sobre el sauce boxeador, un árbol que reparte golpes como loco."
+  },
+  {
+   "id": "vociferador",
+   "text": "Al otro día, Ron recibe un vociferador: una carta roja que le grita delante de todo el colegio. ¡Es su mamá, furiosa!"
+  },
+  {
+   "id": "cierre",
+   "text": "Se salvaron de la expulsión por un pelo. Pero lo peor todavía no empezó. Seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "id": "p1dpart2",
+ "part": 2,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la piedra filosofal. Parte dos. Una calle secreta, un banco lleno de oro y una varita que elige a su dueño. ¡Bienvenido al mundo mágico!"
+  },
+  {
+   "id": "callejon",
+   "text": "Hagrid lleva a Harry a un bar viejo. Toca unos ladrillos, la pared se abre… ¡y aparece una calle llena de magia! Calderos, lechuzas, escobas y libros de hechizos."
+  },
+  {
+   "id": "banco",
+   "text": "En el banco de los duendes, Harry descubre que sus padres le dejaron una montaña de oro. Y Hagrid saca un paquetito misterioso de otra bóveda… pero no dice qué es."
+  },
+  {
+   "id": "varita",
+   "text": "En la tienda de varitas, Harry prueba una, otra y otra… ¡hasta que una lanza chispas doradas! Y de regalo, Hagrid le compra una lechuza blanca."
+  },
+  {
+   "id": "anden",
+   "text": "Primero de septiembre. Harry busca el andén nueve y tres cuartos… que no aparece en ningún cartel. ¿El truco? Correr directo contra la pared… ¡y atravesarla!"
+  },
+  {
+   "id": "tren",
+   "text": "En el tren conoce a Ron, y comparten golosinas mágicas: ranas de chocolate que saltan y caramelos de todos los sabores… ¡hasta los más asquerosos!"
+  },
+  {
+   "id": "hermione",
+   "text": "Aparece Hermione, que se sabe todos los libros de memoria. Y también Draco Malfoy, un chico agrandado que le ofrece su amistad. Harry lo rechaza: prefiere a Ron."
+  },
+  {
+   "id": "sombrero",
+   "text": "En el gran comedor, un sombrero que habla elige la casa de cada alumno. Con Harry duda… piensa en Slytherin… pero Harry le pide otra cosa, y el sombrero grita: ¡Gryffindor!"
+  },
+  {
+   "id": "cierre",
+   "text": "Ron y Hermione también quedan en Gryffindor. Empieza el año más increíble de su vida."
+  }
+ ]
+}

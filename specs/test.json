@@ -1,0 +1,18 @@
+{
+  "id": "test",
+  "duration": 5.0,
+  "bpm": 126,
+  "voice": [
+    {"start": 0.35, "text": "Harry, Ron y Hermione llegan al castillo… ¡y la magia empieza ahora!"}
+  ],
+  "sfx": [
+    {"t": 0.00, "type": "whoosh", "gain": 0.35},
+    {"t": 0.30, "type": "step", "gain": 0.35}, {"t": 0.60, "type": "step", "gain": 0.35},
+    {"t": 0.90, "type": "step", "gain": 0.35}, {"t": 1.20, "type": "step", "gain": 0.35},
+    {"t": 1.50, "type": "step", "gain": 0.35}, {"t": 1.80, "type": "step", "gain": 0.35},
+    {"t": 2.20, "type": "pop", "gain": 0.3},
+    {"t": 2.95, "type": "whoosh", "gain": 0.5},
+    {"t": 3.10, "type": "sparkle", "gain": 0.8},
+    {"t": 3.70, "type": "chime", "gain": 0.6}
+  ]
+}

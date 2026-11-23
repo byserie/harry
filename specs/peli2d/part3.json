@@ -1,0 +1,39 @@
+{
+ "id": "p2dpart3",
+ "part": 3,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la cámara secreta. Parte tres. Una voz que solo Harry escucha, un mensaje escrito en rojo en la pared y un secreto que aterra a todo Hogwarts."
+  },
+  {
+   "id": "duendecillos",
+   "text": "La primera clase de Lockhart es un caos total: abre una jaula de duendecillos azules que vuelan por todos lados, rompen todo… y él sale corriendo. Hermione los congela con un solo hechizo. ¡Crack!"
+  },
+  {
+   "id": "voz",
+   "text": "Una noche, Harry escucha una voz helada dentro de las paredes. Habla de cazar… y de matar. Pero cuando pregunta, nadie más la escuchó."
+  },
+  {
+   "id": "mensaje",
+   "text": "Sigue la voz y encuentra a la gata del conserje colgada, dura como una piedra. Y en la pared, un mensaje en rojo: la cámara de los secretos ha sido abierta."
+  },
+  {
+   "id": "leyenda",
+   "text": "McGonagall cuenta la leyenda: hace mil años, Salazar Slytherin escondió una cámara secreta en el castillo, con un monstruo adentro que solo su heredero puede controlar."
+  },
+  {
+   "id": "duelo",
+   "text": "En el club de duelo, Draco hace aparecer una serpiente. Harry le habla para frenarla… y todos se quedan helados: ¡habla pársel, el idioma de las serpientes, igual que Slytherin!"
+  },
+  {
+   "id": "sospecha",
+   "text": "Desde ese día, todos le tienen miedo. Murmuran a su paso, se alejan… creen que Harry es el heredero de Slytherin."
+  },
+  {
+   "id": "cierre",
+   "text": "Pero Harry sabe que no es él. Entonces… ¿quién abrió la cámara? Seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

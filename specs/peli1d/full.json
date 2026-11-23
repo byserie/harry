@@ -1,0 +1,171 @@
+{
+ "id": "p1full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "p1_hook",
+   "text": "Película: Harry Potter y la piedra filosofal. ¿Y si un día descubrieras que toda tu vida fue una mentira… y que en realidad sos un mago?"
+  },
+  {
+   "id": "p1_bebe",
+   "text": "Todo empieza una noche, en un barrio común. Dumbledore, McGonagall y el gigante Hagrid dejan a un bebé en la puerta de una casa. Es Harry Potter… y tiene en la frente una cicatriz con forma de rayo."
+  },
+  {
+   "id": "p1_dursley",
+   "text": "Diez años después, Harry vive con sus tíos, los Dursley, que lo tratan como un estorbo. ¡Duerme en una alacena debajo de la escalera! Mientras tanto, su primo Dudley tiene dos cuartos llenos de juguetes."
+  },
+  {
+   "id": "p1_zoo",
+   "text": "Pero en el zoológico pasa algo rarísimo: Harry habla con una serpiente, el vidrio desaparece de golpe… ¡y Dudley termina en el agua! Nadie entiende cómo, pero el castigado es Harry."
+  },
+  {
+   "id": "p1_cartas",
+   "text": "Un día llega una carta para Harry, y el tío Vernon la rompe sin dejarlo leer. Al día siguiente llegan diez. Después, cien… ¡hasta que una lluvia de cartas entra por la chimenea!"
+  },
+  {
+   "id": "p1_cabana",
+   "text": "Desesperado, Vernon escapa con la familia a una cabaña en medio del mar. En plena tormenta, justo a medianoche, Harry cumple once años."
+  },
+  {
+   "id": "p1_hagrid",
+   "text": "Y entonces… ¡bum! La puerta se cae al piso. Entra Hagrid, enorme, con una torta de cumpleaños. Le cuenta la verdad: sus padres eran magos, no murieron en ningún accidente… ¡y Harry también es mago!"
+  },
+  {
+   "id": "p1_cierre",
+   "text": "Lo esperan en Hogwarts, el colegio de magia. Su nueva vida está por empezar… y nada va a ser igual."
+  },
+  {
+   "id": "p2_callejon",
+   "text": "Hagrid lleva a Harry a un bar viejo. Toca unos ladrillos, la pared se abre… ¡y aparece una calle llena de magia! Calderos, lechuzas, escobas y libros de hechizos."
+  },
+  {
+   "id": "p2_banco",
+   "text": "En el banco de los duendes, Harry descubre que sus padres le dejaron una montaña de oro. Y Hagrid saca un paquetito misterioso de otra bóveda… pero no dice qué es."
+  },
+  {
+   "id": "p2_varita",
+   "text": "En la tienda de varitas, Harry prueba una, otra y otra… ¡hasta que una lanza chispas doradas! Y de regalo, Hagrid le compra una lechuza blanca."
+  },
+  {
+   "id": "p2_anden",
+   "text": "Primero de septiembre. Harry busca el andén nueve y tres cuartos… que no aparece en ningún cartel. ¿El truco? Correr directo contra la pared… ¡y atravesarla!"
+  },
+  {
+   "id": "p2_tren",
+   "text": "En el tren conoce a Ron, y comparten golosinas mágicas: ranas de chocolate que saltan y caramelos de todos los sabores… ¡hasta los más asquerosos!"
+  },
+  {
+   "id": "p2_hermione",
+   "text": "Aparece Hermione, que se sabe todos los libros de memoria. Y también Draco Malfoy, un chico agrandado que le ofrece su amistad. Harry lo rechaza: prefiere a Ron."
+  },
+  {
+   "id": "p2_sombrero",
+   "text": "En el gran comedor, un sombrero que habla elige la casa de cada alumno. Con Harry duda… piensa en Slytherin… pero Harry le pide otra cosa, y el sombrero grita: ¡Gryffindor!"
+  },
+  {
+   "id": "p2_cierre",
+   "text": "Ron y Hermione también quedan en Gryffindor. Empieza el año más increíble de su vida."
+  },
+  {
+   "id": "p3_castillo",
+   "text": "Hogwarts es una locura: las escaleras cambian de lugar, los cuadros hablan y los fantasmas atraviesan las paredes. Con la profesora McGonagall aprenden a transformar objetos."
+  },
+  {
+   "id": "p3_snape",
+   "text": "Pero en pociones, el profesor Snape lo ataca desde el primer minuto, con preguntas imposibles. Harry siente que lo odia… y no sabe por qué."
+  },
+  {
+   "id": "p3_vuelo",
+   "text": "En la clase de vuelo, Draco le roba una bolita de cristal a un compañero y la tira al aire. Harry sale disparado en su escoba y la atrapa en picada… ¡justo antes del suelo!"
+  },
+  {
+   "id": "p3_buscador",
+   "text": "McGonagall lo vio todo. Harry piensa que lo van a expulsar… pero no: ¡lo convierte en buscador del equipo de quidditch! El más joven en cien años."
+  },
+  {
+   "id": "p3_pelea",
+   "text": "Mientras tanto, Ron se burla de Hermione por sabelotodo. Ella lo escucha y se va llorando al baño."
+  },
+  {
+   "id": "p3_halloween",
+   "text": "En la fiesta de Halloween, el profesor Quirrell entra gritando: ¡hay un troll en las mazmorras! Y Hermione no sabe nada… así que Harry y Ron corren a buscarla."
+  },
+  {
+   "id": "p3_troll",
+   "text": "El troll ya está en el baño, rompiendo todo con su garrote. Ron usa el hechizo de levitar, el garrote sube… ¡y cae justo en la cabeza del troll!"
+  },
+  {
+   "id": "p3_cierre",
+   "text": "Hermione los defiende frente a los profesores… y desde esa noche, los tres son inseparables."
+  },
+  {
+   "id": "p4_quidditch",
+   "text": "Primer partido de quidditch. Harry persigue la snitch dorada… cuando de repente, su escoba empieza a sacudirse como loca. ¡Lo quiere tirar!"
+  },
+  {
+   "id": "p4_fuego",
+   "text": "Hermione ve a Snape mirando fijo a Harry y murmurando. ¡Le prende fuego la capa! La escoba se calma, Harry se tira en picada y atrapa la snitch… ¡casi se la traga! Gryffindor gana."
+  },
+  {
+   "id": "p4_perro",
+   "text": "Los chicos ya habían visto un perro gigante de tres cabezas cuidando una trampilla. Y a Hagrid se le escapa un nombre: Nicolás Flamel."
+  },
+  {
+   "id": "p4_flamel",
+   "text": "Buscan ese nombre durante semanas, hasta que Hermione lo encuentra: Flamel creó la piedra filosofal, ¡que da vida eterna! Eso es lo que cuida el perro."
+  },
+  {
+   "id": "p4_espejo",
+   "text": "En Navidad, Harry recibe una capa de invisibilidad. Explorando de noche, encuentra un espejo donde ve a sus padres sonriéndole. Dumbledore le explica que muestra lo que más deseamos… y que no sirve quedarse soñando frente a él."
+  },
+  {
+   "id": "p4_castigo",
+   "text": "Después, los chicos se meten en problemas y terminan castigados: tienen que entrar de noche al bosque prohibido con Hagrid."
+  },
+  {
+   "id": "p4_bosque",
+   "text": "Allí encuentran un unicornio herido y una sombra encapuchada que se acerca. Un centauro salva a Harry y le advierte: es Voldemort, que busca la piedra para volver."
+  },
+  {
+   "id": "p4_cierre",
+   "text": "Ahora Harry está seguro: alguien va a intentar robar la piedra… y muy pronto."
+  },
+  {
+   "id": "p5_trampilla",
+   "text": "Dumbledore se va del castillo por un aviso falso. Los chicos creen que Snape va a robar la piedra esa misma noche… y deciden adelantarse. Duermen al perro con música y bajan por la trampilla."
+  },
+  {
+   "id": "p5_planta",
+   "text": "Caen sobre una planta que los atrapa con sus ramas. Hermione recuerda que odia la luz, hace una llama mágica… ¡y la planta los suelta!"
+  },
+  {
+   "id": "p5_llaves",
+   "text": "Después, una sala llena de llaves voladoras. Harry, el mejor buscador, monta una escoba y atrapa la correcta: ¡la del ala rota!"
+  },
+  {
+   "id": "p5_ajedrez",
+   "text": "Luego, un ajedrez gigante. Ron dirige la partida como un general y se sacrifica para que Harry gane. Hermione se queda con él… y Harry sigue solo."
+  },
+  {
+   "id": "p5_quirrell",
+   "text": "En la última sala no está Snape… ¡sino Quirrell! El profesor tímido era el traidor. Y Snape, en realidad, siempre lo había protegido."
+  },
+  {
+   "id": "p5_voldemort",
+   "text": "Quirrell se quita el turbante… y en su nuca aparece Voldemort: humo negro y ojos rojos. Frente al espejo, Harry ve su reflejo guardando la piedra… ¡y la piedra aparece en su bolsillo!"
+  },
+  {
+   "id": "p5_lucha",
+   "text": "Quirrell intenta atraparlo, pero al tocar a Harry se quema: el amor de su madre, que dio la vida por él, lo protege. Harry resiste hasta desmayarse."
+  },
+  {
+   "id": "p5_copa",
+   "text": "Despierta en la enfermería: la piedra fue destruida. Y en la cena final, Dumbledore suma puntos de último momento… ¡y Gryffindor gana la Copa de las Casas!"
+  },
+  {
+   "id": "p5_cierre",
+   "text": "Así termina el primer año de Harry en Hogwarts. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}
