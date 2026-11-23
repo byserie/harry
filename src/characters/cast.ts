@@ -74,6 +74,8 @@ export const CAST = {
   cho: { name: "Cho", color: "#17a589", head: "#e6faf5", hair: "#16161c", hairStyle: "curtains", height: 0.97, width: 0, extras: ["longHair"] },
   bellatrix: { name: "Bellatrix", color: "#4a235a", head: "#f2e6f2", hair: "#120a12", hairStyle: "bushy", height: 1.03, width: 0, extras: [] },
   tonks: { name: "Tonks", color: "#7d3c98", head: "#f9ecff", hair: "#ff4fa3", hairStyle: "messy", height: 1.0, width: 0, extras: [] },
+  slughorn: { name: "Slughorn", color: "#c39b55", head: "#fdf1dc", hair: "#e8d8b0", hairStyle: "none", height: 1.0, width: 1, extras: ["mustache"] },
+  lavender: { name: "Lavender", color: "#e6a0f0", head: "#fdeffd", hair: "#e8c070", hairStyle: "curtains", height: 0.95, width: 0, extras: ["longHair"] },
 } satisfies Record<string, CharDef>;
 
 export type CharId = keyof typeof CAST;

@@ -7,6 +7,7 @@ import { LandCtx } from "./engine/layout";
 import { p3full, p3fullAudio } from "./peli3/full";
 import { p4full, p4fullAudio } from "./peli4/full";
 import { p5full, p5fullAudio } from "./peli5/full";
+import { p6full, p6fullAudio } from "./peli6/full";
 import { TestScene } from "./scenes/TestScene";
 import { Part } from "./engine/Part";
 import { part1, part1Audio } from "./scenes/part1";
@@ -92,6 +93,13 @@ const P5FullLand = () => (
   </LandCtx.Provider>
 );
 
+const P6Full = () => <Part spec={p6full} audio={p6fullAudio} audioFile="audio/p6full.wav" />;
+const P6FullLand = () => (
+  <LandCtx.Provider value>
+    <P6Full />
+  </LandCtx.Provider>
+);
+
 const V = { fps: 30, width: 1080, height: 1920 };
 
 export const RemotionRoot: React.FC = () => {
@@ -127,6 +135,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="P3FullYT" component={P3FullLand} durationInFrames={p3fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="P4FullYT" component={P4FullLand} durationInFrames={p4fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="P5FullYT" component={P5FullLand} durationInFrames={p5fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
+      <Composition id="P6FullYT" component={P6FullLand} durationInFrames={p6fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
     </>
   );
 };

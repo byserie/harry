@@ -1,0 +1,79 @@
+{
+ "id": "p6full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y el misterio del príncipe. Un libro viejo lleno de secretos, los recuerdos más oscuros de Voldemort… y una noche en lo alto de la torre que lo cambia todo para siempre."
+  },
+  {
+   "id": "ataque",
+   "text": "Los mortífagos ya no se esconden. En Londres derriban un puente lleno de gente, y en Navidad, Bellatrix incendia la Madriguera, la casa de los Weasley. Nadie está a salvo."
+  },
+  {
+   "id": "slughorn",
+   "text": "Dumbledore lleva a Harry a convencer a un viejo profesor: Horace Slughorn, un mago que colecciona alumnos famosos. Slughorn acepta volver a Hogwarts para enseñar pociones… porque quiere tener a Harry en su colección."
+  },
+  {
+   "id": "juramento",
+   "text": "Mientras tanto, Draco está raro: parece tener una misión secreta. Y Harry descubre que Snape hizo un juramento inquebrantable para protegerlo… y para terminar su misión si Draco falla."
+  },
+  {
+   "id": "libro",
+   "text": "En la clase de pociones, Harry recibe un libro viejo y gastado, lleno de anotaciones a mano de alguien que se hace llamar el Príncipe Mestizo. Gracias a esos trucos, Harry se vuelve el mejor alumno… y gana una poción de la suerte."
+  },
+  {
+   "id": "recuerdos",
+   "text": "Dumbledore le da clases privadas con el pensadero, una fuente mágica donde se pueden ver recuerdos. Juntos viajan al pasado y ven a Tom Riddle de niño, en un orfanato: ya entonces daba miedo."
+  },
+  {
+   "id": "lavender",
+   "text": "Mientras tanto, Ron se convierte en la estrella del equipo de quidditch y empieza a salir con Lavender. Hermione, muerta de celos, le tira una bandada de pájaros encima."
+  },
+  {
+   "id": "veneno",
+   "text": "Pero en su cumpleaños, Ron toma una bebida envenenada y cae al piso. Harry reacciona rápido: le mete un bezoar en la boca, una piedra que cura venenos, y le salva la vida."
+  },
+  {
+   "id": "hechizo",
+   "text": "Harry sigue a Draco hasta un baño y se enfrentan. Desesperado, Harry usa un hechizo del libro del príncipe que nunca había probado… y Draco cae herido. Snape llega a tiempo para salvarlo, y Harry esconde el libro para siempre."
+  },
+  {
+   "id": "suerte",
+   "text": "Para conseguir un recuerdo clave, Harry toma la poción de la suerte. Todo le sale perfecto, y Slughorn le muestra la verdad: de joven, Tom Riddle le preguntó cómo hacer horrocruxes."
+  },
+  {
+   "id": "horrocrux",
+   "text": "Dumbledore le explica: un horrocrux es un objeto donde un mago esconde un pedazo de su alma. Voldemort partió su alma en siete pedazos. El diario y un anillo ya fueron destruidos. Para vencerlo, hay que destruir todos los demás."
+  },
+  {
+   "id": "cueva",
+   "text": "Dumbledore lleva a Harry a una cueva junto al mar, donde está escondido otro horrocrux: un guardapelo. Para sacarlo, Dumbledore tiene que tomar una poción terrible. Y cuando Harry busca agua en el lago, cientos de cadáveres salen del agua. Dumbledore los espanta con un anillo de fuego."
+  },
+  {
+   "id": "torre",
+   "text": "Vuelven a Hogwarts, a la torre más alta. Pero los mortífagos ya entraron al castillo a través de un armario mágico, guiados por Draco. Dumbledore esconde a Harry. Draco lo desarma… pero no se anima a matarlo."
+  },
+  {
+   "id": "snape",
+   "text": "Entonces aparece Snape. Dumbledore lo mira y le dice su nombre… y Snape levanta la varita. Un rayo verde. Dumbledore cae desde lo alto de la torre."
+  },
+  {
+   "id": "principe",
+   "text": "Harry, furioso, persigue a Snape por los jardines y le lanza hechizos. Pero Snape los detiene todos, y le revela que él es el Príncipe Mestizo. Después, escapa con los mortífagos."
+  },
+  {
+   "id": "varitas",
+   "text": "Esa noche, todo Hogwarts se reúne. Alumnos y profesores levantan sus varitas encendidas al cielo, y la luz borra la marca tenebrosa, en honor a Dumbledore."
+  },
+  {
+   "id": "falso",
+   "text": "Y Harry descubre algo más: el guardapelo era falso. Adentro hay una nota de alguien que firma R.A.B.: robó el verdadero horrocrux para destruirlo."
+  },
+  {
+   "id": "final",
+   "text": "Harry toma una decisión: no va a volver al colegio. Va a buscar y destruir los horrocruxes que faltan. Y Ron y Hermione van a ir con él. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}
