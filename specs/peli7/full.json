@@ -1,0 +1,63 @@
+{
+ "id": "p7full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y las reliquias de la muerte, parte uno. Dumbledore murió, Voldemort tomó el Ministerio, y tres amigos tienen que huir para encontrar los horrocruxes. Sin colegio, sin refugio… y sin nadie que los proteja."
+  },
+  {
+   "id": "siete",
+   "text": "Para sacar a Harry de la casa de los Dursley, sus amigos toman poción multijugos y se convierten en siete Harrys idénticos. Salen volando, pero los mortífagos los esperan en el cielo. Persecución, hechizos… y Harry pierde a Hedwig, su lechuza."
+  },
+  {
+   "id": "testamento",
+   "text": "En la Madriguera, el ministro les entrega el testamento de Dumbledore: a Ron le deja un desiluminador, un aparato que apaga las luces. A Hermione, un libro de cuentos. Y a Harry, la primera snitch que atrapó."
+  },
+  {
+   "id": "boda",
+   "text": "Después llega la boda de Bill y Fleur: música, baile, alegría. Hasta que aparece un patronus con un mensaje terrible: el Ministerio cayó, y los mortífagos vienen para acá. Hermione agarra a sus amigos… y desaparecen."
+  },
+  {
+   "id": "director",
+   "text": "Ahora el mundo mágico está en manos de Voldemort: el Ministerio persigue a los hijos de muggles, y en Hogwarts, Snape se convierte en el nuevo director, con mortífagos patrullando los pasillos. Harry es el enemigo número uno."
+  },
+  {
+   "id": "ministerio",
+   "text": "Descubren que el horrocrux del guardapelo lo tiene Dolores Umbridge. Así que se disfrazan de empleados con poción multijugos, se meten al Ministerio, y le roban el guardapelo frente a sus narices. ¡Escapan por un pelo!"
+  },
+  {
+   "id": "carpa",
+   "text": "Desde entonces viven escondidos en una carpa mágica, más grande por dentro, mudándose de bosque en bosque, escuchando las noticias por una radio. Pero no saben cómo destruir el guardapelo. Y llevarlo puesto los pone tristes, nerviosos… y enojados."
+  },
+  {
+   "id": "pelea",
+   "text": "Una noche, Ron explota. Celoso y cansado, pelea con Harry a los gritos… y se va. Hermione llora. Harry se queda en silencio."
+  },
+  {
+   "id": "godric",
+   "text": "Harry y Hermione viajan al pueblo donde nació Harry. En Navidad visitan la tumba de sus padres. Pero una viejita los lleva a su casa… y se convierte en Nagini, la serpiente de Voldemort. Escapan de milagro, pero la varita de Harry se rompe."
+  },
+  {
+   "id": "cierva",
+   "text": "Una noche de nieve, una cierva plateada guía a Harry hasta un lago congelado. En el fondo brilla la espada de Gryffindor. Harry se tira al agua helada, pero el guardapelo lo ahorca. Y de repente, alguien lo saca: ¡es Ron, que volvió! Con la espada, Ron destruye el horrocrux."
+  },
+  {
+   "id": "reliquias",
+   "text": "Después visitan al papá de Luna, que les cuenta un cuento: tres hermanos que engañaron a la muerte y recibieron tres objetos: la varita más poderosa, una piedra que trae de vuelta a los muertos, y una capa de invisibilidad. Las reliquias de la muerte."
+  },
+  {
+   "id": "mansion",
+   "text": "Pero Harry comete un error: dice en voz alta el nombre de Voldemort, que ahora es tabú. Al instante, unos cazadores los rodean, los capturan y los llevan a la mansión Malfoy. Bellatrix interroga a Hermione, mientras Harry y Ron están encerrados en el sótano. Y entonces aparece alguien inesperado: ¡Dobby, que viene a rescatarlos!"
+  },
+  {
+   "id": "dobby",
+   "text": "Dobby los saca de ahí, pero justo antes de desaparecer, Bellatrix lanza un cuchillo. Aparecen en una playa… y Dobby cae en los brazos de Harry. Harry lo entierra con sus propias manos, sin magia, y le escribe una lápida: aquí descansa un elfo libre."
+  },
+  {
+   "id": "final",
+   "text": "Mientras tanto, Voldemort abre la tumba de Dumbledore y le roba la varita de saúco, la más poderosa del mundo. La levanta hacia el cielo… y un rayo ilumina la noche. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

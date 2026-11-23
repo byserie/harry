@@ -124,6 +124,7 @@ PRONUNCIA = {
     "Umbridge": "Ámbrich", "Dolores": "Dolores", "Lovegood": "Lavgud", "Cho": "Chou", "Chang": "Chang",
     "Bellatrix": "Bélatrix", "Lestrange": "Lestránch", "Tonks": "Tonks", "thestrals": "téstrals",
     "Slughorn": "Slágjorn", "Horace": "Jóras", "Lavender": "Lávender", "horrocruxes": "jórocruxes", "horrocrux": "jórocrux",
+    "Nagini": "Nagíni", "Bill": "Bil", "Godric": "Gódric",
     "quidditch": "quídich", "snitch": "esních", "Flamel": "Flamél", "Potter": "Póter",
 }
 
