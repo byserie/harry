@@ -2,6 +2,7 @@ import { PartSpec, SceneSpec } from "../engine/types";
 import { AudioData } from "../engine/Part";
 import { kf } from "../lib/pose";
 import { Sparkles } from "../characters/Stickman";
+import { INK } from "../characters/cast";
 import { Svg } from "../scenes/bg1";
 import { Chamber, Corridor, Forest, GreatHall, NightCastle, Station, Vault } from "../scenes/bg2";
 import { MiniStick, SortingHat, Snitch, Spell } from "../scenes/props";
