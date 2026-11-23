@@ -125,6 +125,7 @@ PRONUNCIA = {
     "Bellatrix": "Bélatrix", "Lestrange": "Lestránch", "Tonks": "Tonks", "thestrals": "téstrals",
     "Slughorn": "Slágjorn", "Horace": "Jóras", "Lavender": "Lávender", "horrocruxes": "jórocruxes", "horrocrux": "jórocrux",
     "Nagini": "Nagíni", "Bill": "Bil", "Godric": "Gódric",
+    "Ravenclaw": "Révenclo", "Lily": "Líli",
     "quidditch": "quídich", "snitch": "esních", "Flamel": "Flamél", "Potter": "Póter",
 }
 

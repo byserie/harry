@@ -1,0 +1,75 @@
+{
+ "id": "p8full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y las reliquias de la muerte, parte dos. La batalla final. Un banco custodiado por un dragón, un castillo en guerra, el secreto más grande de Snape… y el último duelo entre Harry y Voldemort."
+  },
+  {
+   "id": "banco",
+   "text": "El próximo horrocrux está en la bóveda de Bellatrix, en el banco de los duendes. Hermione se disfraza de Bellatrix y entran. En la bóveda brilla una copa dorada… pero todo lo que tocan se multiplica y quema. Agarran la copa y escapan montados en un dragón ciego, rompiendo el techo del banco."
+  },
+  {
+   "id": "hogwarts",
+   "text": "Harry siente que el siguiente horrocrux está en Hogwarts: la diadema perdida de Ravenclaw. Entran por un pasadizo secreto, y en la sala de los menesteres los recibe Neville, que lideró la resistencia de los alumnos todo el año."
+  },
+  {
+   "id": "snape",
+   "text": "Harry se enfrenta a Snape delante de todo el colegio. La profesora McGonagall saca su varita y lo ataca, y Snape huye rompiendo una ventana."
+  },
+  {
+   "id": "escudo",
+   "text": "Voldemort anuncia que va a atacar. Los profesores levantan un escudo gigante sobre el castillo, y McGonagall despierta a las estatuas de piedra para que defiendan Hogwarts."
+  },
+  {
+   "id": "batalla",
+   "text": "Y empieza la batalla. Mortífagos, gigantes y arañas atacan el castillo. Los hechizos rebotan contra el escudo… hasta que se rompe en mil pedazos. Hogwarts está en guerra."
+  },
+  {
+   "id": "camara",
+   "text": "Mientras tanto, Ron y Hermione bajan a la cámara secreta, agarran un colmillo del basilisco y destruyen la copa. El agua explota a su alrededor… y por fin, se dan un beso."
+  },
+  {
+   "id": "diadema",
+   "text": "Harry encuentra la diadema en la sala de los menesteres. Pero aparece Draco con sus amigos, y uno de ellos lanza un fuego maldito que lo devora todo. Harry salva a Draco volando en una escoba, y la diadema se destruye entre las llamas."
+  },
+  {
+   "id": "snape2",
+   "text": "En un cobertizo, Voldemort cree que la varita de saúco obedece a Snape. Y para quedársela, le ordena a Nagini que lo ataque. Harry llega cuando Snape está muriendo… y Snape le entrega sus lágrimas: sus recuerdos."
+  },
+  {
+   "id": "recuerdos",
+   "text": "Harry los ve en el pensadero, y descubre la verdad: Snape amó a Lily, la mamá de Harry, toda su vida. Lo protegió siempre por ella. Y el plan de Dumbledore era terrible: Harry también es un horrocrux… y tiene que morir."
+  },
+  {
+   "id": "bosque",
+   "text": "Harry camina solo hacia el bosque. Abre la snitch y adentro está la piedra de la resurrección. Aparecen sus padres, Sirius y Lupin, que lo acompañan. Llega frente a Voldemort, cierra los ojos… y recibe el rayo verde."
+  },
+  {
+   "id": "limbo",
+   "text": "Harry despierta en un lugar todo blanco, parecido a una estación de tren. Ahí está Dumbledore. Le explica que Voldemort acaba de destruir el pedazo de su propia alma que vivía en Harry. Y que puede volver."
+  },
+  {
+   "id": "neville",
+   "text": "Voldemort lleva a Harry, que parece muerto, hasta Hogwarts, y exige que todos se rindan. Pero Neville da un paso al frente, saca la espada de Gryffindor del sombrero… y destruye a Nagini, el último horrocrux."
+  },
+  {
+   "id": "duelo",
+   "text": "Harry se levanta: ¡está vivo! Empieza el duelo final. Harry le revela un secreto: la varita de saúco nunca fue de Voldemort. Su verdadero dueño es Harry. Los hechizos chocan, el de Voldemort rebota… y Voldemort se deshace en cenizas para siempre."
+  },
+  {
+   "id": "varita",
+   "text": "Harry rompe la varita de saúco en dos y la tira al vacío. Ya no la necesita."
+  },
+  {
+   "id": "epilogo",
+   "text": "Diecinueve años después, en el andén nueve y tres cuartos, Harry y Ginny, Ron y Hermione despiden a sus hijos, que viajan a Hogwarts por primera vez. La cicatriz de Harry no le dolió nunca más. Todo está bien."
+  },
+  {
+   "id": "final",
+   "text": "Así termina la historia de Harry Potter. Gracias por acompañarnos en las ocho películas. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}
