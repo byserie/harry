@@ -6,6 +6,7 @@ import { FONT } from "../lib/font";
 import { kf } from "../lib/pose";
 import { Scene } from "./Scene";
 import { CaptionsDyn, ProgressBar } from "../lib/CaptionsDyn";
+import { LandCtx } from "./layout";
 import { PartSpec } from "./types";
 
 export type AudioData = {
@@ -71,9 +72,10 @@ const CTA: React.FC<{ part: number }> = ({ part }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
-  const k = kf(t, [0, 0.5], [0, 1], Easing.out(Easing.back(1.8)));
+  const land = React.useContext(LandCtx);
+  const k = kf(t, [0, 0.5], [0, 1], Easing.out(Easing.back(1.8))) * (land ? 0.75 : 1);
   return (
-    <AbsoluteFill style={{ alignItems: "center", paddingTop: 230, fontFamily: FONT }}>
+    <AbsoluteFill style={{ alignItems: "center", paddingTop: land ? 30 : 230, fontFamily: FONT }}>
       <div
         style={{
           scale: String(k),
