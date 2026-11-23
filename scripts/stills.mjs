@@ -6,7 +6,8 @@ import path from "node:path";
 const [comp, framesArg, outSheet] = process.argv.slice(2);
 const frames = framesArg.split(",").map(Number);
 const serveUrl = await bundle({ entryPoint: path.resolve("src/index.ts"), enableCaching: true });
-const browserExecutable = "/opt/pw-browsers/chromium_headless_shell";
+import fs from "node:fs";
+const browserExecutable = fs.existsSync("/opt/pw-browsers/chromium_headless_shell") ? "/opt/pw-browsers/chromium_headless_shell" : null;
 const composition = await selectComposition({ serveUrl, id: comp, browserExecutable });
 const files = [];
 for (const f of frames) {

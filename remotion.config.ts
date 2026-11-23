@@ -11,4 +11,8 @@ Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 Config.setDefaultPremountInSeconds(2);
-Config.setBrowserExecutable("/opt/pw-browsers/chromium_headless_shell");
+// Solo en la máquina de la nube: en tu compu Remotion usa su propio navegador.
+import fs from "node:fs";
+if (fs.existsSync("/opt/pw-browsers/chromium_headless_shell")) {
+  Config.setBrowserExecutable("/opt/pw-browsers/chromium_headless_shell");
+}
