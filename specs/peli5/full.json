@@ -1,0 +1,87 @@
+{
+ "id": "p5full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Harry Potter y la Orden del Fénix. Voldemort volvió… pero nadie le cree a Harry. Una profesora rosa y terrible, un ejército secreto de alumnos, y una batalla final en el corazón del Ministerio de Magia."
+  },
+  {
+   "id": "dementores",
+   "text": "El verano empieza mal: en un callejón, dos dementores atacan a Harry y a su primo Dudley. Harry no tiene opción: usa el patronus y los espanta. Pero los menores no pueden hacer magia fuera del colegio… y el Ministerio lo amenaza con la expulsión."
+  },
+  {
+   "id": "orden",
+   "text": "Esa noche, un grupo de magos lo rescata volando en escobas y lo lleva a una casa secreta en Londres: el cuartel de la Orden del Fénix, un grupo que lucha contra Voldemort. Ahí está Sirius, su padrino, feliz de verlo."
+  },
+  {
+   "id": "juicio",
+   "text": "Harry tiene que ir a juicio frente a todo el Ministerio. Lo miran como a un mentiroso. Pero aparece Dumbledore, lo defiende… y Harry queda libre."
+  },
+  {
+   "id": "umbridge",
+   "text": "En Hogwarts hay una nueva profesora: Dolores Umbridge. Vestida toda de rosa, con una sonrisa falsa y voz dulce. Prohíbe practicar hechizos en clase. Y cuando Harry dice que Voldemort volvió, lo castiga con una pluma que escribe con su propia sangre, sobre su mano."
+  },
+  {
+   "id": "decretos",
+   "text": "Umbridge empieza a controlar todo el colegio con decretos ridículos: prohíbe grupos, revisa las clases, y echa a la profesora Trelawney delante de todos."
+  },
+  {
+   "id": "ejercito",
+   "text": "Entonces Hermione tiene una idea: si Umbridge no les enseña a defenderse, que les enseñe Harry. Así nace el Ejército de Dumbledore, que practica en secreto en la sala de los menesteres, una sala mágica que aparece cuando la necesitás. Harry les enseña hasta el patronus."
+  },
+  {
+   "id": "luna",
+   "text": "En el grupo hay caras nuevas: Luna Lovegood, una chica rarísima y adorable, y Neville, que cada día es más valiente. Luna le muestra a Harry los thestrals, unos caballos esqueléticos con alas que solo puede ver quien vio la muerte."
+  },
+  {
+   "id": "cho",
+   "text": "Y en Navidad, debajo del muérdago, Harry recibe su primer beso de Cho Chang."
+  },
+  {
+   "id": "vision",
+   "text": "Pero una noche, Harry sueña que es una serpiente que ataca al señor Weasley en un pasillo oscuro. Se despierta gritando. Y era real: el señor Weasley está herido, pero lo salvan gracias a Harry. Voldemort y Harry están conectados."
+  },
+  {
+   "id": "oclumancia",
+   "text": "Dumbledore le pide a Snape que le enseñe oclumancia, para cerrar su mente a Voldemort. Las clases son una tortura. Y en una, Harry espía un recuerdo de Snape: su padre, de joven, burlándose de él."
+  },
+  {
+   "id": "descubren",
+   "text": "Umbridge descubre al Ejército de Dumbledore. Pero Dumbledore se echa la culpa para proteger a los chicos, y cuando lo quieren arrestar, desaparece en una llamarada con su fénix."
+  },
+  {
+   "id": "gemelos",
+   "text": "Umbridge se queda como directora. Pero Fred y George se despiden a lo grande: llenan el castillo de fuegos artificiales, un dragón de fuego persigue a Umbridge, y se van volando en sus escobas entre los aplausos de todos."
+  },
+  {
+   "id": "centauros",
+   "text": "Durante un examen, Harry tiene una visión: Voldemort tortura a Sirius en el Ministerio. Umbridge los atrapa, pero Hermione la engaña y la lleva al bosque prohibido, donde los centauros se la llevan."
+  },
+  {
+   "id": "ministerio",
+   "text": "Harry, Ron, Hermione, Luna, Neville y Ginny vuelan en thestrals hasta Londres. Entran al Ministerio, al departamento de misterios: una sala gigante llena de esferas de cristal brillantes. En una está el nombre de Harry: es una profecía."
+  },
+  {
+   "id": "trampa",
+   "text": "Pero Sirius no está. Era una trampa. Aparecen Lucius Malfoy y los mortífagos, y una bruja loca que no para de reír: Bellatrix Lestrange. Quieren la profecía. Empieza la batalla: hechizos por todos lados, y miles de esferas que se rompen."
+  },
+  {
+   "id": "velo",
+   "text": "Justo a tiempo llega la Orden: Sirius, Lupin, Moody y Tonks. Sirius pelea al lado de Harry, como su padre… hasta que Bellatrix lo alcanza con un hechizo. Sirius cae hacia atrás, a través de un velo misterioso… y desaparece para siempre. Harry grita su nombre."
+  },
+  {
+   "id": "duelo",
+   "text": "Furioso, Harry persigue a Bellatrix. Y aparece Voldemort. Pero también llega Dumbledore, y se enfrentan en un duelo increíble de fuego y agua. Voldemort intenta poseer a Harry, pero Harry piensa en sus amigos, en el amor… y Voldemort no lo soporta. Huye. Y todo el Ministerio lo ve con sus propios ojos: por fin, le creen."
+  },
+  {
+   "id": "profecia",
+   "text": "En su despacho, Dumbledore le cuenta la verdad sobre la profecía: Harry y Voldemort están unidos por el destino… y al final, uno de los dos tendrá que acabar con el otro."
+  },
+  {
+   "id": "final",
+   "text": "Harry perdió a Sirius, pero no está solo: tiene a Ron, a Hermione y a sus amigos, dispuestos a pelear con él. Si te gustó, seguí mi perfil para ver el próximo resumen."
+  }
+ ]
+}

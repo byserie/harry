@@ -121,6 +121,8 @@ PRONUNCIA = {
     "Hogsmeade": "Jógsmid", "Marge": "Márch", "patronus": "patrónus", "boggart": "bógart", "Scabbers": "Escábers",
     "Beauxbatons": "Bobatón", "Durmstrang": "Dúrmstrang", "Moody": "Múdi", "Ojoloco": "Ojoloco", "Fleur": "Flér",
     "Krum": "Krum", "Cedric": "Sédric", "Colagusano": "Colagusano", "Barty": "Bárti", "Crouch": "Cráuch",
+    "Umbridge": "Ámbrich", "Dolores": "Dolores", "Lovegood": "Lavgud", "Cho": "Chou", "Chang": "Chang",
+    "Bellatrix": "Bélatrix", "Lestrange": "Lestránch", "Tonks": "Tonks", "thestrals": "téstrals",
     "quidditch": "quídich", "snitch": "esních", "Flamel": "Flamél", "Potter": "Póter",
 }
 

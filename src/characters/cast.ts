@@ -69,6 +69,11 @@ export const CAST = {
   moody: { name: "Moody", color: "#7f6b5a", head: "#efe6dc", hair: "#7a7a7a", hairStyle: "curly", height: 1.08, width: 0.2, extras: ["magicEye"] },
   barty: { name: "Barty Crouch", color: "#5d6d3e", head: "#eef2e2", hair: "#c9a25e", hairStyle: "messy", height: 1.03, width: 0, extras: [] },
   voldemort: { name: "Voldemort", color: "#1b1b1b", head: "#f2f4f2", hair: "#000000", hairStyle: "none", height: 1.12, width: 0, extras: ["redEyes"] },
+  umbridge: { name: "Umbridge", color: "#ff8fc7", head: "#ffe3f1", hair: "#a0785a", hairStyle: "bun", height: 0.9, width: 0.7, extras: ["pearls"] },
+  luna: { name: "Luna", color: "#af7ac5", head: "#f7efff", hair: "#f2e6a8", hairStyle: "curtains", height: 0.95, width: 0, extras: ["longHair"] },
+  cho: { name: "Cho", color: "#17a589", head: "#e6faf5", hair: "#16161c", hairStyle: "curtains", height: 0.97, width: 0, extras: ["longHair"] },
+  bellatrix: { name: "Bellatrix", color: "#4a235a", head: "#f2e6f2", hair: "#120a12", hairStyle: "bushy", height: 1.03, width: 0, extras: [] },
+  tonks: { name: "Tonks", color: "#7d3c98", head: "#f9ecff", hair: "#ff4fa3", hairStyle: "messy", height: 1.0, width: 0, extras: [] },
 } satisfies Record<string, CharDef>;
 
 export type CharId = keyof typeof CAST;
