@@ -10,3 +10,4 @@ out
 # Audio generado (se regenera con scripts/part_audio.py, pesa cientos de MB)
 public/audio/*.wav
 __pycache__/
+public/audio/edits/
