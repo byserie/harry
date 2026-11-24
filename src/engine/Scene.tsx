@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, Easing, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { Stickman } from "../characters/Stickman";
+import { Figure, FIGS } from "../characters/Figure";
 import { Camera } from "../lib/Camera";
 import { kf } from "../lib/pose";
 import { charState } from "./charState";
@@ -16,7 +17,24 @@ const Chars: React.FC<{ spec: SceneSpec; t: number }> = ({ spec, t }) => {
   states.sort((a, b) => a.st.y - b.st.y);
   return (
     <>
-      {states.map(({ c, st }, i) => (
+      {states.map(({ c, st }, i) =>
+        FIGS[c.who] ? (
+          <Figure
+            key={`${c.who}-${i}`}
+            who={c.who}
+            x={st.x}
+            y={st.y}
+            scale={st.s}
+            facing={st.facing}
+            pose={st.pose}
+            expression={st.expr}
+            rotate={st.rot}
+            showName={c.name ?? true}
+            opacity={(c.opacity ?? 1) * st.alpha}
+            holding={c.holding?.(t)}
+            stone={st.stone}
+          />
+        ) : (
         <Stickman
           key={`${c.who}-${i}`}
           who={c.who}
@@ -35,7 +53,8 @@ const Chars: React.FC<{ spec: SceneSpec; t: number }> = ({ spec, t }) => {
           holding={c.holding?.(t)}
           stone={st.stone}
         />
-      ))}
+        ),
+      )}
     </>
   );
 };
