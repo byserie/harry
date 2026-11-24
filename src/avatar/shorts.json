@@ -1,0 +1,156 @@
+[
+ {
+  "id": "AV1-1",
+  "film": 9,
+  "scenes": [
+   "hook",
+   "tierra",
+   "nave",
+   "aterrizaje",
+   "quaritch",
+   "mineral",
+   "avatares"
+  ],
+  "teaser": "aterrizaje",
+  "hook": "¿Viajarías seis años dormido para vivir en otro planeta?"
+ },
+ {
+  "id": "AV1-2",
+  "film": 9,
+  "scenes": [
+   "enlace",
+   "selva",
+   "thanator",
+   "lobos",
+   "semillas",
+   "arbol",
+   "espia"
+  ],
+  "teaser": "thanator",
+  "hook": "¿Qué harías si una pantera gigante te persigue en un planeta desconocido?"
+ },
+ {
+  "id": "AV1-3",
+  "film": 9,
+  "scenes": [
+   "aprende",
+   "caballo",
+   "montanas",
+   "ikran",
+   "diario",
+   "amor"
+  ],
+  "teaser": "ikran",
+  "hook": "¿Te animarías a domar un dragón que quiere matarte?"
+ },
+ {
+  "id": "AV1-4",
+  "film": 9,
+  "scenes": [
+   "topadoras",
+   "ataque",
+   "traicion",
+   "escape",
+   "toruk",
+   "toruk_makto"
+  ],
+  "teaser": "ataque",
+  "hook": "¿Qué harías si destruyen tu casa con misiles?"
+ },
+ {
+  "id": "AV1-5",
+  "film": 9,
+  "scenes": [
+   "grace",
+   "clanes",
+   "batalla",
+   "eywa",
+   "duelo",
+   "mascara",
+   "final"
+  ],
+  "teaser": "eywa",
+  "hook": "¿Y si un planeta entero se levantara para defenderse?"
+ },
+ {
+  "id": "AVM1-enlace",
+  "film": 9,
+  "scenes": [
+   "enlace"
+  ],
+  "teaser": "",
+  "hook": "¿Qué sentirías si después de años en silla de ruedas pudieras correr otra vez?"
+ },
+ {
+  "id": "AVM1-thanator",
+  "film": 9,
+  "scenes": [
+   "thanator"
+  ],
+  "teaser": "",
+  "hook": "¿Qué harías si te persigue la bestia más peligrosa de un planeta?"
+ },
+ {
+  "id": "AVM1-lobos",
+  "film": 9,
+  "scenes": [
+   "lobos"
+  ],
+  "teaser": "",
+  "hook": "¿Qué harías si te rodean lobos de seis patas en plena noche?"
+ },
+ {
+  "id": "AVM1-caballo",
+  "film": 9,
+  "scenes": [
+   "caballo"
+  ],
+  "teaser": "",
+  "hook": "¿Podrías montar un caballo de seis patas sin caerte?"
+ },
+ {
+  "id": "AVM1-ikran",
+  "film": 9,
+  "scenes": [
+   "ikran"
+  ],
+  "teaser": "",
+  "hook": "¿Te animarías a domar un dragón volador?"
+ },
+ {
+  "id": "AVM1-ataque",
+  "film": 9,
+  "scenes": [
+   "ataque"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si destruyeran el árbol donde vive todo tu pueblo?"
+ },
+ {
+  "id": "AVM1-toruk",
+  "film": 9,
+  "scenes": [
+   "toruk"
+  ],
+  "teaser": "",
+  "hook": "¿Saltarías sobre el dragón más grande del cielo?"
+ },
+ {
+  "id": "AVM1-eywa",
+  "film": 9,
+  "scenes": [
+   "eywa"
+  ],
+  "teaser": "",
+  "hook": "¿Y si los animales de un planeta entero salieran a defenderlo?"
+ },
+ {
+  "id": "AVM1-mascara",
+  "film": 9,
+  "scenes": [
+   "mascara"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si la chica que amás te viera por primera vez como sos de verdad?"
+ }
+]

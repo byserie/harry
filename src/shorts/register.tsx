@@ -7,6 +7,9 @@ import list from "./list.json";
 import hooksData from "../data/hooks.json";
 import momentos from "../momentos/list.json";
 import momentosHooks from "../data/momentos-hooks.json";
+import avShorts from "../avatar/shorts.json";
+import avHooks from "../data/av-hooks.json";
+import { av1full, av1fullAudio } from "../avatar/av1";
 import { p1full, p1fullAudio } from "../peli1d/full";
 import { p2full, p2fullAudio } from "../peli2d/full";
 import { p3full, p3fullAudio } from "../peli3/full";
@@ -25,6 +28,7 @@ const FILMS: Record<number, { spec: PartSpec; audio: AudioData; file: string }> 
   6: { spec: p6full, audio: p6fullAudio, file: "audio/p6full.wav" },
   7: { spec: p7full, audio: p7fullAudio, file: "audio/p7full.wav" },
   8: { spec: p8full, audio: p8fullAudio, file: "audio/p8full.wav" },
+  9: { spec: av1full, audio: av1fullAudio, file: "audio/av1full.wav" },
 };
 const hooks = hooksData as Record<string, HookAudio>;
 
@@ -38,6 +42,8 @@ const comps = [
   ...build(list as ShortDef[], hooks, "Short"),
   // Momentos clave: pregunta "¿qué pasaría si…?" y la escena directo
   ...build(momentos as ShortDef[], momentosHooks as Record<string, HookAudio>, "Momento"),
+  // Avatar: partes con gancho y momentos
+  ...build(avShorts as ShortDef[], avHooks as Record<string, HookAudio>, "Short"),
 ];
 
 export const ShortCompositions: React.FC = () => (
