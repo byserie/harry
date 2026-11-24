@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Easing, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, Freeze, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { Scene } from "../engine/Scene";
 import { AudioData } from "../engine/Part";
@@ -92,19 +92,28 @@ const EndCard: React.FC = () => {
 export const Short: React.FC<{ def: ShortDef; spec: PartSpec; audio: AudioData; audioFile: string; hook: HookAudio }> = ({ def, spec, audio, audioFile, hook }) => {
   const { fps } = useVideoConfig();
   const { hookFrames, base, chunkFrames, total } = shortTiming(def, audio, hook);
-  const teaserSc = audio.scenes.find((s) => s.id === def.teaser)!;
   const HEAVY = ["boom", "crash", "roar", "fire", "splash", "zap", "thunder"];
-  const hit = (spec.scenes[def.teaser].sfx ?? []).filter((x) => HEAVY.includes(x.s)).sort((a, b) => a.t - b.t)[0];
-  const teaserLocal = hit ? Math.max(0, Math.round((hit.t - 0.6) * fps)) : Math.round(teaserSc.dur * 0.5);
+  const teaserSc = def.teaser ? audio.scenes.find((s) => s.id === def.teaser)! : null;
+  const hit = def.teaser ? (spec.scenes[def.teaser].sfx ?? []).filter((x) => HEAVY.includes(x.s)).sort((a, b) => a.t - b.t)[0] : undefined;
+  const teaserLocal = !teaserSc ? 0 : hit ? Math.max(0, Math.round((hit.t - 0.6) * fps)) : Math.round(teaserSc.dur * 0.5);
   const words = audio.words.filter((w) => w.start * fps >= base && w.start * fps < base + chunkFrames).map((w) => ({ ...w, start: w.start - base / fps, end: w.end - base / fps }));
   const subScenes = def.scenes.map((id) => audio.scenes.find((s) => s.id === id)!);
   return (
     <AbsoluteFill style={{ backgroundColor: "#1b1b2f" }}>
       {/* 1) Gancho: el momento más fuerte + la pregunta */}
       <Sequence durationInFrames={hookFrames} name="Gancho">
-        <Sequence from={-teaserLocal} durationInFrames={teaserLocal + hookFrames}>
-          <Scene spec={spec.scenes[def.teaser]} first dyn />
-        </Sequence>
+        {def.teaser ? (
+          <Sequence from={-teaserLocal} durationInFrames={teaserLocal + hookFrames}>
+            <Scene spec={spec.scenes[def.teaser]} first dyn />
+          </Sequence>
+        ) : (
+          // Momento: la escena congelada y oscura detrás de la pregunta; al terminar arranca directo
+          <AbsoluteFill style={{ filter: "blur(5px) brightness(0.55) saturate(1.2)", scale: "1.06" }}>
+            <Freeze frame={12}>
+              <Scene spec={spec.scenes[def.scenes[0]]} first dyn noSfx />
+            </Freeze>
+          </AbsoluteFill>
+        )}
         <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0) 55%)" }} />
         <HookText text={def.hook} words={hook.words} />
         <Audio src={staticFile(`audio/hooks/${def.id}.wav`)} />

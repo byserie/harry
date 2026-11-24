@@ -1,0 +1,281 @@
+[
+ {
+  "id": "M1-zoo",
+  "film": 1,
+  "scenes": [
+   "p1_zoo"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si le hablaras a una serpiente… y te contestara?"
+ },
+ {
+  "id": "M1-cartas",
+  "film": 1,
+  "scenes": [
+   "p1_cartas"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si te llegaran cien cartas… por la chimenea?"
+ },
+ {
+  "id": "M1-troll",
+  "film": 1,
+  "scenes": [
+   "p3_troll"
+  ],
+  "teaser": "",
+  "hook": "¿Qué harías si un troll gigante entra al baño donde estás?"
+ },
+ {
+  "id": "M1-ajedrez",
+  "film": 1,
+  "scenes": [
+   "p5_ajedrez"
+  ],
+  "teaser": "",
+  "hook": "¿Jugarías un ajedrez donde las piezas te pueden aplastar?"
+ },
+ {
+  "id": "M2-torta",
+  "film": 2,
+  "scenes": [
+   "p1_torta"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si un elfo le tira una torta en la cabeza a tus visitas?"
+ },
+ {
+  "id": "M2-vociferador",
+  "film": 2,
+  "scenes": [
+   "p2_vociferador"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tu mamá te reta a los gritos delante de todo el colegio?"
+ },
+ {
+  "id": "M2-pocion",
+  "film": 2,
+  "scenes": [
+   "p4_pocion"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tomás una poción para transformarte… y te convertís en gato?"
+ },
+ {
+  "id": "M2-aragog",
+  "film": 2,
+  "scenes": [
+   "p4_aragog"
+  ],
+  "teaser": "",
+  "hook": "¿Qué harías si cientos de arañas gigantes te quieren comer?"
+ },
+ {
+  "id": "M3-marge",
+  "film": 3,
+  "scenes": [
+   "marge"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tu tía insoportable se inflara como un globo?"
+ },
+ {
+  "id": "M3-autobus",
+  "film": 3,
+  "scenes": [
+   "autobus"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si un colectivo violeta aparece de la nada a rescatarte?"
+ },
+ {
+  "id": "M3-boggart",
+  "film": 3,
+  "scenes": [
+   "boggart"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tu peor miedo apareciera… con patines?"
+ },
+ {
+  "id": "M3-lobo",
+  "film": 3,
+  "scenes": [
+   "lobo"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tu profesor favorito se convierte en hombre lobo?"
+ },
+ {
+  "id": "M4-dragon",
+  "film": 4,
+  "scenes": [
+   "dragon"
+  ],
+  "teaser": "",
+  "hook": "¿Le robarías un huevo de oro a un dragón?"
+ },
+ {
+  "id": "M4-baile",
+  "film": 4,
+  "scenes": [
+   "baile"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tu mejor amiga llega al baile con el más famoso del colegio?"
+ },
+ {
+  "id": "M4-lago",
+  "film": 4,
+  "scenes": [
+   "lago"
+  ],
+  "teaser": "",
+  "hook": "¿Aguantarías una hora entera debajo del agua?"
+ },
+ {
+  "id": "M4-ritual",
+  "film": 4,
+  "scenes": [
+   "ritual"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si vieras renacer al mago más malvado del mundo?"
+ },
+ {
+  "id": "M5-umbridge",
+  "film": 5,
+  "scenes": [
+   "umbridge"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si la profe más malvada del mundo fuera toda de rosa?"
+ },
+ {
+  "id": "M5-descubren",
+  "film": 5,
+  "scenes": [
+   "descubren"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si intentaran arrestar a Dumbledore?"
+ },
+ {
+  "id": "M5-duelo",
+  "film": 5,
+  "scenes": [
+   "duelo"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si Dumbledore y Voldemort pelearan cara a cara?"
+ },
+ {
+  "id": "M6-lavender",
+  "film": 6,
+  "scenes": [
+   "lavender"
+  ],
+  "teaser": "",
+  "hook": "¿Qué harías si tu amiga, muerta de celos, te tira una bandada de pájaros?"
+ },
+ {
+  "id": "M6-veneno",
+  "film": 6,
+  "scenes": [
+   "veneno"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tu mejor amigo toma veneno en su cumpleaños?"
+ },
+ {
+  "id": "M6-libro",
+  "film": 6,
+  "scenes": [
+   "libro"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si encontraras un libro que te hace el mejor de la clase?"
+ },
+ {
+  "id": "M6-cueva",
+  "film": 6,
+  "scenes": [
+   "cueva"
+  ],
+  "teaser": "",
+  "hook": "¿Entrarías a una cueva llena de muertos para buscar un tesoro?"
+ },
+ {
+  "id": "M7-siete",
+  "film": 7,
+  "scenes": [
+   "siete"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si seis amigos se convirtieran en vos al mismo tiempo?"
+ },
+ {
+  "id": "M7-ministerio",
+  "film": 7,
+  "scenes": [
+   "ministerio"
+  ],
+  "teaser": "",
+  "hook": "¿Te animarías a robarle algo a la mujer más malvada del Ministerio?"
+ },
+ {
+  "id": "M7-pelea",
+  "film": 7,
+  "scenes": [
+   "pelea"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si tu mejor amigo te abandona en el peor momento?"
+ },
+ {
+  "id": "M7-cierva",
+  "film": 7,
+  "scenes": [
+   "cierva"
+  ],
+  "teaser": "",
+  "hook": "¿Te tirarías a un lago congelado para buscar una espada?"
+ },
+ {
+  "id": "M8-banco",
+  "film": 8,
+  "scenes": [
+   "banco"
+  ],
+  "teaser": "",
+  "hook": "¿Te escaparías de un banco montado en un dragón?"
+ },
+ {
+  "id": "M8-neville",
+  "film": 8,
+  "scenes": [
+   "neville"
+  ],
+  "teaser": "",
+  "hook": "¿Qué pasaría si el chico más torpe del colegio enfrentara a Voldemort?"
+ },
+ {
+  "id": "M8-recuerdos",
+  "film": 8,
+  "scenes": [
+   "recuerdos"
+  ],
+  "teaser": "",
+  "hook": "¿Y si el villano de toda la historia… era en realidad el héroe?"
+ },
+ {
+  "id": "M8-duelo",
+  "film": 8,
+  "scenes": [
+   "duelo"
+  ],
+  "teaser": "",
+  "hook": "¿Cómo termina el duelo final entre Harry y Voldemort?"
+ }
+]

@@ -5,6 +5,8 @@ import { PartSpec } from "../engine/types";
 import { Short, ShortDef, shortTiming, HookAudio } from "./Short";
 import list from "./list.json";
 import hooksData from "../data/hooks.json";
+import momentos from "../momentos/list.json";
+import momentosHooks from "../data/momentos-hooks.json";
 import { p1full, p1fullAudio } from "../peli1d/full";
 import { p2full, p2fullAudio } from "../peli2d/full";
 import { p3full, p3fullAudio } from "../peli3/full";
@@ -26,11 +28,17 @@ const FILMS: Record<number, { spec: PartSpec; audio: AudioData; file: string }> 
 };
 const hooks = hooksData as Record<string, HookAudio>;
 
-const comps = (list as ShortDef[]).map((def) => {
-  const film = FILMS[def.film];
-  const C: React.FC = () => <Short def={def} spec={film.spec} audio={film.audio} audioFile={film.file} hook={hooks[def.id]} />;
-  return { id: `Short-${def.id}`, C, total: shortTiming(def, film.audio, hooks[def.id]).total };
-});
+const build = (defs: ShortDef[], hk: Record<string, HookAudio>, prefix: string) =>
+  defs.map((def) => {
+    const film = FILMS[def.film];
+    const C: React.FC = () => <Short def={def} spec={film.spec} audio={film.audio} audioFile={film.file} hook={hk[def.id]} />;
+    return { id: `${prefix}-${def.id}`, C, total: shortTiming(def, film.audio, hk[def.id]).total };
+  });
+const comps = [
+  ...build(list as ShortDef[], hooks, "Short"),
+  // Momentos clave: pregunta "¿qué pasaría si…?" y la escena directo
+  ...build(momentos as ShortDef[], momentosHooks as Record<string, HookAudio>, "Momento"),
+];
 
 export const ShortCompositions: React.FC = () => (
   <>
