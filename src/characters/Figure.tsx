@@ -74,6 +74,8 @@ export const FIGS: Partial<Record<CharId, Body>> = {
   eytukan: NAVI({ skin: "#438cd4", shade: "#2c6cb0", beads: "#e0b030", headdress: "#e0b030", build: 0.7 }),
   moat: NAVI({ female: true, skin: "#4a90d8", shade: "#3070b8", top: "#8a4ab0", beads: "#b06ad8", headdress: "#b06ad8" }),
   tsutey: NAVI({ skin: "#3d86d0", shade: "#2a66ac", paint: "#e04a3a", beads: "#e04a3a", build: 0.7 }),
+  recom: NAVI({ skin: "#4384c4", shade: "#2c64a0", top: "#4c4c2c", vest: "#3a3a24", bottom: "#3e3e2c", hairStyle: "buzz", paint: "#2a2a24", build: 0.8 }),
+  scoresby: HUMAN({ top: "#2a3a5a", bottom: "#2a2a3a", hair: "#9a9a90", hairStyle: "buzz", eye: "#5a7fa8", build: 0.7 }),
   soldado: HUMAN({ top: "#5a5a36", bottom: "#46462a", hairStyle: "buzz", mask: true, build: 0.7 }),
   neteyam: NAVI({ beads: "#e8e2c8", build: 0.4 }),
   loak: NAVI({ beads: "#e0a02a", build: 0.3 }),

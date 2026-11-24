@@ -1,0 +1,100 @@
+{
+ "id": "av2full",
+ "part": 0,
+ "style": "dyn",
+ "min": 540,
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Avatar, el camino del agua. ¿Qué harías si tu peor enemigo volviera de la muerte… con un cuerpo nuevo, y viniera a buscar a tu familia? Jake Sully ya no pelea solo por un planeta. Ahora pelea por sus hijos."
+  },
+  {
+   "id": "familia",
+   "text": "Pasaron más de diez años. Jake y Neytiri formaron una familia: Neteyam, el hijo mayor y responsable; Lo'ak, el rebelde que siempre se mete en problemas; Tuk, la más chiquita; y Kiri, una adolescente misteriosa que nació del avatar de Grace. Y también está Spider, un chico humano que creció con ellos en la selva."
+  },
+  {
+   "id": "regreso",
+   "text": "Pero una noche, el cielo se llena de luces. Los humanos vuelven. Naves gigantes aterrizan quemando la selva, y en pocos meses construyen una ciudad nueva. Esta vez no vienen por un mineral: vienen a quedarse, porque la Tierra se está muriendo."
+  },
+  {
+   "id": "recom",
+   "text": "Y traen una sorpresa: el coronel Quaritch. Antes de morir, guardó sus recuerdos. Ahora los pusieron en un cuerpo na'vi, azul y de tres metros. Despierta, se mira las manos… y tiene una sola misión: encontrar a Jake Sully."
+  },
+  {
+   "id": "captura",
+   "text": "Quaritch y sus soldados na'vi encuentran a los chicos jugando en el bosque y los atrapan. Jake y Neytiri llegan a rescatarlos: flechas, disparos, explosiones. Logran salvar a sus hijos… pero Quaritch se lleva a Spider."
+  },
+  {
+   "id": "huida",
+   "text": "Jake entiende que mientras se quede, todo el clan está en peligro. Entonces toma una decisión difícil: deja la selva y vuela con su familia lejos, muy lejos, hasta el mar, a pedir refugio al clan Metkayina, el pueblo del agua."
+  },
+  {
+   "id": "arrecife",
+   "text": "Los Metkayina viven en un arrecife de aguas turquesas, en casas tejidas sobre el mar. Son distintos: tienen la piel verde azulada, colas anchas y brazos fuertes para nadar. El jefe Tonowari los acepta, aunque su esposa Ronal, la guía espiritual, desconfía."
+  },
+  {
+   "id": "aprenden",
+   "text": "Los chicos tienen que aprender todo de nuevo: a aguantar la respiración, a leer las olas, a nadar como peces. Y a montar los ilu, criaturas marinas de cuello largo, y los skimwings, peces voladores gigantes que saltan sobre el agua."
+  },
+  {
+   "id": "bullying",
+   "text": "Pero no es fácil. Aonung, el hijo del jefe, se burla de ellos por sus colas finas y por ser diferentes. Lo'ak se pelea con él, y Jake lo reta. Lo'ak siente que nunca va a estar a la altura de su hermano mayor."
+  },
+  {
+   "id": "kiri",
+   "text": "Kiri, en cambio, se siente conectada con todo. Bajo el agua escucha a Eywa respirar. En un árbol sagrado del fondo del mar intenta conectarse con su mamá, Grace… pero tiene un ataque y casi muere. Nadie sabe quién es su padre."
+  },
+  {
+   "id": "payakan",
+   "text": "Un día, Aonung abandona a Lo'ak en aguas peligrosas. Un tiburón gigante lo ataca… y lo salva un tulkun, una ballena enorme e inteligente, con una aleta lastimada. Se llama Payakan. Los dos se hacen inseparables."
+  },
+  {
+   "id": "tulkun",
+   "text": "Lo'ak descubre que los tulkun son hermanos espirituales de los Metkayina: cantan, piensan, sienten y odian matar. Pero Payakan fue expulsado de su grupo. Nadie quiere contar por qué."
+  },
+  {
+   "id": "spider",
+   "text": "Mientras tanto, Spider vive con Quaritch. Al principio lo odia. Pero de a poco le enseña a su papá a moverse como na'vi y a hablar su idioma. Quaritch, sin darse cuenta, empieza a quererlo."
+  },
+  {
+   "id": "cazadores",
+   "text": "Quaritch quema aldeas buscando a Jake y se une a unos cazadores de tulkun. En el cerebro de estas ballenas hay un líquido que frena el envejecimiento y vale millones. Con barcos y arpones, matan a una madre tulkun frente a los ojos de los Metkayina."
+  },
+  {
+   "id": "secreto",
+   "text": "Lo'ak descubre el secreto de Payakan: cuando los humanos mataron a su madre, él los atacó, y muchos tulkun murieron en la pelea. Su pueblo no mata, por eso lo echaron. Lo'ak lo entiende: él también se siente un marginado."
+  },
+  {
+   "id": "trampa",
+   "text": "Para atraer a Jake, Quaritch secuestra a Lo'ak, a Tsireya y a Tuk, y los ata en el barco ballenero. Jake, Neytiri y todo el clan Metkayina salen al mar a buscarlos, montados en ilu y skimwings."
+  },
+  {
+   "id": "payakan_ataca",
+   "text": "Y entonces llega Payakan. La ballena destroza los arpones, aplasta los botes y embiste al barco gigante. Por primera vez desde que lo echaron, Payakan pelea… pero esta vez para salvar a su amigo."
+  },
+  {
+   "id": "rescate",
+   "text": "Neteyam y Lo'ak rescatan a Tsireya en medio del caos. Están por escapar nadando, cuando suena un disparo. Neteyam cae. Lo llevan a una roca… pero la herida es muy grave. Neteyam, el hijo mayor, muere en los brazos de sus padres."
+  },
+  {
+   "id": "furia",
+   "text": "Neytiri explota de dolor. Agarra a Spider y lo amenaza con un cuchillo. Quaritch, a su vez, agarra a Kiri. Jake grita: ¡no! Quaritch suelta a Kiri, y Neytiri suelta a Spider."
+  },
+  {
+   "id": "hundimiento",
+   "text": "El barco se parte y se hunde. Jake pelea contra Quaritch bajo el agua, entre pasillos inundados. Kiri llama a las criaturas del mar con su mente, y peces luminosos llevan a Neytiri y a Tuk a la superficie. Jake se queda sin aire… y Lo'ak lo salva."
+  },
+  {
+   "id": "spider_elige",
+   "text": "Quaritch queda atrapado, ahogándose. Spider podría dejarlo… pero lo salva. Y después, le da la espalda y vuelve con los Sully. Quaritch, solo en una roca, ve a su hijo irse."
+  },
+  {
+   "id": "funeral",
+   "text": "Los Metkayina entregan el cuerpo de Neteyam al mar, en la bahía de los antepasados, donde su espíritu va a vivir para siempre. Lo'ak escucha a su hermano a través de los árboles sagrados del fondo del mar."
+  },
+  {
+   "id": "final",
+   "text": "Jake decide quedarse. Tonowari los acepta como parte del pueblo del agua. Y Jake aprende la lección más importante: el camino del agua no tiene principio ni final. Si te gustó, seguí mi perfil para ver Avatar tres: fuego y ceniza."
+  }
+ ]
+}

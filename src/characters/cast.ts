@@ -102,6 +102,8 @@ export const CAST = {
   tsireya: { name: "Tsireya", color: "#3ac9b8", head: "#6fc0b8", hair: "#101018", hairStyle: "none", height: 1.15, width: 0, extras: [] },
   aonung: { name: "Aonung", color: "#1a8f7a", head: "#5fb8b0", hair: "#101018", hairStyle: "none", height: 1.18, width: 0.2, extras: [] },
   varang: { name: "Varang", color: "#c0392b", head: "#5a6a80", hair: "#1a0a0a", hairStyle: "none", height: 1.25, width: 0, extras: [] },
+  recom: { name: "Recom", color: "#5a5a3a", head: "#4384c4", hair: "#1a1a20", hairStyle: "none", height: 1.28, width: 0.5, extras: [] },
+  scoresby: { name: "Capitán", color: "#2a3a5a", head: "#e8b48f", hair: "#8a8a80", hairStyle: "none", height: 1.02, width: 0.6, extras: [] },
   soldado: { name: "Soldado", color: "#5a5a3a", head: "#e8b48f", hair: "#3a3020", hairStyle: "none", height: 1, width: 0.4, extras: [] },
 } satisfies Record<string, CharDef>;
 
