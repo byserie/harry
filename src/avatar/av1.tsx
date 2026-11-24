@@ -27,7 +27,7 @@ const qu = { coronel: w("quaritch", "coronel"), cicatrices: w("quaritch", "cicat
 const mi = { mineral: w("mineral", "mineral"), unobtanio: w("mineral", "unobtanio"), selfridge: w("mineral", "selfridge"), plata: w("mineral", "plata"), debajo: w("mineral", "debajo") };
 const av = { navi: w("avatares", "navi"), azules: w("avatares", "azules"), avatares: w("avatares", "avatares"), mente: w("avatares", "mente"), grace: w("avatares", "grace") };
 const en = { acuesta: w("enlace", "acuesta"), cierra: w("enlace", "cierra"), despierta: w("enlace", "despierta"), dedos: w("enlace", "dedos"), tambaleando: w("enlace", "tambaleando"), tira: w("enlace", "tira"), corriendo: w("enlace", "corriendo"), siente: w("enlace", "siente") };
-const se = { juega: w("selva", "juega"), esconden: w("selva", "esconden"), despierta: w("selva", "despierta"), martillo: w("selva", "martillo"), planta: w("selva", "planta"), va: w("selva", "va", 1), peor: w("selva", "peor") };
+const se = { juega: w("selva", "juega"), esconden: w("selva", "esconden"), despierta: w("selva", "despierta"), martillo: w("selva", "martillo"), planta: w("selva", "planta"), va: w("selva", "va"), peor: w("selva", "peor") };
 const th = { thanator: w("thanator", "thanator"), corriendo: w("thanator", "corriendo"), cascada: w("thanator", "cascada"), rio: w("thanator", "rio"), solo: w("thanator", "solo"), noche: w("thanator", "noche") };
 const lo = { lobos: w("lobos", "lobos"), antorcha: w("lobos", "antorcha"), pelea: w("lobos", "pelea"), flechas: w("lobos", "flechas"), salva: w("lobos", "salva"), neytiri: w("lobos", "neytiri") };
 const sm = { apaga: w("semillas", "apaga"), bebe: w("semillas", "bebe"), irse: w("semillas", "irse"), semillas: w("semillas", "semillas"), posan: w("semillas", "posan"), senal: w("semillas", "senal") };
@@ -50,7 +50,7 @@ const cl = { vuela: w("clanes", "vuela"), miles: w("clanes", "miles"), ayuda: w(
 const ba = { nave: w("batalla", "nave"), bombas: w("batalla", "bombas"), batalla: w("batalla", "batalla"), dragones: w("batalla", "dragones"), flechas: w("batalla", "flechas"), caen: w("batalla", "caen"), tsutey: w("batalla", "tsutey") };
 const ey = { perdido: w("eywa", "perdido"), responde: w("eywa", "responde"), animales: w("eywa", "animales"), martillo: w("eywa", "martillo"), thanators: w("eywa", "thanators"), salta: w("eywa", "salta"), explotar: w("eywa", "explotar") };
 const du = { robot: w("duelo", "robot"), capsula: w("duelo", "capsula"), ventana: w("duelo", "ventana"), ahogar: w("duelo", "ahogar"), pelea: w("duelo", "pelea"), flechas: w("duelo", "flechas") };
-const ma = { corre: w("mascara", "corre"), desmayado: w("mascara", "desmayado"), mascara: w("mascara", "mascara"), despierta: w("mascara", "despierta"), ojos: w("mascara", "ojos"), veo: w("mascara", "veo") };
+const ma = { corre: w("mascara", "corre"), desmayado: w("mascara", "desmayado"), mascara: w("mascara", "mascara"), despierta: w("mascara", "despierta"), ojos: w("mascara", "abraza"), veo: w("mascara", "veo") };
 const fi = { expulsados: w("final", "expulsados"), almas: w("final", "almas"), espiritu: w("final", "espiritu"), abre: w("final", "abre"), nueva: w("final", "nueva") };
 
 const scenes: Record<string, SceneSpec> = {
@@ -740,9 +740,47 @@ const TALK: [string, string, string, number, number?][] = [
   ["clanes", "jakenavi", "ayuda", 2],
   ["clanes", "neytiri", "bandos", 3],
   ["mascara", "neytiri", "veo", 1.6],
-  ["mascara", "jake", "ojos", 1],
+  ["mascara", "jake", "veo", 1],
   ["selva", "jakenavi", "planta", 1],
 ];
+// frases en globos de diálogo
+const SAY: [string, string, string, string][] = [
+  ["tierra", "soldado", "oferta", "Tu hermano iba a ir a Pandora. Podés ir vos."],
+  ["quaritch", "quaritch", "advierte", "¡Todo lo que vive allá afuera quiere matarte!"],
+  ["quaritch", "quaritch", "marine", "Vos sos marine. Me caés bien."],
+  ["mineral", "selfridge", "plata", "¡Cada kilo vale una fortuna!"],
+  ["avatares", "grace", "grace", "¿Un marine? ¡Yo pedí un científico!"],
+  ["enlace", "jakenavi", "siente", "¡Puedo correr! ¡Puedo correr!"],
+  ["selva", "jakenavi", "planta", "¡Vamos! ¿Eso es todo?"],
+  ["semillas", "neytiri", "bebe", "¡Sos como un bebé! Hacés mucho ruido."],
+  ["semillas", "neytiri", "senal", "Es una señal de Eywa…"],
+  ["arbol", "tsutey", "matarlo", "¡Es un caminante de sueños!"],
+  ["arbol", "moat", "ensenar", "Neytiri, enseñale nuestras costumbres."],
+  ["espia", "quaritch", "trato", "Contame todo y te devuelvo tus piernas."],
+  ["espia", "jake", "acepta", "Trato hecho."],
+  ["aprende", "jakenavi", "agradecerle", "Gracias, hermano. Tu espíritu vuelve a Eywa."],
+  ["caballo", "neytiri", "rie", "¡Jajaja! ¡Otra vez!"],
+  ["montanas", "neytiri", "dragon", "Si el ikran no te elige… te mata."],
+  ["ikran", "jakenavi", "vuela", "¡¡Siiiii!!"],
+  ["diario", "jake", "videos", "Día 76… ya no sé qué es real."],
+  ["amor", "neytiri", "aman", "Te elijo, Jake."],
+  ["amor", "jakenavi", "eligen", "Y yo a vos."],
+  ["topadoras", "jakenavi", "rompe", "¡Basta!"],
+  ["topadoras", "quaritch", "bando", "Se pasó al otro bando."],
+  ["ataque", "jakenavi", "convencer", "¡Tienen que irse ya!"],
+  ["traicion", "neytiri", "vaya", "¡Andate! ¡No vuelvas nunca!"],
+  ["escape", "trudy", "trudy", "¡Suban, rápido!"],
+  ["toruk_makto", "neytiri", "perdona", "Volviste…"],
+  ["toruk_makto", "tsutey", "lider", "Vamos a pelear con vos."],
+  ["grace", "grace", "eywa", "La veo… es real."],
+  ["clanes", "jakenavi", "ayuda", "Eywa… ayudanos."],
+  ["clanes", "neytiri", "bandos", "Eywa no elige bandos."],
+  ["mascara", "neytiri", "veo", "Te veo."],
+];
+for (const [sid, who, word, text] of SAY) {
+  const tr = scenes[sid]?.chars.find((c) => c.who === who);
+  if (tr) tr.acts = [...(tr.acts ?? []), { t: w(sid, word), say: text }];
+}
 for (const [sid, who, word, dur] of TALK) {
   const tr = scenes[sid]?.chars.find((c) => c.who === who);
   if (tr) tr.acts = [...(tr.acts ?? []), { t: w(sid, word), talk: dur }];

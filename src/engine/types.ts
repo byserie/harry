@@ -18,7 +18,8 @@ export type Act =
   | { t: number; scale: number; dur?: number }
   | { t: number; alpha: number; dur?: number }
   | { t: number; stone: boolean }
-  | { t: number; talk: number }; // habla durante talk segundos (boca y gestos)
+  | { t: number; talk: number } // habla durante talk segundos (boca y gestos)
+  | { t: number; say: string; dur?: number }; // globo de diálogo (también mueve la boca)
 
 export type CharTrack = {
   who: CharId;
@@ -57,6 +58,8 @@ export type SceneSpec = {
   shake?: [number, number, number?][]; // [t, intensidad, duración]
   sfx?: { t: number; s: SfxName; v?: number }[];
   trans?: Trans;
+  /** false = usar las teclas de cámara a mano en vez del encuadre automático (Avatar). */
+  autoCam?: boolean;
   /** recorte en el que se muestra el contenido (para escenas partidas). */
 };
 

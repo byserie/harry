@@ -17,6 +17,8 @@ export type CharState = {
   alpha: number;
   stone: boolean;
   talking: boolean;
+  say: string | null;
+  sayK: number;
 };
 
 const FPS = 30;
@@ -156,8 +158,13 @@ export const charState = (c: CharTrack, t: number): CharState => {
   }
   const so = latest(p.acts, t, "stone") as { stone: boolean } | undefined;
   const tk = latest(p.acts, t, "talk") as { t: number; talk: number } | undefined;
+  const sy = latest(p.acts, t, "say") as { t: number; say: string; dur?: number } | undefined;
+  const sayDur = sy ? sy.dur ?? Math.max(1.6, sy.say.length * 0.075) : 0;
+  const saying = !!sy && t < sy.t + sayDur;
   return {
-    talking: !!tk && t < tk.t + tk.talk,
+    say: saying ? sy!.say : null,
+    sayK: saying ? Math.min(1, (t - sy!.t) / 0.18) * Math.min(1, (sy!.t + sayDur - t) / 0.18) : 0,
+    talking: (!!tk && t < tk.t + tk.talk) || saying,
     stone: so?.stone ?? false,
     alpha,
     x,

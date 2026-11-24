@@ -8,9 +8,21 @@ import { kf } from "../lib/pose";
 import { charState } from "./charState";
 import { SceneSpec, Trans } from "./types";
 import { dynCam, Pops, SpeedLines } from "./Dyn";
+import { autoFrame, SCREEN_CY } from "./autoframe";
 import { BAND, LAND_SCALE, LandCtx, WideCtx } from "./layout";
 
 const TRANS_FRAMES = 12;
+
+/** Golpe de zoom corto en impactos (sin cortes al azar). */
+const punchOf = (spec: SceneSpec, t: number) => {
+  let p = 0;
+  for (const s of spec.sfx ?? []) {
+    if (!["boom", "crash", "roar", "zap"].includes(s.s)) continue;
+    const d = t - s.t;
+    if (d >= 0 && d < 0.5) p = Math.max(p, (s.s === "boom" || s.s === "crash" ? 0.08 : 0.05) * Math.exp(-d * 8));
+  }
+  return p;
+};
 
 const Chars: React.FC<{ spec: SceneSpec; t: number }> = ({ spec, t }) => {
   const states = spec.chars.map((c) => ({ c, st: charState(c, t) })).filter((o) => o.st.show);
@@ -35,6 +47,8 @@ const Chars: React.FC<{ spec: SceneSpec; t: number }> = ({ spec, t }) => {
             stone={st.stone}
             talking={st.talking}
             mask={c.mask}
+            say={st.say}
+            sayK={st.sayK}
           />
         ) : (
         <Stickman
@@ -102,6 +116,9 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; 
   const t = frame / fps;
   const cam0 = camAt(spec, t);
   const dc = dyn ? dynCam(spec, t, land) : { zMul: 1, xOff: 0, rot: 0 };
+  // Avatar (16:9 a lo ancho): cámara automática que encuadra a los personajes
+  const af = wide ? (spec.cam && spec.autoCam === false ? { z: Math.max(1, cam0.z), cx: cam0.x, cy: cam0.y } : autoFrame(spec, t)) : { z: 1, cx: 540, cy: 1030 };
+  const punch = wide ? Math.max(0, dc.zMul / (1 + 0) - 1) * 0 + punchOf(spec, t) : 0;
   const cam = land ? { z: Math.max(1, 1 + (cam0.z - 1) * 0.75) * dc.zMul, x: cam0.x + dc.xOff, y: cam0.y } : { z: cam0.z * dc.zMul, x: cam0.x + dc.xOff, y: cam0.y };
   let shake = 0;
   for (const [st, amt, d = 0.35] of spec.shake ?? []) {
@@ -143,13 +160,23 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; 
                 boxShadow: wide ? undefined : "0 0 60px 20px rgba(0,0,0,0.6)",
               }}
             >
-              <Camera zoom={cam.z} fx={cam.x} fy={cam.y} shake={shake} frame={frame}>
-                <Bg t={t} />
-                {Under ? <Under t={t} /> : null}
-                <Chars spec={spec} t={t} />
-                {Fx ? <Fx t={t} /> : null}
-              </Camera>
+              {wide ? (
+                <Camera zoom={af.z * (1 + punch)} fx={540} fy={SCREEN_CY} panX={-af.z * (1 + punch) * (af.cx - 540)} panY={-af.z * (1 + punch) * (af.cy - SCREEN_CY)} shake={shake} frame={frame}>
+                  <Bg t={t} />
+                  {Under ? <Under t={t} /> : null}
+                  <Chars spec={spec} t={t} />
+                  {Fx ? <Fx t={t} /> : null}
+                </Camera>
+              ) : (
+                <Camera zoom={cam.z} fx={cam.x} fy={cam.y} shake={shake} frame={frame}>
+                  <Bg t={t} />
+                  {Under ? <Under t={t} /> : null}
+                  <Chars spec={spec} t={t} />
+                  {Fx ? <Fx t={t} /> : null}
+                </Camera>
+              )}
             </div>
+            {wide ? <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.42) 100%)", pointerEvents: "none" }} /> : null}
           </>
         ) : (
           <Camera zoom={cam.z} fx={cam.x} fy={cam.y} shake={shake} frame={frame}>

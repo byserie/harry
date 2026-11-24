@@ -93,15 +93,45 @@ type P = { x: number; y: number };
 const rad = (d: number) => (d * Math.PI) / 180;
 const down = (a: number): P => ({ x: Math.sin(rad(a)), y: Math.cos(rad(a)) });
 const add = (p: P, d: P, k: number): P => ({ x: p.x + d.x * k, y: p.y + d.y * k });
-const OUT = 7; // grosor del contorno
+const OUT = 5.5; // grosor del contorno
 
-/** Segmento con volumen: contorno + relleno. */
-const Seg: React.FC<{ a: P; b: P; w: number; col: string }> = ({ a, b, w, col }) => (
-  <>
-    <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={INK} strokeWidth={w + OUT} strokeLinecap="round" />
-    <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={col} strokeWidth={w} strokeLinecap="round" />
-  </>
-);
+/** Aclara (k>0) u oscurece (k<0) un color hex. */
+export const tone = (hex: string, k: number) => {
+  const n = parseInt(hex.replace("#", "").slice(0, 6), 16);
+  const ch = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((c) => Math.round(k > 0 ? c + (255 - c) * k : c * (1 + k)));
+  return `#${ch.map((c) => Math.max(0, Math.min(255, c)).toString(16).padStart(2, "0")).join("")}`;
+};
+
+/** Segmento con volumen: contorno, relleno, luz de un lado y sombra del otro. */
+const Seg: React.FC<{ a: P; b: P; w: number; col: string }> = ({ a, b, w, col }) => {
+  const dx = b.x - a.x, dy = b.y - a.y;
+  const L = Math.hypot(dx, dy) || 1;
+  const px = -dy / L, py = dx / L;
+  const o = w * 0.24;
+  return (
+    <>
+      <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={INK} strokeWidth={w + OUT} strokeLinecap="round" />
+      <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={col} strokeWidth={w} strokeLinecap="round" />
+      <line x1={a.x + px * o} y1={a.y + py * o} x2={b.x + px * o} y2={b.y + py * o} stroke={tone(col, -0.28)} strokeWidth={w * 0.34} strokeLinecap="round" opacity={0.7} />
+      <line x1={a.x - px * o * 1.1} y1={a.y - py * o * 1.1} x2={b.x - px * o * 1.1} y2={b.y - py * o * 1.1} stroke={tone(col, 0.35)} strokeWidth={w * 0.18} strokeLinecap="round" opacity={0.75} />
+    </>
+  );
+};
+
+/** Mano con pulgar y dedos. */
+const Hand: React.FC<{ p: P; r: number; col: string; dir: P }> = ({ p, r, col, dir }) => {
+  const a = (Math.atan2(dir.y, dir.x) * 180) / Math.PI - 90;
+  return (
+    <g transform={`translate(${p.x} ${p.y}) rotate(${a})`}>
+      <ellipse cx={r * 0.55} cy={r * 0.1} rx={r * 0.38} ry={r * 0.26} fill={col} stroke={INK} strokeWidth={3.5} transform={`rotate(-35 ${r * 0.55} ${r * 0.1})`} />
+      <path d={`M ${-r * 0.75} ${-r * 0.2} Q ${-r * 0.9} ${r * 1.15} 0 ${r * 1.25} Q ${r * 0.9} ${r * 1.15} ${r * 0.75} ${-r * 0.2} Q 0 ${-r * 0.75} ${-r * 0.75} ${-r * 0.2} Z`} fill={col} stroke={INK} strokeWidth={4} />
+      {[-0.35, 0, 0.35].map((k, i) => (
+        <line key={i} x1={k * r} y1={r * 0.55} x2={k * r * 1.1} y2={r * 1.05} stroke={tone(col, -0.35)} strokeWidth={2.5} strokeLinecap="round" />
+      ))}
+      <ellipse cx={-r * 0.25} cy={r * 0.25} rx={r * 0.25} ry={r * 0.35} fill={tone(col, 0.3)} opacity={0.6} />
+    </g>
+  );
+};
 
 type Props = {
   who: CharId;
@@ -118,9 +148,11 @@ type Props = {
   stone?: boolean;
   talking?: boolean;
   mask?: boolean;
+  say?: string | null;
+  sayK?: number;
 };
 
-export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose: pose0, expression = "neutral", showName = true, opacity = 1, rotate = 0, holding, stone = false, talking = false, mask }) => {
+export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose: pose0, expression = "neutral", showName = true, opacity = 1, rotate = 0, holding, stone = false, talking = false, mask, say = null, sayK = 0 }) => {
   const frame = useCurrentFrame();
   const c = CAST[who];
   const b0 = FIGS[who]!;
@@ -167,10 +199,21 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
   const shoulder = add(hip, up, TORSO);
   const neck = add(shoulder, up, NECK);
   const head = add(neck, up, HR + 4);
-  const elbR = add(shoulder, down(pose.rSh), UA);
+  // torso (antes de los miembros: brazos y piernas salen de los costados)
+  const perp: P = { x: -up.y, y: up.x };
+  const shW = (navi ? 34 : 38) + build * 14;
+  const waW = (navi ? 20 : 30) + build * 8;
+  const hpW = (navi ? 28 : 32) + build * 8 + (b.female ? 6 : 0);
+  const shR = add(add(shoulder, perp, shW * 0.72), up, -6);
+  const shL = add(add(shoulder, perp, -shW * 0.72), up, -6);
+  const hipR = add(hip, perp, hpW * 0.42);
+  const hipL = add(hip, perp, -hpW * 0.42);
+  const elbR = add(shR, down(pose.rSh), UA);
   const handR = add(elbR, down(pose.rSh + pose.rEl), FA);
-  const elbL = add(shoulder, down(pose.lSh), UA);
+  const elbL = add(shL, down(pose.lSh), UA);
   const handL = add(elbL, down(pose.lSh + pose.lEl), FA);
+  const kRr: P = { x: kR.x + hipR.x - hip.x, y: kR.y }, aRr: P = { x: aR.x + hipR.x - hip.x, y: aR.y };
+  const kLl: P = { x: kL.x + hipL.x - hip.x, y: kL.y }, aLl: P = { x: aL.x + hipL.x - hip.x, y: aL.y };
 
   const sleeve = b.top ?? b.skin;
   const pantsLong = !navi && b.bottom !== b.skin;
@@ -181,13 +224,13 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
     <g opacity={far ? 0.96 : 1}>
       <Seg a={sh0} b={el} w={limbW + 2} col={!navi && b.top ? sleeve : b.skin} />
       <Seg a={el} b={hd} w={limbW} col={b.skin} />
-      <circle cx={hd.x} cy={hd.y} r={limbW * 0.62} fill={b.skin} stroke={INK} strokeWidth={4} />
+      <Hand p={hd} r={limbW * 0.72} col={b.skin} dir={{ x: hd.x - el.x, y: hd.y - el.y }} />
       {navi && b.beads ? <circle cx={el.x * 0.4 + hd.x * 0.6} cy={el.y * 0.4 + hd.y * 0.6} r={limbW * 0.5} fill="none" stroke={b.beads} strokeWidth={5} /> : null}
     </g>
   );
-  const leg = (k: P, a: P) => (
+  const leg = (k: P, a: P, h0: P) => (
     <g>
-      <Seg a={hip} b={k} w={legW + 3} col={thigh} />
+      <Seg a={h0} b={k} w={legW + 3} col={thigh} />
       <Seg a={k} b={a} w={legW - 2} col={shin} />
       {navi ? (
         <ellipse cx={a.x + 12} cy={a.y + 2} rx={20} ry={9} fill={b.skin} stroke={INK} strokeWidth={4} />
@@ -198,10 +241,6 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
   );
 
   // torso
-  const perp: P = { x: -up.y, y: up.x };
-  const shW = (navi ? 34 : 38) + build * 14;
-  const waW = (navi ? 20 : 30) + build * 8;
-  const hpW = (navi ? 28 : 32) + build * 8 + (b.female ? 6 : 0);
   const pt = (base: P, w: number, side: number) => add(base, perp, w * side);
   const waist = add(hip, up, TORSO * 0.42);
   const torsoPath = `M ${pt(shoulder, shW, -1).x} ${pt(shoulder, shW, -1).y}
@@ -257,12 +296,33 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
         ) : null}
         {tail}
         {braid}
-        {arm(shoulder, elbL, handL, true)}
-        {leg(kL, aL)}
+        {arm(shL, elbL, handL, true)}
+        {leg(kLl, aLl, hipL)}
         {/* cuello */}
         <Seg a={shoulder} b={neck} w={navi ? 16 : 20} col={b.skin} />
         {/* torso */}
-        <path d={torsoPath} fill={b.top ?? b.skin} stroke={INK} strokeWidth={OUT} strokeLinejoin="round" />
+        <defs>
+          <linearGradient id={`tg-${who}`} x1="0" y1="0" x2="1" y2="0.3">
+            <stop offset="0" stopColor={tone(b.top ?? b.skin, -0.22)} />
+            <stop offset="0.55" stopColor={b.top ?? b.skin} />
+            <stop offset="1" stopColor={tone(b.top ?? b.skin, 0.22)} />
+          </linearGradient>
+        </defs>
+        <path d={torsoPath} fill={`url(#tg-${who})`} stroke={INK} strokeWidth={OUT} strokeLinejoin="round" />
+        {/* músculos / pliegues */}
+        {!b.female && !b.top ? (
+          <g stroke={tone(b.skin, -0.3)} strokeWidth={3.5} fill="none" strokeLinecap="round" opacity={0.7}>
+            <path d={`M ${shoulder.x - shW * 0.55} ${shoulder.y + 34} Q ${shoulder.x - shW * 0.2} ${shoulder.y + 52} ${shoulder.x} ${shoulder.y + 36}`} />
+            <path d={`M ${shoulder.x + shW * 0.55} ${shoulder.y + 34} Q ${shoulder.x + shW * 0.2} ${shoulder.y + 52} ${shoulder.x} ${shoulder.y + 36}`} />
+            <path d={`M ${waist.x} ${waist.y - 30} L ${waist.x} ${waist.y + 20}`} />
+          </g>
+        ) : null}
+        {b.top && !navi ? (
+          <g stroke={tone(b.top, -0.3)} strokeWidth={3} fill="none" opacity={0.8}>
+            <path d={`M ${shoulder.x - 10} ${shoulder.y + 6} L ${shoulder.x} ${shoulder.y + 26} L ${shoulder.x + 10} ${shoulder.y + 6}`} />
+            <rect x={shoulder.x + shW * 0.25} y={shoulder.y + 30} width={18} height={14} rx={3} />
+          </g>
+        ) : null}
         {/* sombra lateral del torso */}
         <path d={torsoPath} fill="rgba(0,0,0,0.13)" stroke="none" clipPath="none" transform={`translate(${-perp.x * shW * 0.9} ${-perp.y * shW * 0.9})`} opacity={0.0} />
         <path
@@ -294,7 +354,7 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
             <line x1={pt(beltY, hpW, -1).x} y1={beltY.y + 3} x2={pt(beltY, hpW, 1).x} y2={beltY.y + 3} stroke="#2a2018" strokeWidth={6} />
           </g>
         )}
-        {leg(kR, aR)}
+        {leg(kRr, aRr, hipR)}
         {chair ? (
           <g>
             {/* asiento, apoyapiés y ruedita delantera */}
@@ -304,11 +364,41 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
           </g>
         ) : null}
         <Face b={b} c={{ name: c.name }} p={head} HR={HR} turn={pose.headTurn} tilt={pose.headTilt} expression={expression} seed={seed} talking={talking} />
-        {arm(shoulder, elbR, handR, false)}
+        {arm(shR, elbR, handR, false)}
         {holding ? <g transform={`translate(${handR.x} ${handR.y})`}>{holding}</g> : null}
       </g>
-      {showName ? <Tag x={labelX} y={labelY} name={c.name} color={c.color} /> : null}
+      {showName && !say ? <Tag x={labelX} y={labelY} name={c.name} color={c.color} /> : null}
+      {say ? <Bubble x={labelX} y={labelY + 20} text={say} k={sayK} color={c.color} name={c.name} /> : null}
     </svg>
+  );
+};
+
+/** Globo de diálogo sobre la cabeza. */
+const Bubble: React.FC<{ x: number; y: number; text: string; k: number; color: string; name: string }> = ({ x, y, text, k, color, name }) => {
+  const words = text.split(" ");
+  const lines: string[] = [];
+  let cur = "";
+  for (const wd of words) {
+    if ((cur + " " + wd).trim().length > 22) {
+      lines.push(cur.trim());
+      cur = wd;
+    } else cur += " " + wd;
+  }
+  if (cur.trim()) lines.push(cur.trim());
+  const w = Math.max(...lines.map((l) => l.length)) * 21 + 60;
+  const h = lines.length * 46 + 34;
+  const bx = Math.max(-380 + w / 2, Math.min(1460 - w / 2, x));
+  return (
+    <g transform={`translate(${bx} ${y - h - 30}) scale(${0.6 + 0.4 * k})`} opacity={k}>
+      <path d={`M ${-w / 2 + 24} 0 H ${w / 2 - 24} Q ${w / 2} 0 ${w / 2} 24 V ${h - 24} Q ${w / 2} ${h} ${w / 2 - 24} ${h} H ${Math.min(30, w / 2 - 30) + (x - bx)} L ${x - bx} ${h + 34} L ${Math.max(-30, -w / 2 + 30) + (x - bx) + 20} ${h} H ${-w / 2 + 24} Q ${-w / 2} ${h} ${-w / 2} ${h - 24} V 24 Q ${-w / 2} 0 ${-w / 2 + 24} 0 Z`} fill="#ffffff" stroke={INK} strokeWidth={5} />
+      <rect x={-w / 2 + 16} y={-22} width={name.length * 17 + 28} height={36} rx={18} fill={color} stroke={INK} strokeWidth={4} />
+      <text x={-w / 2 + 30} y={4} fontFamily={FONT} fontWeight={700} fontSize={24} fill="#fff">{name}</text>
+      {lines.map((l, i) => (
+        <text key={i} x={0} y={52 + i * 46} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={38} fill={INK}>
+          {l}
+        </text>
+      ))}
+    </g>
   );
 };
 
@@ -395,7 +485,10 @@ const Face: React.FC<{ b: Body; c: { name: string }; p: P; HR: number; turn: num
   // orejas
   const earX = -rx * 0.75 + fx * 0.3;
   const ear = navi ? (
-    <path d={`M ${earX} ${-6} Q ${earX - 34} ${-40} ${earX - 26} ${-70} Q ${earX - 4} ${-40} ${earX + 10} ${-14} Z`} fill={b.skin} stroke={INK} strokeWidth={4} strokeLinejoin="round" />
+    <g>
+      <path d={`M ${earX} ${-6} Q ${earX - 34} ${-40} ${earX - 26} ${-70} Q ${earX - 4} ${-40} ${earX + 10} ${-14} Z`} fill={b.skin} stroke={INK} strokeWidth={4} strokeLinejoin="round" />
+      <path d={`M ${earX - 2} ${-14} Q ${earX - 22} ${-38} ${earX - 22} ${-58} Q ${earX - 6} ${-38} ${earX + 4} ${-18} Z`} fill={tone(b.skin, -0.25)} />
+    </g>
   ) : (
     <ellipse cx={earX - 2} cy={2} rx={8} ry={12} fill={b.skin} stroke={INK} strokeWidth={4} />
   );
@@ -429,7 +522,11 @@ const Face: React.FC<{ b: Body; c: { name: string }; p: P; HR: number; turn: num
       <ellipse cx={0} cy={0} rx={rx} ry={ry} fill={b.skin} stroke={INK} strokeWidth={OUT} />
       {/* sombra de la cara */}
       <path d={`M ${-rx * 0.2} ${-ry} Q ${-rx * 1.15} ${0} ${-rx * 0.2} ${ry} Q ${-rx * 0.95} ${0} ${-rx * 0.2} ${-ry} Z`} fill={b.shade} opacity={0.0} />
-      <ellipse cx={-rx * 0.45} cy={ry * 0.1} rx={rx * 0.5} ry={ry * 0.85} fill="rgba(0,0,0,0.08)" />
+      <ellipse cx={-rx * 0.45} cy={ry * 0.1} rx={rx * 0.5} ry={ry * 0.85} fill="rgba(0,0,0,0.09)" />
+      <ellipse cx={rx * 0.3} cy={-ry * 0.45} rx={rx * 0.35} ry={ry * 0.22} fill="#ffffff" opacity={0.14} />
+      {/* mejillas */}
+      <ellipse cx={fx - 26} cy={12} rx={10} ry={6} fill={navi ? tone(b.skin, -0.2) : "#e88a8a"} opacity={0.45} />
+      <ellipse cx={fx + 26} cy={12} rx={10} ry={6} fill={navi ? tone(b.skin, -0.2) : "#e88a8a"} opacity={0.45} />
       {/* rayas y pecas fosforescentes na'vi */}
       {navi && b.stripes ? (
         <g stroke={b.stripes} strokeWidth={4.5} fill="none" strokeLinecap="round" opacity={0.8}>

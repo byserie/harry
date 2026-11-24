@@ -1,0 +1,140 @@
+{
+ "id": "av1full",
+ "part": 0,
+ "style": "dyn",
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "Película: Avatar. ¿Y si pudieras tener un cuerpo nuevo, en otro planeta… y terminaras peleando contra tu propia gente? Esta es la historia de un soldado que cruzó la galaxia para conquistar un mundo… y terminó enamorándose de él."
+  },
+  {
+   "id": "tierra",
+   "text": "Año dos mil ciento cincuenta y cuatro. La Tierra está agotada. Jake Sully, un ex marine que quedó en silla de ruedas en la guerra, recibe una noticia terrible: su hermano gemelo, un científico, murió. Y le hacen una oferta: tomar su lugar en una misión al otro lado del espacio."
+  },
+  {
+   "id": "nave",
+   "text": "Jake viaja casi seis años dormido en una cápsula congelada, a bordo de una nave gigante. Cuando despierta, flota sin gravedad, y por la ventana aparece su destino: Pandora, una luna cubierta de selva que gira alrededor de un planeta enorme."
+  },
+  {
+   "id": "aterrizaje",
+   "text": "Bajan en una nave de transporte. Antes de abrir la puerta, todos se ponen máscaras: el aire de Pandora te mata en minutos. Afuera, la base humana es un fuerte rodeado de rejas, con helicópteros, camiones mineros y robots gigantes manejados por soldados."
+  },
+  {
+   "id": "quaritch",
+   "text": "El jefe de seguridad es el coronel Quaritch, un militar duro, con tres cicatrices en la cara. Les advierte: allá afuera, todo lo que vive quiere matarte. Y Jake le cae bien… porque también es marine."
+  },
+  {
+   "id": "mineral",
+   "text": "¿Por qué están ahí? Por un mineral carísimo que flota solo: el unobtanio. El jefe de la empresa, Parker Selfridge, solo piensa en la plata. Y el depósito más grande está justo debajo del hogar de los na'vi."
+  },
+  {
+   "id": "avatares",
+   "text": "Los na'vi son los nativos de Pandora: azules, de tres metros, con cola y una trenza especial. Para hablar con ellos, los científicos crearon avatares: cuerpos na'vi que se manejan con la mente desde una cápsula. La jefa del programa es la doctora Grace Augustine."
+  },
+  {
+   "id": "enlace",
+   "text": "Jake se acuesta en la cápsula, cierra los ojos… y despierta en su avatar. Mueve los dedos de los pies, se para tambaleando, tira todo al piso… y sale corriendo afuera. Después de años, ¡puede correr otra vez! Siente la tierra bajo los pies."
+  },
+  {
+   "id": "selva",
+   "text": "En su primera salida a la selva, Jake juega con unas plantas que se esconden cuando las tocás. Pero eso despierta a una bestia enorme, con cabeza de martillo. Jake se planta firme, la bestia se va… y aparece algo mucho peor."
+  },
+  {
+   "id": "thanator",
+   "text": "Un thanator: una pantera negra gigante, la bestia más peligrosa de Pandora. Jake sale corriendo, salta por una cascada y cae al río. Se salva… pero queda solo, perdido en la selva, y se está haciendo de noche."
+  },
+  {
+   "id": "lobos",
+   "text": "De noche, unos lobos de seis patas lo rodean. Jake prende una antorcha y pelea, pero son demasiados. Y entonces, desde los árboles, vuelan flechas: una guerrera na'vi lo salva. Se llama Neytiri."
+  },
+  {
+   "id": "semillas",
+   "text": "Neytiri apaga la antorcha y lo reta: sos como un bebé, hacés mucho ruido. Está por irse, pero unas semillas del Árbol Sagrado bajan flotando y se posan sobre Jake. Para los na'vi, es una señal de Eywa, su diosa."
+  },
+  {
+   "id": "arbol",
+   "text": "Neytiri lo lleva al Árbol Madre, el hogar del clan Omaticaya: un árbol gigante donde viven cientos de na'vi. Tsu'tey, el mejor guerrero, quiere matarlo. Pero la madre de Neytiri, la guía espiritual, decide que Neytiri le va a enseñar sus costumbres."
+  },
+  {
+   "id": "espia",
+   "text": "Cuando Jake despierta en la base, Quaritch le hace un trato secreto: si le pasa información sobre los na'vi, la empresa le paga una operación para volver a caminar con sus propias piernas. Jake acepta. Ahora es un espía."
+  },
+  {
+   "id": "aprende",
+   "text": "Empieza el entrenamiento. Jake aprende el idioma, a moverse en silencio, a cazar con arco, y a agradecerle al animal cuando lo caza. Descubre que con la trenza se conecta con los animales y las plantas: sienten lo mismo que él."
+  },
+  {
+   "id": "caballo",
+   "text": "Aprende a montar un caballo de seis patas, uniendo su trenza con la del animal. Se cae mil veces, Neytiri se ríe… pero de a poco, Jake empieza a pensar como un na'vi."
+  },
+  {
+   "id": "montanas",
+   "text": "Después lo llevan a las montañas flotantes: rocas gigantes suspendidas en el aire, con cascadas que caen al vacío. Para ser cazador, Jake tiene que trepar hasta arriba y domar a su propio ikran, un dragón volador."
+  },
+  {
+   "id": "ikran",
+   "text": "El ikran elige al jinete… intentando matarlo. Jake pelea, le salta encima y conecta su trenza. Se tiran al vacío… y Jake vuela por primera vez. Ahora es parte del clan."
+  },
+  {
+   "id": "diario",
+   "text": "Mientras tanto, Jake graba videos en la base. Cada día pasa más tiempo en Pandora y menos como humano. Ya no sabe qué es real: su vida en la silla… o su vida en la selva."
+  },
+  {
+   "id": "amor",
+   "text": "En el Árbol de las Voces, un lugar sagrado donde se escucha a los ancestros, Jake y Neytiri se dan cuenta de que se aman. Se eligen para toda la vida."
+  },
+  {
+   "id": "topadoras",
+   "text": "Pero a la mañana siguiente llegan las topadoras. Destruyen el bosque sagrado. Jake, desesperado, rompe las cámaras de las máquinas. Quaritch ve el video: Jake se cambió de bando."
+  },
+  {
+   "id": "ataque",
+   "text": "Selfridge da la orden. Quaritch ataca el Árbol Madre con helicópteros: primero gas, después misiles incendiarios. El árbol gigante se prende fuego y se derrumba. El padre de Neytiri muere. El clan pierde su hogar."
+  },
+  {
+   "id": "traicion",
+   "text": "Neytiri descubre que Jake era un espía desde el principio. Llora, furiosa, y le dice que se vaya para siempre. Jake y Grace son desconectados y encerrados en la base."
+  },
+  {
+   "id": "escape",
+   "text": "La piloto Trudy, que tampoco está de acuerdo, los ayuda a escapar en un helicóptero, junto con Norm y las cápsulas. Pero Quaritch les dispara, y una bala hiere a Grace."
+  },
+  {
+   "id": "toruk",
+   "text": "Jake sabe que el clan nunca lo va a perdonar. Entonces hace algo que solo cinco na'vi hicieron en la historia: se tira desde el cielo y doma al Toruk, el dragón rojo gigante, el rey de los cielos."
+  },
+  {
+   "id": "toruk_makto",
+   "text": "Cuando aterriza frente al clan montado en el Toruk, todos se arrodillan. Es Toruk Makto, una leyenda. Neytiri lo perdona, y Tsu'tey lo acepta como líder."
+  },
+  {
+   "id": "grace",
+   "text": "Llevan a Grace al Árbol de las Almas. El clan entero se conecta para pasarla a su avatar para siempre. Pero está muy débil… y muere. Su espíritu se va con Eywa."
+  },
+  {
+   "id": "clanes",
+   "text": "Jake vuela por todo Pandora y reúne a miles de guerreros de todos los clanes. Y le pide ayuda a Eywa. Neytiri le dice que Eywa no elige bandos… solo protege el equilibrio de la vida."
+  },
+  {
+   "id": "batalla",
+   "text": "Quaritch ataca con una nave gigante llena de bombas para destruir el Árbol de las Almas. Empieza la batalla: dragones contra helicópteros, flechas contra ametralladoras. Los na'vi caen uno tras otro. Tsu'tey muere."
+  },
+  {
+   "id": "eywa",
+   "text": "Y cuando todo parece perdido… Eywa responde. Los animales de Pandora atacan a los humanos: las bestias cabeza de martillo, los thanators, los dragones. Jake salta sobre la nave bomba y la hace explotar en el aire."
+  },
+  {
+   "id": "duelo",
+   "text": "Quaritch sale de su nave en un robot gigante y encuentra la cápsula de Jake. Rompe la ventana: el aire venenoso empieza a ahogar al Jake humano. Neytiri pelea contra el robot y, en el último segundo, le clava dos flechas al coronel."
+  },
+  {
+   "id": "mascara",
+   "text": "Neytiri corre y encuentra a Jake humano, desmayado. Le pone la máscara y lo despierta. Por primera vez, ella lo ve con sus ojos de verdad. Y le dice: te veo."
+  },
+  {
+   "id": "final",
+   "text": "Los humanos son expulsados de Pandora. Y en el Árbol de las Almas, con todo el clan, Jake pasa su espíritu para siempre al cuerpo na'vi. Abre los ojos… y empieza su nueva vida. Si te gustó, seguí mi perfil para ver Avatar dos: el camino del agua."
+  }
+ ],
+ "min": 560
+}
