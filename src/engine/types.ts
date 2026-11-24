@@ -17,7 +17,8 @@ export type Act =
   | { t: number; rot: number; dur?: number }
   | { t: number; scale: number; dur?: number }
   | { t: number; alpha: number; dur?: number }
-  | { t: number; stone: boolean };
+  | { t: number; stone: boolean }
+  | { t: number; talk: number }; // habla durante talk segundos (boca y gestos)
 
 export type CharTrack = {
   who: CharId;
@@ -32,6 +33,7 @@ export type CharTrack = {
   name?: boolean;
   opacity?: number;
   holding?: (t: number) => React.ReactNode;
+  mask?: boolean; // máscara de oxígeno (Avatar)
   acts?: Act[];
 };
 

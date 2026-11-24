@@ -33,6 +33,8 @@ const Chars: React.FC<{ spec: SceneSpec; t: number }> = ({ spec, t }) => {
             opacity={(c.opacity ?? 1) * st.alpha}
             holding={c.holding?.(t)}
             stone={st.stone}
+            talking={st.talking}
+            mask={c.mask}
           />
         ) : (
         <Stickman

@@ -4,8 +4,9 @@ import { AudioData } from "../engine/Part";
 import { kf } from "../lib/pose";
 import { Svg } from "../scenes/bg1";
 import { Banner, Flash, switchAt, wordClock } from "../scenes/util";
-import { Bow, LinkLab, PandoraDay, PandoraNight, Pod, Woodsprites } from "./assets";
-import { BattleSky, SkyFlight, CryoBay, FloatingMountains, HomeTree, HomeTreeInside, HumanBase, Office, Space, TreeOfSouls, TreeOfVoices } from "./world";
+import { Bow, Pod, Woodsprites } from "./assets";
+import { JungleDay as PandoraDay, JungleFront, JungleNight as PandoraNight } from "./jungle";
+import { LabRich as LinkLab, BattleSky, SkyFlight, CryoBay, FloatingMountains, HomeTree, HomeTreeInside, HumanBase, Office, Space, TreeOfSouls, TreeOfVoices } from "./world";
 import { AmpSuit, Arrow, Bulldozer, Direhorse, DragonShip, Explosion, Gunship, Hammerhead, Ikran, Missile, QueueLink, Samson, Shuttle, ShyPlant, Thanator, Torch, Toruk, Unobtanium, ViperWolf } from "./things";
 import audioData from "../data/av1full.audio.json";
 
@@ -105,8 +106,8 @@ const scenes: Record<string, SceneSpec> = {
         </>,
       ),
     chars: [
-      { who: "soldado", x: 250, y: 1480, show: false, name: false, acts: [{ t: at.afuera, show: true }, { t: at.afuera, walk: 760, dur: 2 }] },
-      { who: "jake", x: 340, y: 1480, show: false, acts: [{ t: at.afuera + 0.4, show: true }, { t: at.afuera + 0.4, walk: 520, dur: 1.8 }, { t: at.robots, expr: "surprise" }] },
+      { who: "soldado", mask: true, x: 250, y: 1480, show: false, name: false, acts: [{ t: at.afuera, show: true }, { t: at.afuera, walk: 760, dur: 2 }] },
+      { who: "jake", mask: true, x: 340, y: 1480, show: false, acts: [{ t: at.afuera + 0.4, show: true }, { t: at.afuera + 0.4, walk: 520, dur: 1.8 }, { t: at.robots, expr: "surprise" }] },
     ],
     cam: [{ t: 0, z: 1.0, y: 1000 }, { t: at.mascaras, z: 1.25, x: 360, y: 1150 }, { t: at.afuera, z: 1.0, y: 1100 }, { t: at.robots, z: 1.1, x: 800, y: 1100 }],
     sfx: [{ t: 0.2, s: "rumble", v: 0.6 }, { t: at.mascaras, s: "hiss", v: 0.5 }, { t: at.afuera, s: "whoosh", v: 0.4 }, { t: at.robots, s: "step", v: 0.8 }, { t: at.robots + 0.5, s: "step", v: 0.8 }],
@@ -117,9 +118,9 @@ const scenes: Record<string, SceneSpec> = {
     bg: ({ t }) => <HumanBase t={t} />,
     under: ({ t }) => S(<AmpSuit x={1320} y={1440} s={1.25} flip t={t} />),
     chars: [
-      { who: "soldado", x: 120, y: 1480, name: false },
-      { who: "jake", x: 330, y: 1480, acts: [{ t: qu.marine, expr: "joy" }] },
-      { who: "norm", x: 500, y: 1480, acts: [{ t: qu.matarte, expr: "surprise" }] },
+      { who: "soldado", mask: true, x: 120, y: 1480, name: false },
+      { who: "jake", mask: true, x: 330, y: 1480, acts: [{ t: qu.marine, expr: "joy" }] },
+      { who: "norm", mask: true, x: 500, y: 1480, acts: [{ t: qu.matarte, expr: "surprise" }] },
       { who: "quaritch", x: 820, y: 1480, facing: -1, acts: [{ t: 0, expr: "anger" }, { t: qu.advierte, pose: "point", dur: 2 }, { t: qu.marine, expr: "focus" }] },
     ],
     cam: [{ t: 0, z: 1.0, y: 1100 }, { t: qu.coronel, z: 1.3, x: 820, y: 1100 }, { t: qu.cicatrices, z: 1.7, x: 820, y: 1000 }, { t: qu.matarte, z: 1.2, x: 600, y: 1150 }, { t: qu.marine, z: 1.4, x: 450, y: 1150 }],
@@ -191,7 +192,8 @@ const scenes: Record<string, SceneSpec> = {
           { t: en.tira, walk: 780, dur: 0.8 },
           { t: en.corriendo - 0.2, move: { x: 0 }, dur: 0.01 },
           { t: en.corriendo - 0.2, expr: "joy" },
-          { t: en.corriendo - 0.1, walk: 1600, dur: 3, run: true },
+          { t: en.corriendo - 0.1, walk: 1050, dur: 1.3, run: true },
+          { t: en.siente - 0.6, face: -1 },
           { t: en.siente, pose: "armsUp", dur: 1.5 },
         ],
       },
@@ -506,10 +508,10 @@ const scenes: Record<string, SceneSpec> = {
         </>,
       ),
     chars: [
-      { who: "trudy", x: 900, y: 1480, facing: -1, acts: [{ t: ec.trudy, pose: "wave", dur: 1.2 }, { t: ec.escapar - 0.2, show: false }] },
-      { who: "grace", x: 520, y: 1480, acts: [{ t: ec.escapar - 0.2, show: false }] },
-      { who: "jake", x: 360, y: 1480, acts: [{ t: ec.escapar - 0.2, show: false }] },
-      { who: "norm", x: 680, y: 1480, acts: [{ t: ec.escapar - 0.2, show: false }] },
+      { who: "trudy", mask: true, x: 900, y: 1480, facing: -1, acts: [{ t: ec.trudy, pose: "wave", dur: 1.2 }, { t: ec.escapar - 0.2, show: false }] },
+      { who: "grace", mask: true, x: 520, y: 1480, acts: [{ t: ec.escapar - 0.2, show: false }] },
+      { who: "jake", mask: true, x: 360, y: 1480, acts: [{ t: ec.escapar - 0.2, show: false }] },
+      { who: "norm", mask: true, x: 680, y: 1480, acts: [{ t: ec.escapar - 0.2, show: false }] },
       { who: "quaritch", x: -250, y: 1480, show: false, acts: [{ t: ec.dispara - 0.6, show: true }, { t: ec.dispara - 0.6, walk: 150, dur: 0.6 }, { t: 0, expr: "anger" }, { t: ec.dispara, pose: "wandAim", dur: 2 }] },
     ],
     cam: [{ t: 0, z: 1.1, x: 640, y: 1150 }, { t: ec.escapar, z: 1.0, y: 1050 }, { t: ec.dispara, z: 1.3, x: 200, y: 1100 }, { t: ec.hiere, z: 1.2, x: 1000, y: 850 }],
@@ -712,6 +714,53 @@ const scenes: Record<string, SceneSpec> = {
     overlay: ({ t }) => <Flash t={t} at={fi.almas - 0.2} dur={0.3} />,
   },
 };
+
+// quién habla y cuándo (boca y gestos)
+const TALK: [string, string, string, number, number?][] = [
+  ["tierra", "soldado", "oferta", 2.5],
+  ["quaritch", "quaritch", "advierte", 3.5],
+  ["quaritch", "jake", "marine", 1.2],
+  ["mineral", "selfridge", "plata", 2.2],
+  ["avatares", "grace", "grace", 2.5],
+  ["arbol", "tsutey", "matarlo", 1.6],
+  ["arbol", "moat", "ensenar", 2.5],
+  ["espia", "quaritch", "trato", 4],
+  ["espia", "jake", "acepta", 1.2],
+  ["aprende", "neytiri", "idioma", 2.2],
+  ["aprende", "jakenavi", "silencio", 1.2],
+  ["caballo", "neytiri", "rie", 1.6],
+  ["diario", "jake", "videos", 6],
+  ["amor", "neytiri", "aman", 1.4],
+  ["amor", "jakenavi", "eligen", 1.4],
+  ["semillas", "neytiri", "bebe", 2.6],
+  ["topadoras", "quaritch", "bando", 1.5],
+  ["traicion", "neytiri", "vaya", 2.4],
+  ["escape", "trudy", "trudy", 2],
+  ["toruk_makto", "tsutey", "lider", 1.5],
+  ["clanes", "jakenavi", "ayuda", 2],
+  ["clanes", "neytiri", "bandos", 3],
+  ["mascara", "neytiri", "veo", 1.6],
+  ["mascara", "jake", "ojos", 1],
+  ["selva", "jakenavi", "planta", 1],
+];
+for (const [sid, who, word, dur] of TALK) {
+  const tr = scenes[sid]?.chars.find((c) => c.who === who);
+  if (tr) tr.acts = [...(tr.acts ?? []), { t: w(sid, word), talk: dur }];
+}
+
+// hojas de primer plano en las escenas de selva
+for (const sc of Object.values(scenes)) {
+  if (sc.bg === DAY || sc.bg === NIGHT) {
+    const night = sc.bg === NIGHT;
+    const Fx = sc.fx;
+    sc.fx = ({ t }) => (
+      <>
+        {Fx ? <Fx t={t} /> : null}
+        <JungleFront t={t} night={night} />
+      </>
+    );
+  }
+}
 
 export const av1full: PartSpec = { part: 0, title: "Avatar", dyn: true, scenes };
 export const av1fullAudio = audio;

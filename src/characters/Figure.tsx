@@ -114,15 +114,33 @@ type Props = {
   rotate?: number;
   holding?: React.ReactNode;
   stone?: boolean;
+  talking?: boolean;
+  mask?: boolean;
 };
 
-export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose: pose0, expression = "neutral", showName = true, opacity = 1, rotate = 0, holding, stone = false }) => {
+export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose: pose0, expression = "neutral", showName = true, opacity = 1, rotate = 0, holding, stone = false, talking = false, mask }) => {
   const frame = useCurrentFrame();
   const c = CAST[who];
-  const b = FIGS[who]!;
+  const b0 = FIGS[who]!;
+  const b = mask === undefined ? b0 : { ...b0, mask };
   const chair = !!b.wheelchair;
   // en silla: muslos hacia adelante, rodillas dobladas, sin caminar ni saltar
-  const pose = chair ? { ...pose0, rHip: 88, rKn: 88, lHip: 84, lKn: 86, lean: Math.max(-4, Math.min(6, pose0.lean)), bob: 0 } : pose0;
+  const seed0 = who.length * 13 + c.name.charCodeAt(0);
+  // vida: respiración, balanceo de brazos, cabeza que se mueve; al hablar, gestos y cabeceo
+  const f0 = frame + seed0 * 11;
+  const still = Math.abs(pose0.rHip) < 25 && Math.abs(pose0.lHip) < 25;
+  const gest = talking ? Math.sin(f0 * 0.22) : 0;
+  const live = {
+    ...pose0,
+    rSh: pose0.rSh + (still ? 5 * Math.sin(f0 * 0.06) + 22 * gest : 0),
+    rEl: pose0.rEl + (still ? 6 * Math.sin(f0 * 0.05 + 1) + 30 * Math.max(0, gest) : 0),
+    lSh: pose0.lSh + (still ? -4 * Math.sin(f0 * 0.055 + 2) + (talking ? 10 * Math.sin(f0 * 0.17 + 1) : 0) : 0),
+    lEl: pose0.lEl + (still ? 5 * Math.sin(f0 * 0.045) : 0),
+    lean: pose0.lean + (still ? 1.6 * Math.sin(f0 * 0.04) : 0),
+    headTilt: pose0.headTilt + 3 * Math.sin(f0 * 0.035) + (talking ? 4 * Math.sin(f0 * 0.5) : 0),
+    bob: pose0.bob + (still ? 2.2 * Math.sin(f0 * 0.09) : 0),
+  };
+  const pose = chair ? { ...live, rHip: 88, rKn: 88, lHip: 84, lKn: 86, lean: Math.max(-4, Math.min(6, live.lean)), bob: 0 } : live;
   const navi = b.kind === "navi";
   const s = scale * c.height * 0.76;
   const seed = who.length * 13 + c.name.charCodeAt(0);
@@ -283,7 +301,7 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
             <circle cx={aR.x + 2} cy={aR.y + 36} r={14} fill="#3a3a44" stroke={INK} strokeWidth={4} />
           </g>
         ) : null}
-        <Face b={b} c={{ name: c.name }} p={head} HR={HR} turn={pose.headTurn} tilt={pose.headTilt} expression={expression} seed={seed} />
+        <Face b={b} c={{ name: c.name }} p={head} HR={HR} turn={pose.headTurn} tilt={pose.headTilt} expression={expression} seed={seed} talking={talking} />
         {arm(shoulder, elbR, handR, false)}
         {holding ? <g transform={`translate(${handR.x} ${handR.y})`}>{holding}</g> : null}
       </g>
@@ -304,7 +322,7 @@ const Tag: React.FC<{ x: number; y: number; name: string; color: string }> = ({ 
   );
 };
 
-const Face: React.FC<{ b: Body; c: { name: string }; p: P; HR: number; turn: number; tilt: number; expression: Expression; seed: number }> = ({ b, p, HR, turn, tilt, expression, seed }) => {
+const Face: React.FC<{ b: Body; c: { name: string }; p: P; HR: number; turn: number; tilt: number; expression: Expression; seed: number; talking?: boolean }> = ({ b, p, HR, turn, tilt, expression, seed, talking = false }) => {
   const frame = useCurrentFrame();
   const navi = b.kind === "navi";
   const period = 90 + Math.floor(random(seed) * 40);
@@ -331,6 +349,10 @@ const Face: React.FC<{ b: Body; c: { name: string }; p: P; HR: number; turn: num
   const mouth = () => {
     const m = fx * 1.05;
     const my = navi ? 26 : 22;
+    if (talking && expression !== "sleep") {
+      const o = Math.abs(Math.sin(frame * 0.85 + seed)) * 0.8 + 0.15 * Math.abs(Math.sin(frame * 2.1));
+      return <ellipse cx={m} cy={my + 2} rx={11 - o * 2} ry={2 + o * 10} fill="#6a1a2a" stroke={INK} strokeWidth={4} />;
+    }
     switch (expression) {
       case "joy":
         return <path d={`M ${m - 15} ${my - 4} Q ${m} ${my + 16} ${m + 15} ${my - 4} Z`} fill="#6a1a2a" stroke={INK} strokeWidth={4} strokeLinejoin="round" />;

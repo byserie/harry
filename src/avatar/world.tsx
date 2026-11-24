@@ -168,42 +168,159 @@ const Fence: React.FC<{ y: number; t: number }> = ({ y }) => (
   </g>
 );
 
-/** Base humana (el fuerte): rejas, torres, hangar, pista, selva atrás. */
+/** Base humana (el fuerte): hangar abierto, torre con radar, contenedores, tanques, robots estacionados, rejas. */
 export const HumanBase: React.FC<{ t: number; alarm?: number }> = ({ t, alarm = 0 }) => (
   <Svg>
     <Defs />
-    <Sky id="hb" stops={["#9fd4f0", "#d8eef2", "#b8d8c8"]} />
-    <GasGiant x={1250} y={300} r={180} />
-    {/* selva lejana */}
-    {Array.from({ length: 14 }).map((_, i) => (
-      <ellipse key={i} cx={L + i * 150} cy={900 + (i % 3) * 20} rx={140} ry={110} fill={i % 2 ? "#3a8a5a" : "#2f7a4f"} />
+    <Sky id="hb" stops={["#86c6ec", "#c8e8f0", "#e8f2e6"]} />
+    <GasGiant x={1250} y={330} r={200} />
+    {[0, 1, 2].map((i) => (
+      <ellipse key={`cl${i}`} cx={L + ((t * 12 + i * 700) % WW)} cy={260 + i * 70} rx={220} ry={50} fill="#ffffff" opacity={0.7} />
     ))}
-    <rect x={L} y={900} width={WW} height={120} fill="#2f7a4f" />
-    {/* edificios */}
+    {/* selva lejana en capas con bruma */}
+    {Array.from({ length: 18 }).map((_, i) => (
+      <ellipse key={`j1${i}`} cx={L + i * 120} cy={820 + (i % 3) * 25} rx={130} ry={150} fill="#8ac0a8" />
+    ))}
+    {Array.from({ length: 16 }).map((_, i) => (
+      <ellipse key={`j2${i}`} cx={L + 60 + i * 130} cy={900 + (i % 2) * 30} rx={140} ry={140} fill="#4f8a62" />
+    ))}
+    <rect x={L} y={760} width={WW} height={200} fill="#e8f4ee" opacity={0.25} />
+    {/* hangar con puerta abierta */}
     <g stroke={INK} strokeWidth={5}>
-      <rect x={-300} y={760} width={520} height={300} fill="#8a949e" />
-      <path d="M -320 770 L -40 640 L 240 770 Z" fill="#6a747e" />
-      <rect x={-260} y={860} width={440} height={60} fill="#3a4a5a" />
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <rect key={i} x={-250 + i * 72} y={870} width={56} height={40} fill="#9ad8ff" opacity={0.8} />
+      <path d="M -440 1080 L -440 760 Q -170 600 100 760 L 100 1080 Z" fill="#8f99a3" />
+      <path d="M -380 1080 L -380 820 Q -170 700 40 820 L 40 1080 Z" fill="#2a3440" />
+      {[-360, -300, -240, -180, -120, -60, 0].map((x, i) => (
+        <line key={i} x1={x} y1={790 - Math.sin(((x + 440) / 540) * Math.PI) * 150} x2={x} y2={1080} stroke="#7a848e" strokeWidth={3} />
       ))}
-      <rect x={980} y={700} width={110} height={360} fill="#7a848e" />
-      <rect x={950} y={660} width={170} height={60} fill="#5a646e" />
-      <rect x={1180} y={800} width={360} height={260} fill="#9aa4ae" />
-      <path d="M 1180 800 Q 1360 700 1540 800 Z" fill="#7a848e" />
     </g>
-    <text x={-40} y={1000} textAnchor="middle" fontFamily="sans-serif" fontWeight={900} fontSize={40} fill="#e8b923" stroke={INK} strokeWidth={1.5}>RDA</text>
-    {/* luz de alarma */}
-    <circle cx={1035} cy={650} r={18} fill="#ff3a3a" opacity={alarm > 0 && Math.sin(t * 10) > 0 ? 1 : 0.3} filter="url(#glow)" />
-    <Fence y={1080} t={t} />
-    {/* pista de cemento */}
-    <rect x={L} y={1080} width={WW} height={H - 1080} fill="#8a8c88" />
-    <rect x={L} y={1080} width={WW} height={30} fill="#6a6c68" />
-    {Array.from({ length: 12 }).map((_, i) => (
-      <rect key={i} x={L + i * 180} y={1500} width={100} height={14} fill="#f2e05a" />
+    <g transform="translate(-170 1000) scale(0.55)">
+      <path d="M -160 0 Q -170 -60 -80 -70 L 120 -70 Q 190 -60 200 0 Q 190 40 120 50 L -100 50 Q -160 40 -160 0 Z" fill="#6a6e4a" stroke={INK} strokeWidth={7} />
+    </g>
+    <text x={-170} y={760} textAnchor="middle" fontFamily="sans-serif" fontWeight={900} fontSize={44} fill="#e8b923" stroke={INK} strokeWidth={1.5}>RDA</text>
+    {/* torre de control con radar */}
+    <g stroke={INK} strokeWidth={5}>
+      <rect x={300} y={640} width={70} height={440} fill="#7a848e" />
+      <rect x={260} y={600} width={150} height={70} rx={8} fill="#5a646e" />
+      <rect x={272} y={612} width={126} height={30} fill="#9ad8ff" />
+      <line x1={335} y1={600} x2={335} y2={540} />
+      <g transform={`translate(335 540) scale(${Math.cos(t * 2)} 1)`}>
+        <path d="M -50 0 Q 0 -30 50 0 Z" fill="#c8ced6" />
+      </g>
+    </g>
+    <circle cx={335} cy={530} r={10} fill="#ff3a3a" opacity={(alarm > 0 ? Math.sin(t * 10) > 0 : Math.sin(t * 3) > 0) ? 1 : 0.3} filter="url(#glow)" />
+    {/* tanques de combustible y caños */}
+    <g stroke={INK} strokeWidth={5}>
+      {[520, 660].map((x, i) => (
+        <g key={i}>
+          <rect x={x - 60} y={820} width={120} height={260} rx={50} fill="#d8dee6" />
+          <rect x={x - 60} y={900} width={120} height={20} fill="#e8b923" />
+        </g>
+      ))}
+      <path d="M 450 1000 L 420 1000 L 420 1060 M 730 980 L 800 980 L 800 1060" fill="none" stroke="#5a646e" strokeWidth={14} />
+    </g>
+    <circle cx={520} cy={790 - ((t * 30) % 80)} r={26} fill="#ddd" opacity={0.5} filter="url(#soft)" />
+    {/* contenedores apilados */}
+    {[[880, 1000, "#c0392b"], [1010, 1000, "#2f6fb8"], [940, 920, "#e8b923"], [1140, 1000, "#3a8a4a"]].map(([x, y, c], i) => (
+      <g key={`ct${i}`} stroke={INK} strokeWidth={4}>
+        <rect x={(x as number) - 60} y={(y as number) - 40} width={124} height={80} fill={c as string} />
+        {[0, 1, 2, 3, 4].map((j) => (
+          <line key={j} x1={(x as number) - 50 + j * 24} y1={(y as number) - 34} x2={(x as number) - 50 + j * 24} y2={(y as number) + 34} stroke="rgba(0,0,0,0.25)" strokeWidth={3} />
+        ))}
+      </g>
     ))}
-    {Array.from({ length: 10 }).map((_, i) => (
-      <line key={`c${i}`} x1={L + i * 220} y1={1110} x2={L + i * 220 - 300} y2={H} stroke="#7a7c78" strokeWidth={3} />
+    {/* edificio de módulos */}
+    <g stroke={INK} strokeWidth={5}>
+      <rect x={1220} y={820} width={320} height={260} fill="#a8b2bc" />
+      <path d="M 1220 820 Q 1380 730 1540 820 Z" fill="#8a949e" />
+      {[0, 1, 2, 3].map((i) => (
+        <rect key={i} x={1240 + i * 72} y={880} width={54} height={36} fill="#9ad8ff" />
+      ))}
+    </g>
+    {/* torres de luz */}
+    {[-30, 790, 1200].map((x, i) => (
+      <g key={`lt${i}`} stroke={INK} strokeWidth={4}>
+        <line x1={x} y1={1080} x2={x} y2={700} strokeWidth={8} />
+        <rect x={x - 40} y={680} width={80} height={30} fill="#eef2f6" />
+      </g>
+    ))}
+    <Fence y={1100} t={t} />
+    {/* pista de cemento con marcas */}
+    <rect x={L} y={1100} width={WW} height={H - 1100} fill="#8f918c" />
+    <rect x={L} y={1100} width={WW} height={26} fill="#6f716c" />
+    {Array.from({ length: 22 }).map((_, i) => (
+      <rect key={`ws${i}`} x={L + i * 95} y={1126} width={46} height={14} fill={i % 2 ? "#1b1b2f" : "#f2c230"} />
+    ))}
+    <circle cx={1240} cy={1600} r={170} fill="none" stroke="#f2e05a" strokeWidth={12} />
+    <text x={1240} y={1650} textAnchor="middle" fontFamily="sans-serif" fontWeight={900} fontSize={150} fill="#f2e05a">H</text>
+    {Array.from({ length: 12 }).map((_, i) => (
+      <line key={`c${i}`} x1={L + i * 200} y1={1140} x2={L + i * 200 - 300} y2={H} stroke="#7f817c" strokeWidth={3} />
+    ))}
+    {/* helicóptero que pasa al fondo */}
+    <g transform={`translate(${1700 - ((t * 120) % 2400)} 520) scale(-0.35 0.35)`}>
+      <path d="M -160 0 Q -170 -60 -80 -70 L 120 -70 Q 190 -60 200 0 Q 190 40 120 50 L -100 50 Q -160 40 -160 0 Z" fill="#5a5e40" stroke={INK} strokeWidth={8} />
+      <ellipse cx={0} cy={-90} rx={200 * Math.abs(Math.cos(t * 30))} ry={8} fill="#ccc" />
+    </g>
+  </Svg>
+);
+
+/** Laboratorio de enlace con más vida: cápsulas en fila, escritorios con pantallas, cables, holograma de ADN. */
+export const LabRich: React.FC<{ t: number }> = ({ t }) => (
+  <Svg>
+    <Defs />
+    <Sky id="lr" stops={["#16222e", "#22334a", "#2a3e54"]} />
+    {/* ventanal a la selva */}
+    <rect x={-300} y={420} width={1680} height={420} rx={20} fill="#6ac0a0" stroke="#5a6a7a" strokeWidth={16} />
+    {Array.from({ length: 14 }).map((_, i) => (
+      <ellipse key={i} cx={-280 + i * 130} cy={760 + (i % 2) * 30} rx={120} ry={160} fill={i % 2 ? "#2f7a4f" : "#3a8a5a"} />
+    ))}
+    {[-2, -1, 0, 1, 2, 3, 4, 5].map((i) => (
+      <line key={`m${i}`} x1={120 + i * 210} y1={420} x2={120 + i * 210} y2={840} stroke="#5a6a7a" strokeWidth={12} />
+    ))}
+    {/* holograma de ADN */}
+    <g transform="translate(540 330)">
+      {Array.from({ length: 14 }).map((_, i) => {
+        const y = -120 + i * 18;
+        const a = t * 2 + i * 0.5;
+        return (
+          <g key={i}>
+            <line x1={Math.cos(a) * 60} y1={y} x2={-Math.cos(a) * 60} y2={y} stroke="#6ae8ff" strokeWidth={3} opacity={0.6} />
+            <circle cx={Math.cos(a) * 60} cy={y} r={6} fill="#6ae8ff" filter="url(#glow)" />
+            <circle cx={-Math.cos(a) * 60} cy={y} r={6} fill="#ff7ad8" filter="url(#glow)" />
+          </g>
+        );
+      })}
+    </g>
+    {/* pantallas */}
+    {[[-300, 300], [120, 280], [880, 280], [1300, 300]].map(([x, y], i) => (
+      <g key={`sc${i}`}>
+        <rect x={x - 110} y={y - 70} width={220} height={140} rx={10} fill="#0a1a2a" stroke="#6ae8ff" strokeWidth={4} />
+        {[0, 1, 2, 3].map((j) => (
+          <rect key={j} x={x - 90} y={y - 50 + j * 26} width={40 + ((j * 53 + Math.floor(t * 5) + i * 17) % 130)} height={10} rx={5} fill={j % 2 ? "#3ae07a" : "#9af0ff"} />
+        ))}
+      </g>
+    ))}
+    {/* luces de techo */}
+    {[-260, 200, 540, 880, 1340].map((x, i) => (
+      <g key={`l${i}`}>
+        <rect x={x - 90} y={110} width={180} height={18} rx={9} fill="#e8f8ff" />
+        <path d={`M ${x - 90} 128 L ${x + 90} 128 L ${x + 220} 1300 L ${x - 220} 1300 Z`} fill="#e8f8ff" opacity={0.05} />
+      </g>
+    ))}
+    {/* piso con cables */}
+    <rect x={L} y={1260} width={WW} height={H - 1260} fill="#2a3644" />
+    {Array.from({ length: 14 }).map((_, i) => (
+      <line key={`fl${i}`} x1={L + i * 160} y1={1260} x2={L + i * 160 - 220} y2={H} stroke="#3a4858" strokeWidth={3} />
+    ))}
+    {[0, 1, 2].map((i) => (
+      <path key={`cb${i}`} d={`M ${-400 + i * 40} 1500 Q 200 ${1440 + i * 30} 600 ${1520 + i * 10} T 1500 ${1480 + i * 20}`} stroke={["#e8b923", "#2f6fb8", "#c0392b"][i]} strokeWidth={8} fill="none" />
+    ))}
+    {/* cápsulas de fondo */}
+    {[-320, 1360].map((x, i) => (
+      <g key={`pd${i}`} transform={`translate(${x} 1300) scale(0.75)`}>
+        <path d="M -220 0 Q -230 -90 -150 -110 L 150 -110 Q 230 -90 220 0 Z" fill="#d8e2ea" stroke={INK} strokeWidth={6} />
+        <path d="M -210 -100 Q -200 -200 0 -210 Q 200 -200 210 -100 Z" fill="rgba(170,220,255,0.55)" stroke={INK} strokeWidth={6} />
+        <ellipse cx={0} cy={-120} rx={190} ry={60} fill="#6ae8ff" opacity={0.25 + 0.15 * Math.sin(t * 6 + i)} />
+      </g>
     ))}
   </Svg>
 );

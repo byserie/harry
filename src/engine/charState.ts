@@ -16,6 +16,7 @@ export type CharState = {
   rot: number;
   alpha: number;
   stone: boolean;
+  talking: boolean;
 };
 
 const FPS = 30;
@@ -154,7 +155,9 @@ export const charState = (c: CharTrack, t: number): CharState => {
     alpha = a0 + (aa.alpha - a0) * Math.min(1, (t - aa.t) / (aa.dur ?? 0.5));
   }
   const so = latest(p.acts, t, "stone") as { stone: boolean } | undefined;
+  const tk = latest(p.acts, t, "talk") as { t: number; talk: number } | undefined;
   return {
+    talking: !!tk && t < tk.t + tk.talk,
     stone: so?.stone ?? false,
     alpha,
     x,

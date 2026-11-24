@@ -19,12 +19,19 @@ const EMOJI: [string, string][] = [
   ["aranas", "🕷️"], ["monstruo", "👹"], ["basilisco", "🐍"], ["mirada", "👁️"], ["espada", "⚔️"], ["fenix", "🔥"],
   ["lagrimas", "💧"], ["media", "🧦"], ["libre", "🎉"], ["mentira", "🤥"], ["memoria", "🧠"], ["voldemort", "💀"],
   ["secreto", "🤫"], ["hechizo", "🪄"], ["magia", "🪄"], ["magicos", "✨"], ["mago", "🪄"], ["colmillo", "🦷"],
+  // Avatar
+  ["dragon", "🐉"], ["ikran", "🐉"], ["toruk", "🐉"], ["flecha", "🏹"], ["arco", "🏹"], ["nave", "🚀"], ["espacio", "🌌"],
+  ["planeta", "🪐"], ["luna", "🌙"], ["selva", "🌴"], ["bestia", "👹"], ["lobo", "🐺"], ["caballo", "🐎"], ["helicoptero", "🚁"],
+  ["misil", "💥"], ["fuego", "🔥"], ["robot", "🤖"], ["mascara", "😷"], ["aman", "💙"], ["mineral", "💎"], ["unobtanio", "💎"],
+  ["plata", "💰"], ["semilla", "✨"], ["espia", "🕵️"], ["silla", "🦽"], ["ojos", "👀"], ["cascada", "🌊"], ["rio", "🌊"],
+  ["noche", "🌙"], ["topadora", "🚜"], ["bomba", "💣"], ["explotar", "💥"], ["thanator", "🐆"], ["pantera", "🐆"],
 ];
 
 const emojiFor = (w: string) => {
   const n = norm(w);
   if (n.length < 3) return null;
-  const hit = EMOJI.find(([k]) => n.startsWith(k));
+  // palabra exacta (o su plural): "trenza" ya no es "tren"
+  const hit = EMOJI.find(([k]) => n === k || n === k + "s" || n === k + "es");
   return hit ? hit[1] : null;
 };
 
