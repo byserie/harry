@@ -110,7 +110,7 @@ def _synth(text, out):
 
 # Pronunciación (solo para la voz; los subtítulos usan el texto original)
 PRONUNCIA = {
-    "Neytiri": "Neitíri", "na'vi": "návi", "Sully": "Sáli", "Quaritch": "Cuóritch", "Eywa": "Éiua", "Omaticaya": "Omaticáia", "Tsu'tey": "Sutéi", "Toruk": "Tóruk", "Makto": "Mákto", "ikran": "íkran", "Selfridge": "Sélfrich", "Grace": "Gréis", "Jake": "Yéik", "Norm": "Norm", "Trudy": "Trúdi", "Metkayina": "Metcaína", "Tonowari": "Tonouári", "Ronal": "Rónal", "Kiri": "Kíri", "Lo'ak": "Lóak", "Neteyam": "Netéiam", "Tuk": "Tuk", "Spider": "Spáider", "Payakan": "Paiácan", "tulkun": "túlkun", "Varang": "Varáng",
+    "Neytiri": "Neitíri", "na'vi": "návi", "Sully": "Sáli", "Quaritch": "Cuóritch", "Eywa": "Éiua", "Omaticaya": "Omaticáia", "Tsu'tey": "Sutéi", "Toruk": "Tóruk", "Makto": "Mákto", "ikran": "íkran", "Selfridge": "Sélfrich", "Grace": "Gréis", "Jake": "Yéik", "Norm": "Norm", "Trudy": "Trúdi", "Metkayina": "Metcaína", "Tonowari": "Tonouári", "Ronal": "Rónal", "Kiri": "Kíri", "Lo'ak": "Lóak", "Neteyam": "Netéiam", "Tuk": "Tuk", "Spider": "Spáider", "Payakan": "Paiácan", "tulkun": "túlkun", "Varang": "Varáng", "unobtanio": "unobtánio", "Augustine": "Ógastin", "Parker": "Párker", "thanator": "zánator", "thanators": "zánators",
     "McGonagall": "Macgónagal", "Hagrid": "Jágrid", "Harry": "Jarri", "Hermione": "Jermáioni",
     "Dumbledore": "Dámbeldor", "Hogwarts": "Jógguarts", "Snape": "Esnéip", "Quirrell": "Quírrel",
     "Voldemort": "Voldemor", "Dursley": "Dúrsli", "Dudley": "Dádli", "Vernon": "Vérnon",
