@@ -1,5 +1,5 @@
 import { Composition, Series, Still } from "remotion";
-import { Miniatura, Miniatura1, Portada } from "./Thumb";
+import { Miniatura, Miniatura1, MiniaturaPeli, Portada, ThumbDef } from "./Thumb";
 import { Avatar, Banner } from "./Brand";
 import { p2full, p2fullAudio } from "./peli2d/full";
 import { p1full, p1fullAudio } from "./peli1d/full";
@@ -120,6 +120,16 @@ const P8FullLand = () => (
 
 const V = { fps: 30, width: 1080, height: 1920 };
 
+const THUMBS: Record<string, ThumbDef> = {
+  Miniatura3: { scene: p3full.scenes.ciervo, t: 9.5, y: 640, l1: "EL PRISIONERO", l2: "DE AZKABAN", c2: "#8fd3ff", badge: "¡EN 5 MINUTOS!", bg: "#101830" },
+  Miniatura4: { scene: p4full.scenes.dragon, t: 2.9, y: 640, l1: "EL CÁLIZ", l2: "DE FUEGO", c2: "#ff7a3b", badge: "¡EN 4 MINUTOS!", bg: "#301010" },
+  Miniatura5: { scene: p5full.scenes.duelo, t: 4.6, y: 640, l1: "LA ORDEN", l2: "DEL FÉNIX", c2: "#ff6b6b", badge: "¡EN 4 MINUTOS!", bg: "#201028" },
+  Miniatura6: { scene: p6full.scenes.cueva, t: 14.8, y: 640, l1: "EL MISTERIO", l2: "DEL PRÍNCIPE", c2: "#7dff9a", badge: "¡EN 3 MINUTOS!", bg: "#0d2a22" },
+  Miniatura7: { scene: p7full.scenes.cierva, t: 8.0, y: 640, l1: "LAS RELIQUIAS", l2: "PARTE 1", c2: "#c9a0ff", badge: "¡EN 3 MINUTOS!", bg: "#1a1030" },
+  Miniatura8: { scene: p8full.scenes.duelo, t: 10.5, y: 640, l1: "LAS RELIQUIAS", l2: "PARTE 2", c2: "#ff6b6b", badge: "¡EL FINAL!", bg: "#200a0a" },
+};
+const thumbComps = Object.fromEntries(Object.entries(THUMBS).map(([id, d]) => [id, () => <MiniaturaPeli d={d} />]));
+
 export const RemotionRoot: React.FC = () => {
   return (
     <>
@@ -156,6 +166,9 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="P6FullYT" component={P6FullLand} durationInFrames={p6fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="P7FullYT" component={P7FullLand} durationInFrames={p7fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="P8FullYT" component={P8FullLand} durationInFrames={p8fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
+      {Object.entries(thumbComps).map(([id, C]) => (
+        <Still key={id} id={id} component={C} width={1280} height={720} />
+      ))}
       <ShortCompositions />
       <EditCompositions />
     </>

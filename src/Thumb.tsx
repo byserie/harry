@@ -145,3 +145,50 @@ export const Miniatura1: React.FC = () => (
     </svg>
   </AbsoluteFill>
 );
+
+// ------------------------------------------------------------------ miniaturas genéricas (pelis 3–8)
+import { Freeze } from "remotion";
+import { Scene } from "./engine/Scene";
+import { SceneSpec } from "./engine/types";
+
+export type ThumbDef = { scene: SceneSpec; t: number; y: number; x?: number; zoom?: number; l1: string; l2: string; c2: string; badge: string; bg: string };
+
+export const MiniaturaPeli: React.FC<{ d: ThumbDef }> = ({ d }) => (
+  <AbsoluteFill style={{ backgroundColor: d.bg, overflow: "hidden" }}>
+    {/* fondo borroso a lo ancho + la escena entera a la derecha */}
+    <div style={{ position: "absolute", inset: 0, filter: "blur(18px) brightness(0.6)" }}>
+      <Canvas x={0} y={-d.y * 1.19} scale={1.19}>
+        <Freeze frame={Math.round(d.t * 30)}>
+          <Scene spec={d.scene} first noSfx />
+        </Freeze>
+      </Canvas>
+    </div>
+    <Canvas x={(d.x ?? 520) - 40 * (d.zoom ?? 0)} y={-380 * 0.704 - (d.zoom ?? 0) * 60} scale={0.704 + (d.zoom ?? 0) * 0.1}>
+      <Freeze frame={Math.round(d.t * 30)}>
+        <Scene spec={d.scene} first noSfx />
+      </Freeze>
+    </Canvas>
+    <AbsoluteFill style={{ background: "linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3) 42%, rgba(0,0,0,0) 55%)" }} />
+    <div style={{ position: "absolute", left: 30, top: 40, width: 660, fontFamily: FONT, fontWeight: 700, lineHeight: 0.95 }}>
+      <div style={{ fontSize: 46, color: "#fff", WebkitTextStroke: "8px #121220", paintOrder: "stroke fill" }}>HARRY POTTER</div>
+      <div style={{ fontSize: d.l1.length > 10 ? 92 : 110, color: "#ffe14d", WebkitTextStroke: "14px #121220", paintOrder: "stroke fill", rotate: "-3deg", marginTop: 6 }}>{d.l1}</div>
+      <div style={{ fontSize: d.l2.length > 9 ? 100 : 124, color: d.c2, WebkitTextStroke: "14px #121220", paintOrder: "stroke fill", rotate: "-3deg" }}>{d.l2}</div>
+      <div
+        style={{
+          display: "inline-block",
+          marginTop: 22,
+          fontSize: 48,
+          color: "#fff",
+          background: "#e23b3b",
+          border: "5px solid #121220",
+          borderRadius: 20,
+          padding: "4px 22px",
+          rotate: "3deg",
+          boxShadow: "0 6px 0 rgba(0,0,0,0.45)",
+        }}
+      >
+        {d.badge}
+      </div>
+    </div>
+  </AbsoluteFill>
+);
