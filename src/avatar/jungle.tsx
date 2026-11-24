@@ -28,15 +28,15 @@ type Pal = {
 };
 
 const DAYP: Pal = {
-  sky: ["#7fd0f2", "#bfeae6", "#e4f6dc"],
-  far: "#7fb8a0",
-  mid: "#4f8a6a",
-  midDark: "#3a6a52",
-  near: "#3f5f3a",
-  nearDark: "#2a4228",
-  leaf: "#3f9a4a",
-  leaf2: "#5ec05a",
-  ground: ["#4f9a3f", "#2f6a2a", "#1f4a20"],
+  sky: ["#48b8f8", "#9ae8f4", "#e2fbd6"],
+  far: "#6ec0a4",
+  mid: "#3f9a72",
+  midDark: "#2a7258",
+  near: "#3a6a3a",
+  nearDark: "#244a28",
+  leaf: "#2fb050",
+  leaf2: "#7ade5a",
+  ground: ["#4fb83f", "#2f8a2a", "#1f5a20"],
   haze: "#dff4e6",
 };
 const NIGHTP: Pal = {
@@ -303,6 +303,17 @@ const Jungle: React.FC<{ t: number; p: Pal; night: boolean; glow?: number }> = (
         );
       })}
       <Fliers t={t} night={night} />
+      {/* bandada de ikran a lo lejos */}
+      {[0, 1, 2, 3, 4].map((i) => {
+        const x = 1700 - ((t * 110 + i * 90) % 2600);
+        const y = 420 + i * 28 + Math.sin(t * 1.5 + i) * 14;
+        const fl = Math.sin(t * 9 + i) * 14;
+        return <path key={`ik${i}`} d={`M ${x - 30} ${y + fl} Q ${x - 14} ${y - 8} ${x} ${y} Q ${x + 14} ${y - 8} ${x + 30} ${y + fl}`} stroke={night ? "#c86bff" : "#2a3a8a"} strokeWidth={5} fill="none" opacity={night ? 0.8 : 1} />;
+      })}
+      {/* bandas de niebla que se desplazan */}
+      {[0, 1].map((i) => (
+        <ellipse key={`mist${i}`} cx={L + ((t * 30 + i * 1000) % (WW + 600)) - 300} cy={1180 + i * 80} rx={520} ry={60} fill={night ? "#3ae0ff" : "#ffffff"} opacity={night ? 0.12 : 0.35} filter="url(#soft)" />
+      ))}
     </Svg>
   );
 };

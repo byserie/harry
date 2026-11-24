@@ -61,7 +61,7 @@ const scenes: Record<string, SceneSpec> = {
         <>
           {t < hk.peleando - 0.2 ? <Woodsprites t={t} n={8} cx={540} cy={800} /> : null}
           {t > hk.peleando - 0.2 ? <Gunship x={kf(t, [hk.peleando - 0.2, D("hook")], [1500, 300])} y={650} s={0.9} flip t={t} fire={t > hk.soldado} /> : null}
-          {t > hk.peleando - 0.2 ? <Ikran x={kf(t, [hk.peleando - 0.2, D("hook")], [-400, 800])} y={820} s={0.8} t={t} /> : null}
+          {t > hk.peleando - 0.2 ? <Ikran x={kf(t, [hk.peleando - 0.2, D("hook")], [-400, 800])} y={820} s={1.6} t={t} /> : null}
         </>,
       ),
     chars: [
@@ -102,7 +102,7 @@ const scenes: Record<string, SceneSpec> = {
         <>
           <Shuttle x={kf(t, [0, at.mascaras], [300, 360])} y={kf(t, [0, at.mascaras], [700, 1180])} s={1.0} t={t} door={kf(t, [at.mata, at.afuera], [0, 1])} />
           {t > at.afuera ? <Samson x={kf(t, [at.afuera, D("aterrizaje")], [1500, 1100])} y={760} s={0.9} flip t={t} /> : null}
-          {t > at.robots - 0.6 ? <AmpSuit x={kf(t, [at.robots - 0.6, D("aterrizaje")], [1500, 1180])} y={1470} s={1.35} flip t={t} walk={1} /> : null}
+          {t > at.robots - 0.6 ? <AmpSuit x={kf(t, [at.robots - 0.6, D("aterrizaje")], [1500, 1180])} y={1470} s={1.8} flip t={t} walk={1} /> : null}
         </>,
       ),
     chars: [
@@ -116,7 +116,7 @@ const scenes: Record<string, SceneSpec> = {
 
   quaritch: {
     bg: ({ t }) => <HumanBase t={t} />,
-    under: ({ t }) => S(<AmpSuit x={1320} y={1440} s={1.25} flip t={t} />),
+    under: ({ t }) => S(<AmpSuit x={1380} y={1450} s={1.7} flip t={t} />),
     chars: [
       { who: "soldado", mask: true, x: 120, y: 1480, name: false },
       { who: "jake", mask: true, x: 330, y: 1480, acts: [{ t: qu.marine, expr: "joy" }] },
@@ -211,12 +211,12 @@ const scenes: Record<string, SceneSpec> = {
   selva: {
     bg: DAY,
     under: ({ t }) => S([[260, 1400], [430, 1380], [850, 1400]].map(([x, y], i) => <ShyPlant key={i} x={x} y={y} s={1.1} t={t} k={kf(t, [se.esconden + i * 0.15, se.esconden + 0.3 + i * 0.15], [0, 1])} />)),
-    fx: ({ t }) => S(t > se.despierta - 0.3 && t < se.peor ? <Hammerhead x={kf(t, [se.despierta - 0.3, se.martillo, se.va, se.peor], [1700, 1150, 1150, 1900])} y={1480} s={1.05} flip t={t} charge={t < se.planta ? 1 : 0} /> : null),
+    fx: ({ t }) => S(t > se.despierta - 0.3 && t < se.peor ? <Hammerhead x={kf(t, [se.despierta - 0.3, se.martillo, se.va, se.peor], [2300, 1500, 1500, 2600])} y={1480} s={2.5} flip t={t} charge={t < se.planta ? 1 : 0} /> : null),
     chars: [
       { who: "jakenavi", x: 330, y: 1480, acts: [{ t: 0, expr: "joy" }, { t: se.juega, pose: "point", dur: 1.6 }, { t: se.martillo, expr: "surprise" }, { t: se.planta, pose: "angry", dur: 1.4 }, { t: se.planta, expr: "anger" }, { t: se.va, expr: "joy" }, { t: se.peor, expr: "surprise" }] },
       { who: "grace", x: -100, y: 1480, show: false },
     ],
-    cam: [{ t: 0, z: 1.2, x: 380, y: 1250 }, { t: se.esconden, z: 1.4, x: 350, y: 1300 }, { t: se.martillo, z: 1.0, y: 1100 }, { t: se.planta, z: 1.3, x: 500, y: 1150 }, { t: se.peor, z: 1.5, x: 330, y: 1050 }],
+    cam: [{ t: 0, z: 1.2, x: 380, y: 1250 }, { t: se.esconden, z: 1.4, x: 350, y: 1300 }, { t: se.martillo, z: 1.0, y: 1100 }, { t: se.planta, z: 1.0, x: 700, y: 1100 }, { t: se.peor, z: 1.5, x: 330, y: 1050 }],
     sfx: [{ t: se.esconden, s: "pop", v: 0.6 }, { t: se.martillo, s: "roar", v: 0.7 }, { t: se.martillo + 0.3, s: "rumble", v: 0.6 }, { t: se.peor, s: "hiss", v: 0.6 }],
     shake: [[se.martillo + 0.2, 0.7, 0.8]],
   },
@@ -226,7 +226,7 @@ const scenes: Record<string, SceneSpec> = {
     fx: ({ t }) =>
       S(
         <>
-          {t < th.cascada ? <Thanator x={kf(t, [0, th.corriendo, th.cascada], [1500, 1150, 600])} y={1490} s={1.0} flip t={t} roar={kf(t, [th.thanator - 0.2, th.thanator + 0.4, th.thanator + 1.0], [0, 1, 0.2])} run={t > th.corriendo ? 1 : 0} /> : null}
+          {t < th.cascada ? <Thanator x={kf(t, [0, th.corriendo, th.cascada], [1500, 1150, 600])} y={1490} s={2.2} flip t={t} roar={kf(t, [th.thanator - 0.2, th.thanator + 0.4, th.thanator + 1.0], [0, 1, 0.2])} run={t > th.corriendo ? 1 : 0} /> : null}
           {t > th.cascada - 0.2 && t < th.solo ? (
             <g>
               <rect x={-460} y={900} width={2000} height={700} fill="#4aa8d8" opacity={0.0} />
@@ -254,7 +254,7 @@ const scenes: Record<string, SceneSpec> = {
         <>
           {[0, 1, 2, 3].map((i) => (
             <g key={i} opacity={t > lo.salva + i * 0.2 ? Math.max(0, 1 - (t - lo.salva - i * 0.2) * 2) : 1}>
-              <ViperWolf x={kf(t, [0, lo.lobos + 0.5], [i < 2 ? -300 - i * 100 : 1400 + i * 50, i < 2 ? 220 + i * 120 : 820 + (i - 2) * 140])} y={1490 - (i % 2) * 30} s={1.1} flip={i >= 2} t={t} />
+              <ViperWolf x={kf(t, [0, lo.lobos + 0.5], [i < 2 ? -300 - i * 100 : 1400 + i * 50, i < 2 ? 220 + i * 120 : 820 + (i - 2) * 140])} y={1490 - (i % 2) * 30} s={1.9} flip={i >= 2} t={t} />
             </g>
           ))}
           <Arrow x0={1300} y0={700} x1={300} y1={1400} t={t} t0={lo.flechas} />
@@ -337,12 +337,12 @@ const scenes: Record<string, SceneSpec> = {
     under: ({ t }) =>
       S(
         <>
-          <Direhorse x={kf(t, [ca.poco, D("caballo")], [560, 1500])} y={1480} s={1.1} t={t} run={t > ca.poco ? 1 : t > ca.cae && t < ca.cae + 0.8 ? 1 : 0} />
+          <Direhorse x={kf(t, [ca.poco, D("caballo")], [560, 1500])} y={1480} s={2.1} t={t} run={t > ca.poco ? 1 : t > ca.cae && t < ca.cae + 0.8 ? 1 : 0} />
           <QueueLink x0={kf(t, [ca.poco, D("caballo")], [500, 1440])} y0={1050} x1={kf(t, [ca.poco, D("caballo")], [760, 1700])} y1={1150} t={t} k={kf(t, [ca.uniendo, ca.uniendo + 0.4], [0, 1]) * (t > ca.cae && t < ca.rie ? 0 : 1)} />
         </>,
       ),
     chars: [
-      { who: "jakenavi", x: 500, y: 1300, acts: [{ t: 0, pose: "ride" }, { t: ca.cae, move: { x: 320, y: 1480 }, dur: 0.4 }, { t: ca.cae, rot: -70, dur: 0.4 }, { t: ca.cae, expr: "surprise" }, { t: ca.rie + 0.6, move: { x: 500, y: 1300 }, dur: 0.3 }, { t: ca.rie + 0.6, rot: 0, dur: 0.3 }, { t: ca.poco, move: { x: 1440 }, dur: D("caballo") - ca.poco }, { t: ca.poco, expr: "joy" }] },
+      { who: "jakenavi", x: 500, y: 1180, acts: [{ t: 0, pose: "ride" }, { t: ca.cae, move: { x: 320, y: 1480 }, dur: 0.4 }, { t: ca.cae, rot: -70, dur: 0.4 }, { t: ca.cae, expr: "surprise" }, { t: ca.rie + 0.6, move: { x: 500, y: 1180 }, dur: 0.3 }, { t: ca.rie + 0.6, rot: 0, dur: 0.3 }, { t: ca.poco, move: { x: 1440 }, dur: D("caballo") - ca.poco }, { t: ca.poco, expr: "joy" }] },
       { who: "neytiri", x: 900, y: 1480, facing: -1, holding: bow, acts: [{ t: ca.rie, expr: "joy" }, { t: ca.rie, pose: "cheer", dur: 1.2 }] },
     ],
     cam: [{ t: 0, z: 1.15, x: 600, y: 1150 }, { t: ca.cae, z: 1.4, x: 400, y: 1250 }, { t: ca.rie, z: 1.4, x: 900, y: 1050 }, { t: ca.poco, z: 1.0, y: 1100 }],
@@ -351,7 +351,7 @@ const scenes: Record<string, SceneSpec> = {
 
   montanas: {
     bg: ({ t }) => <FloatingMountains t={t} />,
-    fx: ({ t }) => S(t > mo.ikran - 0.3 ? <Ikran x={kf(t, [mo.ikran - 0.3, D("montanas")], [1500, 1000])} y={kf(t, [mo.ikran - 0.3, D("montanas")], [500, 900])} s={0.9} flip t={t} /> : null),
+    fx: ({ t }) => S(t > mo.ikran - 0.3 ? <Ikran x={kf(t, [mo.ikran - 0.3, D("montanas")], [1500, 1000])} y={kf(t, [mo.ikran - 0.3, D("montanas")], [500, 900])} s={1.6} flip t={t} /> : null),
     chars: [
       { who: "jakenavi", x: 300, y: 1480, acts: [{ t: 0, expr: "surprise" }, { t: mo.trepar, walk: 560, dur: 1.5 }, { t: mo.dragon, expr: "focus" }] },
       { who: "neytiri", x: 120, y: 1480, holding: bow, acts: [{ t: mo.trepar, walk: 360, dur: 1.5 }] },
@@ -366,9 +366,9 @@ const scenes: Record<string, SceneSpec> = {
     under: ({ t }) =>
       S(
         t < ik.vacio - 0.2 ? (
-          <Ikran x={kf(t, [0, ik.salta], [800, 700])} y={1300} s={1.1} flip t={t} perch={t < ik.salta} flap={t < ik.salta ? 0 : 1} />
+          <Ikran x={kf(t, [0, ik.salta], [800, 700])} y={1300} s={2.0} flip t={t} perch={t < ik.salta} flap={t < ik.salta ? 0 : 1} />
         ) : (
-          <Ikran x={kf(t, [ik.vacio - 0.2, D("ikran")], [-200, 1300])} y={kf(t, [ik.vacio - 0.2, D("ikran")], [600, 900])} s={1.2} t={t} />
+          <Ikran x={kf(t, [ik.vacio - 0.2, D("ikran")], [-200, 1300])} y={kf(t, [ik.vacio - 0.2, D("ikran")], [600, 900])} s={2.0} t={t} />
         ),
       ),
     fx: ({ t }) => S(t > ik.conecta - 0.1 && t < ik.vacio - 0.2 ? <QueueLink x0={620} y0={1050} x1={760} y1={1240} t={t} k={1} /> : null),
@@ -381,7 +381,7 @@ const scenes: Record<string, SceneSpec> = {
           { t: 0, expr: "focus" },
           { t: ik.matarlo, pose: "cower", dur: 0.8 },
           { t: ik.matarlo, expr: "surprise" },
-          { t: ik.salta - 0.2, move: { x: 680, y: 1220 }, dur: 0.4 },
+          { t: ik.salta - 0.2, move: { x: 660, y: 1250 }, dur: 0.4 },
           { t: ik.salta, pose: "ride" },
           { t: ik.conecta, expr: "anger" },
           { t: ik.vacio - 0.2, move: { x: -190, y: 610 }, dur: 0.01 },
@@ -523,8 +523,8 @@ const scenes: Record<string, SceneSpec> = {
     under: ({ t }) =>
       S(
         <>
-          <Toruk x={kf(t, [0, tk.doma, D("toruk")], [1500, 700, 300])} y={kf(t, [0, tk.doma, D("toruk")], [900, 1150, 900])} s={0.9} flip={t < tk.doma} t={t} />
-          {t < tk.tira + 0.4 ? <Ikran x={kf(t, [0, tk.tira], [-200, 600])} y={600} s={0.8} t={t} /> : null}
+          <Toruk x={kf(t, [0, tk.doma, D("toruk")], [1500, 700, 300])} y={kf(t, [0, tk.doma, D("toruk")], [900, 1150, 900])} s={1.9} flip={t < tk.doma} t={t} />
+          {t < tk.tira + 0.4 ? <Ikran x={kf(t, [0, tk.tira], [-200, 600])} y={600} s={1.5} t={t} /> : null}
         </>,
       ),
     chars: [
@@ -537,7 +537,7 @@ const scenes: Record<string, SceneSpec> = {
 
   toruk_makto: {
     bg: ({ t }) => <TreeOfSouls t={t} k={0.6} />,
-    under: ({ t }) => S(<Toruk x={kf(t, [0, tk.doma * 0 + 1.2], [1500, 760])} y={kf(t, [0, 1.2], [600, 1250])} s={0.75} flip t={t} flap={t < 1.2 ? 1 : 0.15} />),
+    under: ({ t }) => S(<Toruk x={kf(t, [0, tk.doma * 0 + 1.2], [1500, 760])} y={kf(t, [0, 1.2], [600, 1250])} s={1.6} flip t={t} flap={t < 1.2 ? 1 : 0.15} />),
     chars: [
       { who: "jakenavi", x: 1500, y: 980, acts: [{ t: 0, pose: "ride" }, { t: 0, move: { x: 800, y: 1080 }, dur: 1.2 }, { t: tm.leyenda, move: { x: 560, y: 1480 }, dur: 0.6 }, { t: tm.leyenda, pose: "stand" }, { t: tm.perdona, expr: "joy" }] },
       { who: "neytiri", x: 220, y: 1480, acts: [{ t: tm.arrodillan, pose: "cower", dur: 1.6 }, { t: tm.perdona, expr: "joy" }, { t: tm.perdona, walk: 400, dur: 0.6 }] },
@@ -575,9 +575,9 @@ const scenes: Record<string, SceneSpec> = {
       S(
         t < cl.ayuda - 0.2 ? (
           <>
-            <Toruk x={kf(t, [0, cl.ayuda], [-300, 1400])} y={650} s={0.7} t={t} />
+            <Toruk x={kf(t, [0, cl.ayuda], [-300, 1400])} y={650} s={1.4} t={t} />
             {Array.from({ length: 8 }).map((_, i) => (
-              <Ikran key={i} x={kf(t, [0, cl.ayuda], [-500 - i * 140, 1200 - i * 140])} y={780 + (i % 3) * 90} s={0.45} t={t + i} col={i % 2 ? "#3a6ad8" : "#d84a6a"} />
+              <Ikran key={i} x={kf(t, [0, cl.ayuda], [-500 - i * 140, 1200 - i * 140])} y={780 + (i % 3) * 90} s={0.8} t={t + i} col={i % 2 ? "#3a6ad8" : "#d84a6a"} />
             ))}
           </>
         ) : null,
@@ -602,7 +602,7 @@ const scenes: Record<string, SceneSpec> = {
             <Gunship key={i} x={kf(t, [ba.batalla - 0.5, D("batalla")], [1700 + i * 160, 500 + i * 220])} y={900 + i * 120} s={0.6} flip t={t} fire={t > ba.flechas} />
           ))}
           {Array.from({ length: 6 }).map((_, i) => (
-            <Ikran key={`i${i}`} x={kf(t, [ba.batalla - 0.5, D("batalla")], [-400 - i * 120, 900 - i * 120])} y={900 + (i % 3) * 140} s={0.55} t={t + i} col={i % 2 ? "#3a6ad8" : "#d84a6a"} r={t > ba.caen + i * 0.3 && i % 2 ? 60 : 0} />
+            <Ikran key={`i${i}`} x={kf(t, [ba.batalla - 0.5, D("batalla")], [-400 - i * 120, 900 - i * 120])} y={900 + (i % 3) * 140} s={1.0} t={t + i} col={i % 2 ? "#3a6ad8" : "#d84a6a"} r={t > ba.caen + i * 0.3 && i % 2 ? 60 : 0} />
           ))}
           {t > ba.caen ? [0, 1, 2].map((i) => <Explosion key={`e${i}`} x={300 + i * 300} y={1000 + (i % 2) * 150} s={0.6} k={Math.max(0, 1 - (t - ba.caen - i * 0.4) * 1.2)} />) : null}
         </>,
@@ -621,11 +621,11 @@ const scenes: Record<string, SceneSpec> = {
     under: ({ t }) =>
       S(
         <>
-          {t > ey.martillo - 0.4 && t < ey.salta - 0.2 ? <Hammerhead x={kf(t, [ey.martillo - 0.4, ey.salta], [-500, 900])} y={1480} s={1.0} t={t} charge={1} /> : null}
-          {t > ey.thanators - 0.3 && t < ey.salta - 0.2 ? <Thanator x={kf(t, [ey.thanators - 0.3, ey.salta], [1600, 400])} y={1490} s={0.9} flip t={t} run={1} roar={0.8} /> : null}
-          {t > ey.martillo - 0.4 && t < ey.salta - 0.2 ? <AmpSuit x={kf(t, [ey.martillo, ey.salta], [800, 1350])} y={1470} s={1.25} t={t} broken={1} /> : null}
+          {t > ey.martillo - 0.4 && t < ey.salta - 0.2 ? <Hammerhead x={kf(t, [ey.martillo - 0.4, ey.salta], [-500, 900])} y={1480} s={2.5} t={t} charge={1} /> : null}
+          {t > ey.thanators - 0.3 && t < ey.salta - 0.2 ? <Thanator x={kf(t, [ey.thanators - 0.3, ey.salta], [1600, 400])} y={1490} s={2.1} flip t={t} run={1} roar={0.8} /> : null}
+          {t > ey.martillo - 0.4 && t < ey.salta - 0.2 ? <AmpSuit x={kf(t, [ey.martillo, ey.salta], [800, 1350])} y={1470} s={1.7} t={t} broken={1} /> : null}
           {t > ey.salta - 0.2 ? <DragonShip x={kf(t, [ey.salta - 0.2, ey.explotar], [1100, 800])} y={700} s={1.0} flip t={t} /> : null}
-          {t > ey.salta - 0.2 ? <Toruk x={kf(t, [ey.salta - 0.2, ey.explotar], [-200, 500])} y={kf(t, [ey.salta - 0.2, ey.explotar], [900, 450])} s={0.6} t={t} /> : null}
+          {t > ey.salta - 0.2 ? <Toruk x={kf(t, [ey.salta - 0.2, ey.explotar], [-200, 500])} y={kf(t, [ey.salta - 0.2, ey.explotar], [900, 450])} s={1.3} t={t} /> : null}
           {t > ey.explotar - 0.1 ? <Explosion x={800} y={700} s={2.2} k={Math.max(0, 1 - (t - ey.explotar) * 0.7)} /> : null}
         </>,
       ),
@@ -654,21 +654,21 @@ const scenes: Record<string, SceneSpec> = {
             <rect x={-150} y={-160} width={300} height={110} rx={10} fill={t > du.ventana ? "rgba(255,255,255,0.1)" : "rgba(160,220,255,0.6)"} stroke="#1b1b2f" strokeWidth={5} />
             {t > du.ventana ? <path d="M -100 -150 L -60 -100 L -110 -70 M 40 -155 L 10 -110 L 70 -70" stroke="#fff" strokeWidth={4} fill="none" /> : null}
           </g>
-          <AmpSuit x={kf(t, [0, du.capsula, du.pelea, du.flechas], [300, 900, 820, 820])} y={1470} s={1.6} t={t} walk={t < du.capsula ? 1 : 0} knife pilotSkin="#e3ad88" />
+          <AmpSuit x={kf(t, [0, du.capsula, du.pelea, du.flechas], [300, 900, 820, 820])} y={1470} s={1.9} t={t} walk={t < du.capsula ? 1 : 0} knife pilotSkin="#e3ad88" />
           {t > du.ventana && t < du.flechas + 0.5 ? [0, 1, 2].map((i) => <circle key={i} cx={1180 + i * 40} cy={1300 - ((t * 80 + i * 40) % 160)} r={30} fill="#b8c8a0" opacity={0.4} filter="url(#soft)" />) : null}
         </>,
       ),
     fx: ({ t }) =>
       S(
         <>
-          <Arrow x0={200} y0={950} x1={820} y1={820} t={t} t0={du.flechas} dur={0.25} />
-          <Arrow x0={200} y0={900} x1={830} y1={810} t={t} t0={du.flechas + 0.35} dur={0.25} />
+          <Arrow x0={200} y0={850} x1={820} y1={720} t={t} t0={du.flechas} dur={0.25} />
+          <Arrow x0={200} y0={800} x1={830} y1={710} t={t} t0={du.flechas + 0.35} dur={0.25} />
         </>,
       ),
     chars: [
       { who: "neytiri", x: -200, y: 1480, holding: bow, show: false, acts: [{ t: du.pelea - 0.6, show: true }, { t: du.pelea - 0.6, walk: 200, dur: 0.6, run: true }, { t: 0, expr: "anger" }, { t: du.flechas - 0.3, pose: "wandAim", dur: 1.5 }] },
     ],
-    cam: [{ t: 0, z: 1.0, y: 1050 }, { t: du.capsula, z: 1.2, x: 1100, y: 1100 }, { t: du.ventana, z: 1.6, x: 1180, y: 1300 }, { t: du.pelea, z: 1.0, y: 1050 }, { t: du.flechas, z: 1.4, x: 820, y: 900 }],
+    cam: [{ t: 0, z: 1.0, y: 1050 }, { t: du.capsula, z: 1.2, x: 1100, y: 1100 }, { t: du.ventana, z: 1.6, x: 1180, y: 1300 }, { t: du.pelea, z: 1.0, y: 1050 }, { t: du.flechas, z: 1.3, x: 820, y: 850 }],
     sfx: [{ t: du.robot, s: "step", v: 0.8 }, { t: du.robot + 0.5, s: "step", v: 0.8 }, { t: du.ventana, s: "crash", v: 0.9 }, { t: du.ahogar, s: "hiss", v: 0.6 }, { t: du.pelea, s: "zap", v: 0.6 }, { t: du.flechas, s: "whoosh", v: 0.7 }, { t: du.flechas + 0.35, s: "whoosh", v: 0.7 }],
     shake: [[du.ventana, 0.6, 0.5]],
   },
@@ -760,6 +760,16 @@ for (const sc of Object.values(scenes)) {
       </>
     );
   }
+}
+
+// color más intenso y fondo que se mueve suave (sensación de cámara viva)
+for (const sc of Object.values(scenes)) {
+  const Bg = sc.bg;
+  sc.bg = ({ t }) => (
+    <div style={{ position: "absolute", inset: 0, filter: "saturate(1.4) contrast(1.06) brightness(1.04)", translate: `${Math.sin(t * 0.27) * 34}px ${Math.cos(t * 0.21) * 12}px`, scale: "1.05" }}>
+      <Bg t={t} />
+    </div>
+  );
 }
 
 export const av1full: PartSpec = { part: 0, title: "Avatar", dyn: true, scenes };
