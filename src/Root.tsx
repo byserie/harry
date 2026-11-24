@@ -12,7 +12,7 @@ import { p7full, p7fullAudio } from "./peli7/full";
 import { p8full, p8fullAudio } from "./peli8/full";
 import { ShortCompositions } from "./shorts/register";
 import { EditCompositions } from "./edits/Edit";
-import { MuestraElenco, MuestraNoche, MuestraNocheYT } from "./avatar/Muestra";
+import { MuestraElenco, MuestraJake, MuestraNoche, MuestraNocheYT } from "./avatar/Muestra";
 import { TestScene } from "./scenes/TestScene";
 import { Part } from "./engine/Part";
 import { part1, part1Audio } from "./scenes/part1";
@@ -172,6 +172,7 @@ export const RemotionRoot: React.FC = () => {
       ))}
       <Composition id="AvMuestraNoche" component={MuestraNoche} durationInFrames={150} {...V} />
       <Composition id="AvMuestraNocheYT" component={MuestraNocheYT} durationInFrames={150} fps={30} width={1920} height={1080} />
+      <Composition id="AvMuestraJake" component={MuestraJake} durationInFrames={60} {...V} />
       <Composition id="AvMuestraElenco" component={MuestraElenco} durationInFrames={60} {...V} />
       <ShortCompositions />
       <EditCompositions />

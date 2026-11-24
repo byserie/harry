@@ -41,3 +41,13 @@ export const MuestraNocheYT: React.FC = () => (
     <MuestraNoche />
   </LandCtx.Provider>
 );
+
+const jake: SceneSpec = {
+  bg: ({ t }) => <PandoraDay t={t} />,
+  chars: [
+    { who: "jake", x: 380, y: 1480, s: 2, acts: [{ t: 0, expr: "joy" }] },
+    { who: "jakenavi", x: 760, y: 1480, s: 2, facing: -1, acts: [{ t: 0, expr: "surprise" }] },
+  ],
+  cam: [{ t: 0, z: 1.0, y: 1150 }],
+};
+export const MuestraJake: React.FC = () => <AbsoluteFill><Scene spec={jake} first noSfx /></AbsoluteFill>;

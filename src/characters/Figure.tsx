@@ -31,6 +31,7 @@ export type Body = {
   tie?: string;
   glasses?: boolean;
   build?: number; // 0 flaco … 1 ancho
+  wheelchair?: boolean; // siempre sentado en silla de ruedas
 };
 
 const NAVI = (o: Partial<Body>): Body => ({
@@ -60,7 +61,7 @@ const HUMAN = (o: Partial<Body>): Body => ({
 });
 
 export const FIGS: Partial<Record<CharId, Body>> = {
-  jake: HUMAN({ top: "#3d4a2e", bottom: "#2b3324", hairStyle: "buzz", build: 0.5 }),
+  jake: HUMAN({ top: "#3d4a2e", bottom: "#2b3324", hairStyle: "buzz", build: 0.5, wheelchair: true }),
   jakenavi: NAVI({ beads: "#e8e2c8", build: 0.5 }),
   neytiri: NAVI({ skin: "#58aaee", shade: "#3a88d2", female: true, top: "#c9873e", beads: "#e2553a", headdress: "#e2553a" }),
   grace: HUMAN({ female: true, skin: "#f3d6bd", shade: "#dcb393", top: "#b8a274", bottom: "#5c5a48", hair: "#a34e2a", hairStyle: "bob", eye: "#4a8a5a" }),
@@ -115,10 +116,13 @@ type Props = {
   stone?: boolean;
 };
 
-export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose, expression = "neutral", showName = true, opacity = 1, rotate = 0, holding, stone = false }) => {
+export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose: pose0, expression = "neutral", showName = true, opacity = 1, rotate = 0, holding, stone = false }) => {
   const frame = useCurrentFrame();
   const c = CAST[who];
   const b = FIGS[who]!;
+  const chair = !!b.wheelchair;
+  // en silla: muslos hacia adelante, rodillas dobladas, sin caminar ni saltar
+  const pose = chair ? { ...pose0, rHip: 88, rKn: 88, lHip: 84, lKn: 86, lean: Math.max(-4, Math.min(6, pose0.lean)), bob: 0 } : pose0;
   const navi = b.kind === "navi";
   const s = scale * c.height * 0.92;
   const seed = who.length * 13 + c.name.charCodeAt(0);
@@ -135,7 +139,7 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
   const ankR = add(kneeR, down(pose.rHip - pose.rKn), SH);
   const kneeL = add(hip0, down(pose.lHip), TH);
   const ankL = add(kneeL, down(pose.lHip - pose.lKn), SH);
-  const ground = Math.max(ankR.y, ankL.y) + 10;
+  const ground = Math.max(ankR.y, ankL.y) + (chair ? 40 : 10);
   const off = -ground + pose.bob;
   const sh = (p: P): P => ({ x: p.x, y: p.y + off });
   const hip = sh(hip0), kR = sh(kneeR), aR = sh(ankR), kL = sh(kneeL), aL = sh(ankL);
@@ -217,6 +221,20 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
     <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity, filter: stone ? "grayscale(1) brightness(1.15)" : undefined }}>
       <ellipse cx={x} cy={y + 4} rx={62 * s} ry={11 * s} fill="rgba(0,0,0,0.25)" />
       <g transform={`translate(${x} ${y}) scale(${facing * s} ${s}) rotate(${rotate} 0 ${-(TH + SH)})`}>
+        {chair ? (
+          <g>
+            {/* respaldo y rueda grande (detrás del cuerpo) */}
+            <path d={`M ${hip.x - 34} ${hip.y + 6} L ${hip.x - 40} ${hip.y - 110} L ${hip.x - 26} ${hip.y - 116}`} stroke="#2a2a30" strokeWidth={10} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+            <rect x={hip.x - 46} y={hip.y - 100} width={22} height={80} rx={6} fill="#3a4a6a" stroke={INK} strokeWidth={4} />
+            <circle cx={hip.x - 6} cy={hip.y + 40} r={62} fill="none" stroke={INK} strokeWidth={14} />
+            <circle cx={hip.x - 6} cy={hip.y + 40} r={62} fill="none" stroke="#5a5a66" strokeWidth={7} />
+            <circle cx={hip.x - 6} cy={hip.y + 40} r={50} fill="none" stroke="#9a9aa8" strokeWidth={3} />
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <line key={i} x1={hip.x - 6} y1={hip.y + 40} x2={hip.x - 6 + Math.cos(i * 1.047 + frame * 0.02) * 50} y2={hip.y + 40 + Math.sin(i * 1.047 + frame * 0.02) * 50} stroke="#8a8a96" strokeWidth={3} />
+            ))}
+            <circle cx={hip.x - 6} cy={hip.y + 40} r={8} fill="#2a2a30" />
+          </g>
+        ) : null}
         {tail}
         {braid}
         {arm(shoulder, elbL, handL, true)}
@@ -257,6 +275,14 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
           </g>
         )}
         {leg(kR, aR)}
+        {chair ? (
+          <g>
+            {/* asiento, apoyapiés y ruedita delantera */}
+            <rect x={hip.x - 40} y={hip.y + 4} width={100} height={14} rx={5} fill="#3a4a6a" stroke={INK} strokeWidth={4} />
+            <path d={`M ${hip.x + 50} ${hip.y + 16} L ${aR.x + 6} ${aR.y + 14} L ${aR.x + 40} ${aR.y + 14}`} stroke="#2a2a30" strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+            <circle cx={aR.x + 2} cy={aR.y + 36} r={14} fill="#3a3a44" stroke={INK} strokeWidth={4} />
+          </g>
+        ) : null}
         <Face b={b} c={{ name: c.name }} p={head} HR={HR} turn={pose.headTurn} tilt={pose.headTilt} expression={expression} seed={seed} />
         {arm(shoulder, elbR, handR, false)}
         {holding ? <g transform={`translate(${handR.x} ${handR.y})`}>{holding}</g> : null}
