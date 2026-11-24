@@ -379,14 +379,14 @@ const Bubble: React.FC<{ x: number; y: number; text: string; k: number; color: s
   const lines: string[] = [];
   let cur = "";
   for (const wd of words) {
-    if ((cur + " " + wd).trim().length > 22) {
+    if ((cur + " " + wd).trim().length > 20) {
       lines.push(cur.trim());
       cur = wd;
     } else cur += " " + wd;
   }
   if (cur.trim()) lines.push(cur.trim());
-  const w = Math.max(...lines.map((l) => l.length)) * 21 + 60;
-  const h = lines.length * 46 + 34;
+  const w = Math.max(...lines.map((l) => l.length)) * 26 + 70;
+  const h = lines.length * 56 + 40;
   const bx = Math.max(-380 + w / 2, Math.min(1460 - w / 2, x));
   return (
     <g transform={`translate(${bx} ${y - h - 30}) scale(${0.6 + 0.4 * k})`} opacity={k}>
@@ -394,7 +394,7 @@ const Bubble: React.FC<{ x: number; y: number; text: string; k: number; color: s
       <rect x={-w / 2 + 16} y={-22} width={name.length * 17 + 28} height={36} rx={18} fill={color} stroke={INK} strokeWidth={4} />
       <text x={-w / 2 + 30} y={4} fontFamily={FONT} fontWeight={700} fontSize={24} fill="#fff">{name}</text>
       {lines.map((l, i) => (
-        <text key={i} x={0} y={52 + i * 46} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={38} fill={INK}>
+        <text key={i} x={0} y={60 + i * 56} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={46} fill={INK}>
           {l}
         </text>
       ))}
