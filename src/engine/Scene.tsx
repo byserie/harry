@@ -73,7 +73,7 @@ const transStyle = (trans: Trans, f: number, tf = TRANS_FRAMES): React.CSSProper
   }
 };
 
-export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean }> = ({ spec, first, dyn = false }) => {
+export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; noSfx?: boolean }> = ({ spec, first, dyn = false, noSfx = false }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const land = React.useContext(LandCtx);
@@ -147,7 +147,7 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean }
           <Audio src={staticFile("sfx/whoosh.wav")} volume={dyn ? 0.45 : 0.25} />
         </Sequence>
       )}
-      {(spec.sfx ?? []).map((s, i) => (
+      {(noSfx ? [] : spec.sfx ?? []).map((s, i) => (
         <Sequence key={i} from={Math.round(s.t * fps)} durationInFrames={Math.round(3.2 * fps)} layout="none">
           <Audio src={staticFile(`sfx/${s.s}.wav`)} volume={s.v ?? 0.5} />
         </Sequence>

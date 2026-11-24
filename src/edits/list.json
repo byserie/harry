@@ -1,0 +1,7 @@
+[
+  { "id": "saga", "who": null, "title": "HARRY POTTER", "sub": "8 películas · 1 historia", "end": "La saga completa en el canal", "root": 40, "seed": 3 },
+  { "id": "harry", "who": "harry", "title": "EL ELEGIDO", "sub": "Harry Potter", "end": "El niño que vivió ⚡", "root": 41, "seed": 5 },
+  { "id": "voldemort", "who": "voldemort", "title": "EL QUE NO DEBE SER NOMBRADO", "sub": "Voldemort", "end": "Lord Voldemort 🐍", "root": 38, "seed": 7 },
+  { "id": "hermione", "who": "hermione", "title": "LA BRUJA MÁS BRILLANTE", "sub": "Hermione Granger", "end": "Hermione 📚✨", "root": 43, "seed": 11 },
+  { "id": "snape", "who": "snape", "title": "SIEMPRE.", "sub": "Severus Snape", "end": "Siempre. 🦌", "root": 39, "seed": 13 }
+]
