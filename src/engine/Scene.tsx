@@ -8,7 +8,7 @@ import { kf } from "../lib/pose";
 import { charState } from "./charState";
 import { SceneSpec, Trans } from "./types";
 import { dynCam, Pops, SpeedLines } from "./Dyn";
-import { BAND, LAND_SCALE, LandCtx } from "./layout";
+import { BAND, LAND_SCALE, LandCtx, WideCtx } from "./layout";
 
 const TRANS_FRAMES = 12;
 
@@ -96,6 +96,7 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; 
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const land = React.useContext(LandCtx);
+  const wide = React.useContext(WideCtx);
   const t = frame / fps;
   const cam0 = camAt(spec, t);
   const dc = dyn ? dynCam(spec, t, land) : { zMul: 1, xOff: 0, rot: 0 };
@@ -113,7 +114,7 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; 
       <AbsoluteFill style={{ backgroundColor: "#1b1b2f", overflow: "hidden", rotate: `${dc.rot}deg`, scale: dc.rot ? "1.04" : undefined }}>
         {land ? (
           <>
-            <div
+            {wide ? null : <div
               style={{
                 position: "absolute",
                 left: 0,
@@ -126,18 +127,18 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; 
               }}
             >
               <Bg t={t} />
-            </div>
+            </div>}
             <div
               style={{
                 position: "absolute",
                 left: (1920 - 1080 * LAND_SCALE) / 2,
-                top: -BAND.top * LAND_SCALE,
+                top: -(BAND.top + (wide ? 110 : 0)) * LAND_SCALE,
                 width: 1080,
                 height: 1920,
                 transformOrigin: "0 0",
                 scale: String(LAND_SCALE),
-                overflow: "hidden",
-                boxShadow: "0 0 60px 20px rgba(0,0,0,0.6)",
+                overflow: wide ? "visible" : "hidden",
+                boxShadow: wide ? undefined : "0 0 60px 20px rgba(0,0,0,0.6)",
               }}
             >
               <Camera zoom={cam.z} fx={cam.x} fy={cam.y} shake={shake} frame={frame}>

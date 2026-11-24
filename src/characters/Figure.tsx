@@ -124,7 +124,7 @@ export const Figure: React.FC<Props> = ({ who, x, y, scale = 2, facing = 1, pose
   // en silla: muslos hacia adelante, rodillas dobladas, sin caminar ni saltar
   const pose = chair ? { ...pose0, rHip: 88, rKn: 88, lHip: 84, lKn: 86, lean: Math.max(-4, Math.min(6, pose0.lean)), bob: 0 } : pose0;
   const navi = b.kind === "navi";
-  const s = scale * c.height * 0.92;
+  const s = scale * c.height * 0.76;
   const seed = who.length * 13 + c.name.charCodeAt(0);
   const build = b.build ?? 0.3;
 

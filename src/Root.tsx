@@ -3,7 +3,7 @@ import { Miniatura, Miniatura1, MiniaturaPeli, Portada, ThumbDef } from "./Thumb
 import { Avatar, Banner } from "./Brand";
 import { p2full, p2fullAudio } from "./peli2d/full";
 import { p1full, p1fullAudio } from "./peli1d/full";
-import { LandCtx } from "./engine/layout";
+import { LandCtx, WideCtx } from "./engine/layout";
 import { p3full, p3fullAudio } from "./peli3/full";
 import { p4full, p4fullAudio } from "./peli4/full";
 import { p5full, p5fullAudio } from "./peli5/full";
@@ -13,6 +13,7 @@ import { p8full, p8fullAudio } from "./peli8/full";
 import { ShortCompositions } from "./shorts/register";
 import { EditCompositions } from "./edits/Edit";
 import { MuestraElenco, MuestraJake, MuestraNoche, MuestraNocheYT } from "./avatar/Muestra";
+import { avdemo, avdemoAudio } from "./avatar/demo";
 import { TestScene } from "./scenes/TestScene";
 import { Part } from "./engine/Part";
 import { part1, part1Audio } from "./scenes/part1";
@@ -120,6 +121,14 @@ const P8FullLand = () => (
 );
 
 const V = { fps: 30, width: 1080, height: 1920 };
+const AvDemo = () => <Part spec={avdemo} audio={avdemoAudio} audioFile="audio/avdemo.wav" />;
+const AvDemoYT = () => (
+  <LandCtx.Provider value>
+    <WideCtx.Provider value>
+      <AvDemo />
+    </WideCtx.Provider>
+  </LandCtx.Provider>
+);
 
 const THUMBS: Record<string, ThumbDef> = {
   Miniatura3: { scene: p3full.scenes.ciervo, t: 9.5, y: 640, l1: "EL PRISIONERO", l2: "DE AZKABAN", c2: "#8fd3ff", badge: "¡EN 5 MINUTOS!", bg: "#101830" },
@@ -172,6 +181,8 @@ export const RemotionRoot: React.FC = () => {
       ))}
       <Composition id="AvMuestraNoche" component={MuestraNoche} durationInFrames={150} {...V} />
       <Composition id="AvMuestraNocheYT" component={MuestraNocheYT} durationInFrames={150} fps={30} width={1920} height={1080} />
+      <Composition id="AvDemoYT" component={AvDemoYT} durationInFrames={avdemoAudio.durationInFrames} fps={30} width={1920} height={1080} />
+      <Composition id="AvDemo" component={AvDemo} durationInFrames={avdemoAudio.durationInFrames} {...V} />
       <Composition id="AvMuestraJake" component={MuestraJake} durationInFrames={60} {...V} />
       <Composition id="AvMuestraElenco" component={MuestraElenco} durationInFrames={60} {...V} />
       <ShortCompositions />

@@ -91,19 +91,19 @@ export const PandoraNight: React.FC<{ t: number; glow?: number }> = ({ t, glow =
         <stop offset="1" stopColor="#041a1e" />
       </linearGradient>
     </defs>
-    <rect width={W} height={H} fill="url(#pnSky)" />
+    <rect x={-460} width={W + 920} height={H} fill="url(#pnSky)" />
     {/* gigante gaseoso en el cielo */}
     <circle cx={800} cy={420} r={240} fill="url(#pnPlanet)" opacity={0.85} />
     <path d="M 560 400 Q 800 360 1040 420" stroke="#d8ecff" strokeWidth={10} fill="none" opacity={0.35} />
     <path d="M 575 480 Q 800 450 1030 500" stroke="#2a4a8a" strokeWidth={14} fill="none" opacity={0.4} />
     {Array.from({ length: 50 }).map((_, i) => (
-      <circle key={i} cx={rnd(`s${i}`) * W} cy={rnd(`sy${i}`) * 700} r={1 + rnd(`sr${i}`) * 2} fill="#fff" opacity={0.4 + 0.5 * Math.sin(t * 2 + i)} />
+      <circle key={i} cx={-460 + rnd(`s${i}`) * (W + 920)} cy={rnd(`sy${i}`) * 700} r={1 + rnd(`sr${i}`) * 2} fill="#fff" opacity={0.4 + 0.5 * Math.sin(t * 2 + i)} />
     ))}
     {/* árboles lejanos (silueta azul) */}
-    {[60, 300, 560, 880, 1060].map((x, i) => (
+    {[-380, -160, 60, 300, 560, 880, 1060, 1280, 1480].map((x, i) => (
       <BigTree key={`f${i}`} x={x} y={1150} s={0.8} col="#0d2c4a" dark="#081a30" />
     ))}
-    <rect x={0} y={900} width={W} height={400} fill="#0a3a4a" opacity={0.35} filter="url(#soft)" />
+    <rect x={-460} y={900} width={W + 920} height={400} fill="#0a3a4a" opacity={0.35} filter="url(#soft)" />
     {/* árboles cercanos con raíces que brillan */}
     <BigTree x={90} y={1290} s={1.25} col="#123a46" dark="#08202a" glow="#4ef0ff" night />
     <BigTree x={1010} y={1300} s={1.35} col="#123a46" dark="#08202a" glow="#c86bff" night />
@@ -112,17 +112,21 @@ export const PandoraNight: React.FC<{ t: number; glow?: number }> = ({ t, glow =
       <path key={`l${i}`} d={`M ${x} 0 Q ${x + 40 + Math.sin(t + i) * 10} 300 ${x - 10} ${520 + i * 40}`} stroke="#0d3a3a" strokeWidth={8} fill="none" />
     ))}
     {/* piso */}
-    <path d="M 0 1260 Q 540 1210 1080 1260 L 1080 1920 L 0 1920 Z" fill="url(#pnGround)" />
+    <path d="M -460 1270 Q 540 1205 1540 1270 L 1540 1920 L -460 1920 Z" fill="url(#pnGround)" />
     {/* camino de luz: el piso se ilumina donde pisan */}
     <ellipse cx={540} cy={1460} rx={420} ry={60} fill="#3ae0ff" opacity={0.12 * glow} filter="url(#soft)" />
+    <BigTree x={-300} y={1300} s={1.3} col="#123a46" dark="#08202a" glow="#7affb8" night />
+    <BigTree x={1400} y={1290} s={1.2} col="#123a46" dark="#08202a" glow="#4ef0ff" night />
+    <GlowPlant x={-150} y={1360} s={1.2} col="#c86bff" t={t} k={glow} />
+    <Mushroom x={1250} y={1330} s={1.0} col="#4ef0ff" t={t} k={glow} />
     <GlowPlant x={150} y={1330} s={1.1} col="#4ef0ff" t={t} k={glow} />
     <GlowPlant x={930} y={1340} s={1.2} col="#ff6bd6" t={t} k={glow} />
     <Mushroom x={330} y={1300} s={0.9} col="#7affb8" t={t} k={glow} />
     <Mushroom x={760} y={1290} s={0.8} col="#c86bff" t={t} k={glow} />
     <GlowPlant x={540} y={1250} s={0.7} col="#b0ff4e" t={t} k={glow} />
     {/* pasto luminoso en primer plano */}
-    {Array.from({ length: 40 }).map((_, i) => {
-      const x = (i / 40) * W + rnd(`g${i}`) * 20;
+    {Array.from({ length: 70 }).map((_, i) => {
+      const x = -460 + (i / 70) * (W + 920) + rnd(`g${i}`) * 20;
       return <path key={`g${i}`} d={`M ${x} 1920 Q ${x + 8} ${1780 - rnd(`gh${i}`) * 80} ${x + 20 + Math.sin(t * 1.5 + i) * 6} ${1700 - rnd(`gh${i}`) * 120}`} stroke={i % 3 ? "#0f4a4a" : "#3ae0c8"} strokeWidth={6} fill="none" opacity={i % 3 ? 1 : 0.8 * glow} />;
     })}
     {/* partículas flotantes */}
@@ -153,32 +157,34 @@ export const PandoraDay: React.FC<{ t: number }> = ({ t }) => (
         <stop offset="1" stopColor="#fffbe0" stopOpacity="0" />
       </linearGradient>
     </defs>
-    <rect width={W} height={H} fill="url(#pdSky)" />
-    {[80, 330, 600, 860, 1060].map((x, i) => (
+    <rect x={-460} width={W + 920} height={H} fill="url(#pdSky)" />
+    {[-380, -150, 80, 330, 600, 860, 1060, 1280, 1480].map((x, i) => (
       <BigTree key={i} x={x} y={1180} s={0.85} col="#4a8a6a" dark="#2a5a4a" />
     ))}
-    <rect x={0} y={950} width={W} height={300} fill="#bff0d8" opacity={0.35} filter="url(#soft)" />
+    <rect x={-460} y={950} width={W + 920} height={300} fill="#bff0d8" opacity={0.35} filter="url(#soft)" />
     {/* hojas gigantes de copa */}
-    {Array.from({ length: 9 }).map((_, i) => (
-      <ellipse key={i} cx={i * 130} cy={60 + (i % 2) * 50} rx={160} ry={90} fill={i % 2 ? "#2f7a4a" : "#3a9a5a"} stroke={INK} strokeWidth={4} />
+    {Array.from({ length: 16 }).map((_, i) => (
+      <ellipse key={i} cx={-460 + i * 130} cy={60 + (i % 2) * 50} rx={160} ry={90} fill={i % 2 ? "#2f7a4a" : "#3a9a5a"} stroke={INK} strokeWidth={4} />
     ))}
     {/* rayos de sol */}
-    {[250, 520, 790].map((x, i) => (
+    {[-200, 250, 520, 790, 1250].map((x, i) => (
       <path key={i} d={`M ${x} 100 L ${x + 120} 100 L ${x + 260} 1300 L ${x - 60} 1300 Z`} fill="url(#ray)" opacity={0.5 + 0.2 * Math.sin(t + i)} />
     ))}
+    <BigTree x={-320} y={1300} s={1.4} col="#3a6a4a" dark="#1f4430" />
+    <BigTree x={1420} y={1300} s={1.3} col="#3a6a4a" dark="#1f4430" />
     <BigTree x={70} y={1300} s={1.3} col="#3a6a4a" dark="#1f4430" />
     <BigTree x={1020} y={1310} s={1.4} col="#3a6a4a" dark="#1f4430" />
-    <path d="M 0 1260 Q 540 1215 1080 1260 L 1080 1920 L 0 1920 Z" fill="url(#pdGround)" />
+    <path d="M -460 1270 Q 540 1210 1540 1270 L 1540 1920 L -460 1920 Z" fill="url(#pdGround)" />
     {/* helechos */}
-    {[120, 380, 700, 960].map((x, i) => (
+    {[-300, 120, 380, 700, 960, 1350].map((x, i) => (
       <g key={i} transform={T(x, 1330 + (i % 2) * 20, 1.1)}>
         {[-60, -25, 10, 45].map((a, j) => (
           <path key={j} d={`M 0 0 Q ${a} -60 ${a * 2} -110`} stroke="#1f6a3a" strokeWidth={14} fill="none" strokeLinecap="round" />
         ))}
       </g>
     ))}
-    {Array.from({ length: 30 }).map((_, i) => {
-      const x = (i / 30) * W;
+    {Array.from({ length: 52 }).map((_, i) => {
+      const x = -460 + (i / 52) * (W + 920);
       return <path key={`g${i}`} d={`M ${x} 1920 Q ${x + 10} 1800 ${x + 20 + Math.sin(t * 1.5 + i) * 6} ${1720 - rnd(`dg${i}`) * 90}`} stroke="#2a7a3a" strokeWidth={8} fill="none" />;
     })}
   </Svg>
@@ -203,5 +209,81 @@ export const Woodsprites: React.FC<{ t: number; n?: number; cx?: number; cy?: nu
         </g>
       );
     })}
+  </g>
+);
+
+/** Laboratorio de la base humana: cápsulas de enlace, pantallas, ventana a la selva. */
+export const LinkLab: React.FC<{ t: number }> = ({ t }) => (
+  <Svg>
+    <Defs />
+    <defs>
+      <linearGradient id="labWall" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stopColor="#1c2a3a" />
+        <stop offset="1" stopColor="#2a3c50" />
+      </linearGradient>
+      <linearGradient id="labFloor" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stopColor="#3a4a5a" />
+        <stop offset="1" stopColor="#1a2430" />
+      </linearGradient>
+      <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stopColor="#8fd8ff" />
+        <stop offset="1" stopColor="#3a9a6a" />
+      </linearGradient>
+    </defs>
+    <rect x={-460} width={W + 920} height={H} fill="url(#labWall)" />
+    {/* ventanal con la selva */}
+    <rect x={-300} y={520} width={1680} height={420} rx={20} fill="url(#win)" stroke={INK} strokeWidth={8} />
+    {[-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+      <path key={i} d={`M ${150 + i * 140} 940 Q ${170 + i * 140} 700 ${140 + i * 140} 560`} stroke="#2a6a4a" strokeWidth={34} fill="none" opacity={0.8} />
+    ))}
+    {[-2, -1, 0, 1, 2, 3, 4].map((i) => (
+      <line key={`m${i}`} x1={120 + (i + 1) * 210} y1={520} x2={120 + (i + 1) * 210} y2={940} stroke="#5a6a7a" strokeWidth={12} />
+    ))}
+    {/* pantallas holográficas */}
+    {[[160, 380], [700, 360]].map(([x, y], i) => (
+      <g key={i}>
+        <rect x={x} y={y} width={220} height={120} rx={12} fill="#2ad0ff" opacity={0.18 + 0.05 * Math.sin(t * 3 + i)} stroke="#6ae8ff" strokeWidth={3} />
+        {[0, 1, 2, 3].map((j) => (
+          <rect key={j} x={x + 16} y={y + 18 + j * 24} width={60 + ((j * 37 + Math.floor(t * 4)) % 120)} height={8} rx={4} fill="#9af0ff" opacity={0.8} />
+        ))}
+      </g>
+    ))}
+    {/* luces de techo */}
+    {[-260, 200, 540, 880, 1340].map((x, i) => (
+      <g key={i}>
+        <rect x={x - 90} y={120} width={180} height={18} rx={9} fill="#e8f8ff" />
+        <path d={`M ${x - 90} 138 L ${x + 90} 138 L ${x + 200} 1300 L ${x - 200} 1300 Z`} fill="#e8f8ff" opacity={0.05} />
+      </g>
+    ))}
+    <rect x={-460} y={1260} width={W + 920} height={H - 1260} fill="url(#labFloor)" />
+    {Array.from({ length: 14 }).map((_, i) => (
+      <line key={i} x1={-460 + i * 160} y1={1260} x2={i * 160 - 200} y2={H} stroke="#4a5a6a" strokeWidth={3} />
+    ))}
+  </Svg>
+);
+
+/** Cápsula de enlace (se cierra con k de 0 a 1). */
+export const Pod: React.FC<XY & { k?: number; t: number; glow?: number }> = ({ x, y, s = 1, k = 0, t, glow = 0 }) => (
+  <g transform={T(x, y, s)}>
+    <ellipse cx={0} cy={10} rx={230} ry={30} fill="rgba(0,0,0,0.3)" />
+    <path d="M -220 0 Q -230 -90 -150 -110 L 150 -110 Q 230 -90 220 0 Z" fill="#d8e2ea" stroke={INK} strokeWidth={6} />
+    <rect x={-190} y={-60} width={380} height={30} rx={14} fill="#7a8a9a" />
+    {/* tapa */}
+    <g transform={`rotate(${-70 * (1 - k)} 200 -100)`}>
+      <path d="M -210 -100 Q -200 -200 0 -210 Q 200 -200 210 -100 Z" fill="rgba(170,220,255,0.55)" stroke={INK} strokeWidth={6} />
+    </g>
+    {glow > 0 ? <ellipse cx={0} cy={-120} rx={200} ry={70} fill="#6ae8ff" opacity={glow * (0.4 + 0.2 * Math.sin(t * 8))} filter="url(#soft)" /> : null}
+    {[-120, -40, 40, 120].map((d, i) => (
+      <circle key={i} cx={d} cy={-20} r={7} fill={i % 2 ? "#3ae07a" : "#ffcc3a"} opacity={0.6 + 0.4 * Math.sin(t * 5 + i)} />
+    ))}
+  </g>
+);
+
+/** Arco na'vi (en la mano). */
+export const Bow: React.FC<{ r?: number; s?: number }> = ({ r = 0, s = 1 }) => (
+  <g transform={`rotate(${r}) scale(${s})`}>
+    <path d="M 0 -110 Q 50 0 0 110" stroke={INK} strokeWidth={13} fill="none" strokeLinecap="round" />
+    <path d="M 0 -110 Q 50 0 0 110" stroke="#8a5a2a" strokeWidth={7} fill="none" strokeLinecap="round" />
+    <line x1={0} y1={-110} x2={0} y2={110} stroke="#e8e2c8" strokeWidth={2} />
   </g>
 );

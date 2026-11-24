@@ -1,0 +1,11 @@
+{
+ "id": "avdemo",
+ "part": 0,
+ "style": "dyn",
+ "min": 20,
+ "scenes": [
+  { "id": "hook", "text": "Película: Avatar. Jake Sully es un ex marine en silla de ruedas. Lo mandan a Pandora, una luna llena de selvas, para manejar un cuerpo nuevo: un avatar." },
+  { "id": "link", "text": "Se acuesta en una cápsula, cierra los ojos… y despierta en un cuerpo azul de tres metros. Mueve los dedos, se para… ¡y sale corriendo! Puede caminar otra vez." },
+  { "id": "noche", "text": "Pero de noche, perdido en la selva, aparece Neytiri, una guerrera na'vi. Unas semillas sagradas bajan flotando y se posan sobre Jake. Es una señal." }
+ ]
+}

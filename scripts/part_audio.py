@@ -35,7 +35,7 @@ def main(path):
     durs = [max(MIN_SCENE, LEAD + d + TAIL) for d in vdur]
     durs[-1] += 1.5  # tarjeta final
     total = sum(durs) - (len(durs) - 1) * OVERLAP / FPS
-    target_min = 90.0
+    target_min = float(spec.get("min", 90.0))
     if total < target_min:  # repartir aire extra para más acción
         extra = (target_min - total) / len(durs)
         durs = [d + extra for d in durs]
