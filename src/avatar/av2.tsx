@@ -276,7 +276,7 @@ const scenes: Record<string, SceneSpec> = {
           {t > tu.expulsado - 0.2 ? <Tulkun x={kf(t, [tu.expulsado, D("tulkun")], [1600, 1300])} y={1300} s={0.8} flip t={t} scar /> : null}
         </>,
       ),
-    chars: [{ who: "loak", x: 300, y: 1060, acts: [{ t: 0, pose: "ride" }, { t: tu.hermanos, expr: "joy" }, { t: tu.expulsado, expr: "sadness" }] }],
+    chars: [{ who: "loak", x: -330, y: 1085, acts: [{ t: 0, pose: "ride" }, { t: 0, move: { x: 170 }, dur: D("tulkun") }, { t: tu.hermanos, expr: "joy" }, { t: tu.expulsado, expr: "sadness" }] }],
     cam: [{ t: 0, z: 1.0, y: 1050 }, { t: tu.cantan, z: 1.05, y: 950 }, { t: tu.expulsado, z: 1.2, x: 1200, y: 1150 }],
     sfx: [{ t: tu.cantan, s: "chime", v: 0.6 }, { t: tu.cantan + 0.6, s: "chime", v: 0.5 }, { t: tu.expulsado, s: "rumble", v: 0.4 }],
   },
@@ -446,6 +446,7 @@ const scenes: Record<string, SceneSpec> = {
 
   spider_elige: {
     bg: switchAt(sl.espalda - 0.2, UNDER, SEA),
+    under: ({ t }) => S(t > sl.espalda - 0.2 ? <path d="M 650 1520 Q 700 1290 900 1280 Q 1100 1290 1160 1520 Z" fill="#5a5e58" stroke="#1b1b2f" strokeWidth={6} /> : null),
     chars: [
       { who: "quaritchnavi", x: 600, y: 1300, acts: [{ t: 0, rot: 40 }, { t: 0, expr: "sleep" }, { t: sl.salva, move: { y: 1100 }, dur: 1 }, { t: sl.espalda - 0.2, move: { x: 900, y: 1300 }, dur: 0.01 }, { t: sl.espalda - 0.2, rot: 0, dur: 0.01 }, { t: sl.espalda, expr: "surprise" }, { t: sl.irse, expr: "sadness" }, { t: sl.irse, pose: "sad", dur: 2 }] },
       { who: "spider", x: 300, y: 1300, mask: true, acts: [{ t: sl.salva - 0.6, move: { x: 520 }, dur: 0.6 }, { t: sl.salva, pose: "hold", dur: 1 }, { t: sl.espalda - 0.2, move: { x: 700, y: 1300 }, dur: 0.01 }, { t: sl.espalda, face: -1 }, { t: sl.espalda, move: { x: -300 }, dur: 2.5 }, { t: 0, expr: "focus" }] },

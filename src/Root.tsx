@@ -15,6 +15,7 @@ import { EditCompositions } from "./edits/Edit";
 import { MuestraElenco, MuestraJake, MuestraNoche, MuestraNocheYT } from "./avatar/Muestra";
 import { avdemo, avdemoAudio } from "./avatar/demo";
 import { av1full, av1fullAudio } from "./avatar/av1";
+import { av2full, av2fullAudio } from "./avatar/av2";
 import { TestScene } from "./scenes/TestScene";
 import { Part } from "./engine/Part";
 import { part1, part1Audio } from "./scenes/part1";
@@ -130,6 +131,14 @@ const AV1FullYT = () => (
     </WideCtx.Provider>
   </LandCtx.Provider>
 );
+const AV2Full = () => <Part spec={av2full} audio={av2fullAudio} audioFile="audio/av2full.wav" />;
+const AV2FullYT = () => (
+  <LandCtx.Provider value>
+    <WideCtx.Provider value>
+      <AV2Full />
+    </WideCtx.Provider>
+  </LandCtx.Provider>
+);
 const AvDemo = () => <Part spec={avdemo} audio={avdemoAudio} audioFile="audio/avdemo.wav" />;
 const AvDemoYT = () => (
   <LandCtx.Provider value>
@@ -192,6 +201,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="AvMuestraNocheYT" component={MuestraNocheYT} durationInFrames={150} fps={30} width={1920} height={1080} />
       <Composition id="AV1FullYT" component={AV1FullYT} durationInFrames={av1fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="AV1Full" component={AV1Full} durationInFrames={av1fullAudio.durationInFrames} {...V} />
+      <Composition id="AV2FullYT" component={AV2FullYT} durationInFrames={av2fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="AvDemoYT" component={AvDemoYT} durationInFrames={avdemoAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="AvDemo" component={AvDemo} durationInFrames={avdemoAudio.durationInFrames} {...V} />
       <Composition id="AvMuestraJake" component={MuestraJake} durationInFrames={60} {...V} />
