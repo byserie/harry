@@ -1,0 +1,104 @@
+{
+ "id": "rd1",
+ "part": 0,
+ "style": "dyn",
+ "min": 690,
+ "scenes": [
+  {
+   "id": "gancho",
+   "text": "Bienvenidos a otro video. Si les gusta este tipo de historias, suscríbanse y dejen su like, que nos ayuda muchísimo. Vamos con la historia. Mi hermano menor entró a los Marines con un solo objetivo: superarme en rango para poder darme órdenes en la cena familiar de Acción de Gracias. El problema es que se olvidó de un pequeño detalle: yo ya llevaba tres años en el ejército… y era sargento."
+  },
+  {
+   "id": "cap1",
+   "text": "Capítulo uno. La rivalidad. Me llamo Martín, y Tomi es mi hermano menor. Nos llevamos dos años, y desde que tengo memoria, Tomi convirtió todo en una competencia. Quién corría más rápido hasta la esquina. Quién comía más empanadas. Quién se sentaba adelante en el auto. Y si perdía, no lo aceptaba: pedía revancha, y después otra revancha, hasta que yo me cansaba y lo dejaba ganar."
+  },
+  {
+   "id": "alistamiento",
+   "text": "Cuando terminé la secundaria, me alisté en el ejército. Tomi se rió en mi cara. Dijo que eso era para los que no sabían qué hacer con su vida, y que él iba a hacer algo importante de verdad. Durante dos años, lo único importante que hizo fue empezar tres carreras distintas y abandonarlas todas en el primer cuatrimestre."
+  },
+  {
+   "id": "ascenso",
+   "text": "Hasta que un domingo, durante un almuerzo, conté que me habían ascendido a sargento y que ahora tenía un grupo de soldados a cargo. Mi papá me felicitó. Mi mamá casi llora. Y el abuelo Ernesto, que casi nunca habla, levantó su vaso y dijo: bien hecho, hijo. Yo vi la cara de Tomi en ese momento. Se quedó mirando al abuelo como si le hubieran robado algo."
+  },
+  {
+   "id": "marines",
+   "text": "Un mes después, Tomi me mandó un mensaje: me anoté en los Marines. Y en seis meses voy a tener más rango que vos. Le expliqué que los ascensos no funcionan así, que yo llevaba años adentro, que no se puede saltar todos los escalones de golpe. Me clavó el visto. Y se fue al entrenamiento."
+  },
+  {
+   "id": "mama",
+   "text": "Durante esos meses, mi mamá me mandaba mensajes como si estuviera siguiendo un reality. Tomi dice que es el mejor de su grupo. Tomi dice que lo van a ascender antes que a nadie. Tomi dice que en Acción de Gracias vas a tener que saludarlo. Yo le contestaba: mamá, eso es imposible. Y ella me mandaba un pulgar para arriba. Con los años aprendí que ese pulgar significa: no leí nada de lo que escribiste."
+  },
+  {
+   "id": "cap2",
+   "text": "Capítulo dos. La cena. Llegó Acción de Gracias. La mesa estaba lista: el pavo, el puré, la tarta de calabaza de mi mamá. Y de repente, se abre la puerta. Tomi entra con el uniforme de gala de los Marines, impecable, con el pecho inflado como un globo. Y en el pecho, una fila entera de medallas de colores."
+  },
+  {
+   "id": "saludo",
+   "text": "Saludó a mi papá con un apretón de manos, abrazó a mi mamá, le dio un beso al abuelo… y después se paró frente a mí, levantó el mentón y dijo: a partir de hoy, me tenés que saludar. Me ascendieron en tiempo récord."
+  },
+  {
+   "id": "medallas",
+   "text": "Yo no le contesté enseguida. Me quedé mirando las medallas. Porque las medallas militares no se ponen de cualquier manera: tienen un orden, según su importancia. Y las de Tomi estaban todas mezcladas. Una estaba al revés. Y otra… otra tenía un dibujito muy raro."
+  },
+  {
+   "id": "bowling",
+   "text": "Me acerqué para verla mejor. Tomi, le dije, ¿esta medalla qué es? Es por… mérito especial, me dijo. Martín, le dije, esta medalla tiene un palito de bowling. Mi papá se atragantó con el agua. Tomi se puso blanco. Es por puntería, dijo. Por puntería. En bowling."
+  },
+  {
+   "id": "compradas",
+   "text": "Al final lo confesó a medias: las había comprado por internet. Pero dijo que no importaba, que eran simbólicas, que igual se las merecía. Y que de todos modos, él tenía más rango que yo. ¿Ah, sí?, le pregunté. ¿Y qué rango tenés? Tomi infló el pecho otra vez: soy marine. Ya sé que sos marine, le dije. Te pregunto el rango."
+  },
+  {
+   "id": "tabla",
+   "text": "Saqué el celular, busqué la tabla de rangos militares y la puse sobre la mesa, al lado del puré. Señalé el escalón más bajo de todos. Este sos vos, le dije. Soldado. Y fui subiendo el dedo, escalón por escalón, hasta llegar a sargento. Y este soy yo. Tomi miró la pantalla como si fuera una multa. Esa tabla está mal, dijo. Es del ejército. Los marines somos distintos."
+  },
+  {
+   "id": "cap3",
+   "text": "Capítulo tres. El abuelo. Y ahí pasó algo que nadie esperaba. El abuelo Ernesto, que había estado callado toda la noche, dejó los cubiertos sobre la mesa, despacito. Y dijo: los marines no son tan distintos, Tomás. Yo lo sé bien. Porque yo también fui marine."
+  },
+  {
+   "id": "revelacion",
+   "text": "Tomi se quedó congelado. Ninguno de los dos lo sabía. El abuelo nunca hablaba de esa época. Se arremangó la camisa, y en el antebrazo, medio borrado por los años, tenía tatuado el escudo de los Marines: el águila, el globo y el ancla. Mi mamá se tapó la boca. Mi papá sonrió, porque él sí sabía."
+  },
+  {
+   "id": "preguntas",
+   "text": "Entonces el abuelo empezó a preguntar. Tranquilo, sin levantar la voz. ¿En qué compañía estás, Tomás? ¿Quién es tu instructor? ¿Cuántos días te faltan para graduarte? Y con cada pregunta, Tomi se ponía más nervioso. Dudaba. Cambiaba de tema. Hasta que el abuelo le preguntó: ¿y por qué estás de uniforme de gala, si todavía no terminaste el entrenamiento?"
+  },
+  {
+   "id": "cap4",
+   "text": "Capítulo cuatro. La verdad. Tomi se quedó callado un rato largo. Después se sentó, se sacó la gorra y la dejó sobre la mesa. Y dijo la verdad. No era el mejor de su grupo. No lo habían ascendido. Al contrario: no había pasado una de las pruebas físicas, la de natación, y lo habían atrasado varias semanas. Tenía que repetir parte del entrenamiento."
+  },
+  {
+   "id": "porque",
+   "text": "¿Y por qué no nos dijiste?, le preguntó mi mamá. Tomi miró al abuelo. Porque cuando Martín contó que era sargento, el abuelo le dijo bien hecho, hijo. Y a mí nunca me dijo eso. Nunca. Pensé que si llegaba con algo grande, con medallas, con un ascenso, por fin me iba a mirar a mí."
+  },
+  {
+   "id": "silencio",
+   "text": "Nadie dijo nada. Hasta yo me quedé sin chistes. Porque por primera vez entendí que todas esas competencias, todas esas revanchas desde que éramos chicos, no eran contra mí. Eran para que alguien lo viera."
+  },
+  {
+   "id": "historia_abuelo",
+   "text": "Capítulo cinco. La insignia. El abuelo apoyó la mano en el hombro de Tomi. Y le contó algo que nunca le había contado a nadie. Cuando yo tenía tu edad, le dijo, me atrasaron en el entrenamiento. Dos veces. No podía aprobar la prueba de tiro. Todos mis compañeros se graduaron antes que yo. Y yo quería que me tragara la tierra."
+  },
+  {
+   "id": "leccion",
+   "text": "¿Sabés cuál fue la diferencia?, siguió el abuelo. Que no me compré medallas. Volví al campo de tiro todos los días, hasta que me salió. A un marine no lo hace el uniforme, Tomás. Lo hace levantarse cuando lo tiran al piso."
+  },
+  {
+   "id": "insignia",
+   "text": "Entonces el abuelo metió la mano en el bolsillo de la camisa y sacó algo chiquito, gastado, de metal: su insignia original de marine, la que le dieron el día que se graduó, hace más de cincuenta años. La puso en la mano de Tomi. Esta sí te la vas a ganar, le dijo. Y cuando te gradúes, te la ponés."
+  },
+  {
+   "id": "lagrimas",
+   "text": "Tomi se quedó mirando la insignia. Y por primera vez en toda su vida, lo vi llorar delante de todos. El abuelo lo abrazó. Y le dijo lo que Tomi había esperado escuchar desde hacía años: estoy orgulloso de vos, hijo. No por lo que tenés en el pecho. Por haber tenido el valor de decir la verdad."
+  },
+  {
+   "id": "postre",
+   "text": "Mi mamá se secó las lágrimas, se levantó y dijo: bueno, basta de emociones, que se enfría la tarta. Y la cena siguió. Mi papá contó chistes malos. El abuelo, después de cincuenta años, contó historias de cuando era marine. Y Tomi, sin las medallas de bowling, se rió como hacía años que no lo veía reír."
+  },
+  {
+   "id": "final",
+   "text": "Después de comer, mi mamá nos mandó a los dos a lavar los platos. Tomi agarró la esponja y me dijo: algún día voy a tener más rango que vos. Puede ser, le dije. Pero primero aprendé a nadar. Me tiró agua con la esponja. Desde la cocina, mi mamá gritó: ¡los dos, terminen de lavar ya mismo! Y Tomi, sin pensarlo, se cuadró y contestó: ¡sí, señora! Lo miré y le dije: viste que sí sabés reconocer a un superior. Tres meses después, Tomi se graduó. Con la insignia del abuelo en el pecho. Si te gustó esta historia, suscribite y dejá tu like para más."
+  }
+ ]
+}
