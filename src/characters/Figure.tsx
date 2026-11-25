@@ -392,9 +392,15 @@ const Bubble: React.FC<{ x: number; y: number; text: string; k: number; color: s
   if (cur.trim()) lines.push(cur.trim());
   const w = Math.max(...lines.map((l) => l.length)) * 26 + 70;
   const h = lines.length * 56 + 40;
-  const bx = Math.max(-380 + w / 2, Math.min(1460 - w / 2, x));
+  let bx = Math.max(-380 + w / 2, Math.min(1460 - w / 2, x));
+  let top = y - h - 30;
+  // si no entra arriba de la cabeza, va al costado
+  if (top < 520) {
+    top = 520;
+    bx = x < 540 ? x + w / 2 + 70 : x - w / 2 - 70;
+  }
   return (
-    <g transform={`translate(${bx} ${y - h - 30}) scale(${0.6 + 0.4 * k})`} opacity={k}>
+    <g transform={`translate(${bx} ${top}) scale(${0.6 + 0.4 * k})`} opacity={k}>
       <path d={`M ${-w / 2 + 24} 0 H ${w / 2 - 24} Q ${w / 2} 0 ${w / 2} 24 V ${h - 24} Q ${w / 2} ${h} ${w / 2 - 24} ${h} H ${Math.min(30, w / 2 - 30) + (x - bx)} L ${x - bx} ${h + 34} L ${Math.max(-30, -w / 2 + 30) + (x - bx) + 20} ${h} H ${-w / 2 + 24} Q ${-w / 2} ${h} ${-w / 2} ${h - 24} V 24 Q ${-w / 2} 0 ${-w / 2 + 24} 0 Z`} fill="#ffffff" stroke={INK} strokeWidth={5} />
       <rect x={-w / 2 + 16} y={-22} width={name.length * 17 + 28} height={36} rx={18} fill={color} stroke={INK} strokeWidth={4} />
       <text x={-w / 2 + 30} y={4} fontFamily={FONT} fontWeight={700} fontSize={24} fill="#fff">{name}</text>

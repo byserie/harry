@@ -16,7 +16,7 @@ export type AudioData = {
   words: Word[];
 };
 
-const Title: React.FC<{ part: number; title: string; dyn?: boolean }> = ({ part, title, dyn }) => {
+const Title: React.FC<{ part: number; title: string; dyn?: boolean; badge?: string }> = ({ part, title, dyn, badge }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
@@ -45,7 +45,7 @@ const Title: React.FC<{ part: number; title: string; dyn?: boolean }> = ({ part,
           rotate: `${-3 + Math.sin(t * 3) * 1}deg`,
         }}
       >
-        {part ? `PARTE ${part}` : "PELÍCULA COMPLETA"}
+        {badge ?? (part ? `PARTE ${part}` : "PELÍCULA COMPLETA")}
       </div>
       <div
         style={{
@@ -68,7 +68,7 @@ const Title: React.FC<{ part: number; title: string; dyn?: boolean }> = ({ part,
   );
 };
 
-const CTA: React.FC<{ part: number }> = ({ part }) => {
+const CTA: React.FC<{ part: number; cta?: string }> = ({ part, cta }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
@@ -104,7 +104,7 @@ const CTA: React.FC<{ part: number }> = ({ part }) => {
             scale: String(1 + 0.06 * Math.sin(t * 8)),
           }}
         >
-          {part === 0 ? "Próxima película ➜" : part < 5 ? `Parte ${part + 1} ➜` : "¡Seguí! ➜"}
+          {cta ?? (part === 0 ? "Próxima película ➜" : part < 5 ? `Parte ${part + 1} ➜` : "¡Seguí! ➜")}
         </div>
       </div>
     </AbsoluteFill>
@@ -125,10 +125,10 @@ export const Part: React.FC<{ spec: PartSpec; audio: AudioData; audioFile: strin
         );
       })}
       <Sequence from={0} durationInFrames={150} name="Título">
-        <Title part={spec.part} title={spec.title ?? "Harry Potter y la piedra filosofal"} dyn={spec.dyn} />
+        <Title part={spec.part} title={spec.title ?? "Harry Potter y la piedra filosofal"} dyn={spec.dyn} badge={spec.badge} />
       </Sequence>
       <Sequence from={last.voiceFrom + Math.round((last.voiceDur - 3.2) * 30)} name="Seguí mi perfil">
-        <CTA part={spec.part} />
+        <CTA part={spec.part} cta={spec.cta} />
       </Sequence>
       {spec.dyn ? <CaptionsDyn words={audio.words} /> : <Captions words={audio.words} />}
       {spec.dyn ? <ProgressBar total={audio.durationInFrames} part={spec.part} /> : null}
