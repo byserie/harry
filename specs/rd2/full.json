@@ -1,0 +1,104 @@
+{
+ "id": "rd2",
+ "part": 0,
+ "style": "dyn",
+ "min": 720,
+ "scenes": [
+  {
+   "id": "gancho",
+   "text": "Mi hermano se metió en los Marines con un único objetivo: tener más rango que yo para poder mandarme en la cena de Acción de Gracias. Lo que no sabía es cómo funcionan de verdad los ascensos en las fuerzas armadas. Y esa noche, delante de toda la familia, lo aprendió de la peor manera."
+  },
+  {
+   "id": "intro",
+   "text": "El primer año que volvió a casa, apenas cuatro meses después de terminar el entrenamiento básico, entró al comedor como si hubiera ganado una guerra él solo. Me miró fijo y me dijo: desde ahora, me tenés que decir señor. Y yo me empecé a reír. Porque para ese momento, yo ya llevaba tres años en el ejército… y tenía dos rangos más que él. Pero vamos desde el principio."
+  },
+  {
+   "id": "rivalidad",
+   "text": "Capítulo uno. Dani es mi hermano menor. Nos llevamos dos años, y desde chicos nunca soportó perder contra mí. Juegos de mesa, carreras en bicicleta, quién se sentaba adelante en el auto. Todo era una competencia. Cuando terminé la secundaria y me alisté en el ejército, él puso cara de que no era para tanto. Dijo que el ejército era para los que no sabían qué hacer, y que él iba a hacer algo de verdad."
+  },
+  {
+   "id": "nada",
+   "text": "Y durante bastante tiempo, no hizo nada. Se anotó en un instituto y lo dejó. Consiguió trabajo en un depósito y renunció. Mientras tanto, yo seguía adentro, aprendiendo, y dos años después volví a casa siendo cabo."
+  },
+  {
+   "id": "cena_cabo",
+   "text": "En esa cena cometí un error: comenté que ahora tenía algunos soldados a mi cargo. Dani dejó el tenedor sobre la mesa y se quedó callado. Lo conozco desde que nació: en su cabeza se estaba armando un plan."
+  },
+  {
+   "id": "llamada",
+   "text": "Tres semanas después me llamó. Ya firmé, me dijo. Me voy a los Marines. Y voy a ser oficial. Le pregunté si sabía lo que estaba diciendo. Me contestó que sí, que lo había investigado: los oficiales están por encima de todos. Dani, le dije, para ser oficial necesitás un título universitario. Y vos no tenés. Hubo un silencio largo. Después dijo: bueno, primero entro, después saco el título, y después te paso por arriba. Le quise explicar que no funcionaba así, pero me cortó."
+  },
+  {
+   "id": "mama",
+   "text": "Mientras estaba en el entrenamiento, mi mamá me mandaba mensajes como si estuviera siguiendo un programa de televisión. Dani dice que para Navidad va a ser tu superior. Yo le respondía: mamá, eso es imposible. Y ella me mandaba un pulgar para arriba. Con el tiempo descubrí que ese pulgar quería decir: no leí nada."
+  },
+  {
+   "id": "llega",
+   "text": "Capítulo dos. La cena de Acción de Gracias. Dani llegó con el uniforme nuevo, impecable, y en la manga el rango más bajo que existe: soldado raso. Saludó a papá con un apretón de manos, abrazó a mamá, y después se paró frente a mí con una sonrisita y soltó la frase que seguramente había practicado todo el viaje: ahora me tenés que decir señor."
+  },
+  {
+   "id": "rango",
+   "text": "Para ese entonces, a mí ya me habían ascendido a sargento. Así que le pregunté: Dani, ¿vos sabés qué rango tenés? Soy marine, me dijo. Ya sé que sos marine, le dije. Te pregunto el rango. Mi papá, que había estado cuatro años en el ejército cuando era joven, casi se ahoga con el agua."
+  },
+  {
+   "id": "tabla",
+   "text": "Saqué el celular, busqué una tabla con todos los rangos militares y se la mostré. Señalé el último escalón de abajo: soldado raso, ese sos vos. Y fui subiendo con el dedo, escalón por escalón, hasta llegar a sargento. Y este soy yo. Vos estás en el uno. Yo estoy en el cinco. Dani miró la pantalla como si fuera una cuenta que no pensaba pagar. Y dijo: esa tabla está mal. Los marines somos distintos."
+  },
+  {
+   "id": "papa_rie",
+   "text": "Mi papá dejó el vaso sobre la mesa, despacio. ¿La tabla está mal? Dani insistió: que el entrenamiento de los marines era mucho más duro, y que si estuviéramos en una base, yo lo tendría que saludar a él. Ahí mi papá ya no aguantó más y se largó a reír tan fuerte que mi mamá tuvo que correrle la copa. Le explicó con paciencia: hijo, tu hermano es sargento, vos sos soldado raso, y ninguno de los dos es oficial. Así que dejá de pedirle que te diga señor."
+  },
+  {
+   "id": "sobre",
+   "text": "Capítulo tres. El sobre. Pensé que ahí terminaba todo. Me equivoqué. Dani dijo que no se iba a quedar mucho tiempo como soldado raso, que tenía oportunidades que yo nunca tuve. Metió la mano en la chaqueta, sacó un sobre blanco y lo dejó en el medio de la mesa, al lado del puré. No pensaba mostrarles esto todavía, dijo. Es documentación oficial sobre mi futuro como oficial. Ahora sí me van a tener que decir señor."
+  },
+  {
+   "id": "carta",
+   "text": "Mi papá le pidió el sobre. Dani dudó, pero se lo dio. Papá se puso los anteojos y empezó a leer. Y su cara cambió: no estaba sorprendido, estaba confundido. Daniel, esto es un folleto con información general sobre cómo pedir una comisión de oficial. No dice que te hayan elegido. No dice que te hayas postulado. Dice los requisitos. Y el primer requisito es terminar la universidad."
+  },
+  {
+   "id": "info",
+   "text": "Le dije a Dani que recibir información sobre cómo ser oficial no te convierte en oficial, de la misma manera que leer un folleto de pilotos no te convierte en piloto. Mi mamá se rió sin querer. Y Dani, rojo como un tomate, dijo que era una etapa preliminar."
+  },
+  {
+   "id": "dinero",
+   "text": "Pero entonces mi mamá se puso seria. Pará, le dijo. Vos me contaste que ya estabas en un programa especial. Que habías pasado la primera selección. Que necesitabas pagar libros, equipo y trámites antes de fin de mes. Mi papá giró la cabeza despacio hacia ella. ¿Le diste plata? Mi mamá respiró hondo y dijo una cifra: cuatro mil ochocientos dólares. Se hizo un silencio total. Hasta Dani dejó de moverse."
+  },
+  {
+   "id": "banco",
+   "text": "Volví a leer la carta de punta a punta. En ningún lado decía que hubiera que pagar nada. Mi papá habló con una calma que daba más miedo que cualquier grito: Daniel, mostrame en qué gastaste esa plata. Dani tardó casi un minuto en abrir la aplicación del banco. Y empezó a leer: deudas viejas de antes de alistarse, ropa, una fiesta con amigos después de la graduación, compras varias. ¿Y los libros para ser oficial?, preguntó mi mamá. Ahí, dijo Dani señalando una compra. Ciento dieciocho dólares."
+  },
+  {
+   "id": "porque",
+   "text": "Capítulo cuatro. La verdad. Dani golpeó la mesa: ustedes no entienden lo que es querer hacer algo importante y que nadie te tome en serio. Mi papá le preguntó de dónde había sacado la idea de que tenía que impresionarlos. Y Dani contó que una vez escuchó a papá decirle a un vecino que por fin tenía un hijo con futuro. Desde ese día, sintió que todo lo que yo hacía era extraordinario… y lo que hacía él, no le importaba a nadie."
+  },
+  {
+   "id": "prestamo",
+   "text": "Mi mamá escribió la cifra en una servilleta y se la puso adelante: esta plata era para arreglar el techo antes del invierno. ¿Cómo me la vas a devolver? Dani dudó, y después me señaló a mí. Mi plan era pedírsela a él. Un préstamo. Me quedé mirándolo. ¿Me pensabas pedir cuatro mil ochocientos dólares… media hora después de exigirme que te dijera señor? Lo peor es que esa era justamente la idea: mostrar que era casi oficial, para que yo lo respetara y le prestara la plata."
+  },
+  {
+   "id": "pelea",
+   "text": "Dani se levantó de golpe y dijo que estaba harto de que todos me trataran como si fuera perfecto. Yo también me levanté. Y mi papá, con esa voz que sigue funcionando aunque pasen los años, dijo: los dos, siéntense. Y nos sentamos."
+  },
+  {
+   "id": "error",
+   "text": "Capítulo cinco. Mi papá miró a Dani y le dijo que yo tampoco había sido perfecto. Y me pidió que le contara. Así que le conté: al principio de mi carrera, me dieron una tarea con otros soldados y quise hacerlo todo a mi manera, sin escuchar a nadie. Salió mal, tuvimos que repetir el trabajo, y mi sargento me puso una evaluación pésima. ¿Y cómo te ascendieron después?, preguntó Dani. Haciendo lo que vos estuviste evitando toda la noche: escuchar, aceptar que me equivoqué y aprender."
+  },
+  {
+   "id": "plan",
+   "text": "Mi papá le dijo que ningún uniforme te hace mejor persona; lo que importa es lo que hacés mientras lo tenés puesto. Mi mamá le pasó una lapicera. Dani hizo cuentas en el celular: podía pagar doscientos dólares por mes. Veinticuatro meses, calculó mi papá. Dani escribió la cifra en la servilleta, debajo de los cuatro mil ochocientos, y puso la fecha del primer pago. Mi mamá la dobló con cuidado y le dijo: estaba orgullosa de vos antes de que me mostraras esa carta. Pero estar orgullosa no quiere decir regalarte cuatro mil ochocientos dólares."
+  },
+  {
+   "id": "postre",
+   "text": "Después llegó la tarta de calabaza, y por primera vez en toda la noche, Dani se rió sin querer demostrar nada. Hasta que se inclinó hacia mí y me preguntó: ¿por lo menos admitís que el entrenamiento de los marines es más duro? Mi papá dejó caer el tenedor. Hijo, llegaste exigiendo que te digan señor, y te vas con una deuda escrita en una servilleta. Yo no cantaría victoria todavía."
+  },
+  {
+   "id": "platos",
+   "text": "Al final, mi mamá nos mandó a los dos a lavar los platos. En la cocina, Dani me dijo que algún día iba a tener más rango que yo. Puede ser, le dije, pasándole la esponja. Pero primero pagá tus deudas. Nos tiramos agua como cuando éramos chicos, hasta que mi mamá apareció en la puerta: si se van a portar como nenes, limpian toda la cocina. Dani dejó la esponja al instante y contestó: ¡sí, señora! Lo miré y le dije: viste que al final sí sabés reconocer a un superior."
+  },
+  {
+   "id": "cierre",
+   "text": "Esta historia está basada en un post de Reddit. Si te gustó, dejá tu like, suscribite y contame en los comentarios: ¿vos tenés un hermano así?"
+  }
+ ]
+}

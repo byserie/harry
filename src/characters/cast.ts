@@ -104,6 +104,11 @@ export const CAST = {
   varang: { name: "Varang", color: "#c0392b", head: "#5a6a80", hair: "#1a0a0a", hairStyle: "none", height: 1.25, width: 0, extras: [] },
   recom: { name: "Recom", color: "#5a5a3a", head: "#4384c4", hair: "#1a1a20", hairStyle: "none", height: 1.28, width: 0.5, extras: [] },
   scoresby: { name: "Capitán", color: "#2a3a5a", head: "#e8b48f", hair: "#8a8a80", hairStyle: "none", height: 1.02, width: 0.6, extras: [] },
+  yo: { name: "Yo", color: "#4a6a3a", head: "#f1c9a5", hair: "#5a3a20", hairStyle: "none", height: 1.02, width: 0.5, extras: [] },
+  dani: { name: "Dani", color: "#2a3a7a", head: "#f3cfae", hair: "#5a3a20", hairStyle: "none", height: 1.0, width: 0.4, extras: [] },
+  mama: { name: "Mamá", color: "#c0607a", head: "#f3d2b6", hair: "#6a4028", hairStyle: "none", height: 0.94, width: 0.2, extras: [] },
+  papa: { name: "Papá", color: "#8a6a3a", head: "#e8bf9a", hair: "#9a9a90", hairStyle: "none", height: 1.03, width: 0.6, extras: [] },
+  vecino: { name: "Vecino", color: "#5a7a9a", head: "#f0c8a8", hair: "#3a2a1a", hairStyle: "none", height: 1.0, width: 0.3, extras: [] },
   soldado: { name: "Soldado", color: "#5a5a3a", head: "#e8b48f", hair: "#3a3020", hairStyle: "none", height: 1, width: 0.4, extras: [] },
 } satisfies Record<string, CharDef>;
 
