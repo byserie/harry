@@ -71,3 +71,32 @@ export const autoFrame = (spec: SceneSpec, t: number) => {
 };
 
 export { SCREEN_CY };
+
+
+/** Cámara vertical (Shorts) para personajes con cuerpo: sigue a quien habla, si no al centro del grupo. */
+export const vFollow = (spec: SceneSpec, t: number) => {
+  const at = (tt: number) => {
+    let sx = 0, sn = 0, gx0 = Infinity, gx1 = -Infinity;
+    for (const c of spec.chars) {
+      const st = charState(c, tt);
+      if (!st.show || st.alpha < 0.35 || st.x < -380 || st.x > 1460) continue;
+      gx0 = Math.min(gx0, st.x);
+      gx1 = Math.max(gx1, st.x);
+      if (st.talking) {
+        sx += st.x;
+        sn++;
+      }
+    }
+    if (sn) return sx / sn;
+    if (isFinite(gx0)) return (gx0 + gx1) / 2;
+    return 540;
+  };
+  const ts = [0, 0.25, 0.5, 0.75, 1.0].map((d) => Math.max(0, t - d));
+  const wts = [0.3, 0.25, 0.2, 0.15, 0.1];
+  let cx = 0;
+  ts.forEach((tt, i) => (cx += at(tt) * wts[i]));
+  const z = 1.08;
+  const hw = 540 / z;
+  cx = Math.max(-440 + hw, Math.min(1520 - hw, cx));
+  return { z, cx, cy: 1040 };
+};

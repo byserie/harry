@@ -17,6 +17,7 @@ import { avdemo, avdemoAudio } from "./avatar/demo";
 import { av1full, av1fullAudio } from "./avatar/av1";
 import { av2full, av2fullAudio } from "./avatar/av2";
 import { rd2, rd2Audio } from "./rd/rd2";
+import { MiniaturaMarines } from "./rd/world";
 import { TestScene } from "./scenes/TestScene";
 import { Part } from "./engine/Part";
 import { part1, part1Audio } from "./scenes/part1";
@@ -211,6 +212,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="AV1FullYT" component={AV1FullYT} durationInFrames={av1fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="AV1Full" component={AV1Full} durationInFrames={av1fullAudio.durationInFrames} {...V} />
       <Composition id="AV2FullYT" component={AV2FullYT} durationInFrames={av2fullAudio.durationInFrames} fps={30} width={1920} height={1080} />
+      <Still id="MiniaturaMarines" component={MiniaturaMarines} width={1280} height={720} />
       <Composition id="HistoriaMarinesYT" component={RD2YT} durationInFrames={rd2Audio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="AvDemoYT" component={AvDemoYT} durationInFrames={avdemoAudio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="AvDemo" component={AvDemo} durationInFrames={avdemoAudio.durationInFrames} {...V} />

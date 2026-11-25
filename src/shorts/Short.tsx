@@ -9,7 +9,7 @@ import { Word } from "../lib/Captions";
 import { FONT } from "../lib/font";
 import { kf } from "../lib/pose";
 
-export type ShortDef = { id: string; film: number; scenes: string[]; teaser: string; hook: string };
+export type ShortDef = { id: string; film: number; scenes: string[]; teaser: string; hook: string; label?: string; end?: string };
 export type HookAudio = { dur: number; words: Word[] };
 
 const FPS = 30;
@@ -61,7 +61,18 @@ const HookText: React.FC<{ text: string; words: Word[] }> = ({ text, words }) =>
   );
 };
 
-const EndCard: React.FC = () => {
+/** Cartel fijo "PARTE X/N" arriba a la izquierda. */
+const PartBadge: React.FC<{ text: string }> = ({ text }) => {
+  const f = useCurrentFrame();
+  const k = kf(f / FPS, [0, 0.3], [0, 1], Easing.out(Easing.back(2)));
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <div style={{ position: "absolute", left: 40, top: 40, scale: String(k), background: "#e23b3b", color: "#fff", fontFamily: FONT, fontWeight: 700, fontSize: 48, padding: "10px 28px", borderRadius: 24, border: "6px solid #1b1b2f", boxShadow: "0 8px 0 rgba(0,0,0,0.35)", rotate: "-3deg" }}>{text}</div>
+    </AbsoluteFill>
+  );
+};
+
+const EndCard: React.FC<{ text?: string }> = ({ text }) => {
   const f = useCurrentFrame();
   const t = f / FPS;
   const k = kf(t, [0, 0.35], [0, 1], Easing.out(Easing.back(2)));
@@ -83,7 +94,7 @@ const EndCard: React.FC = () => {
           boxShadow: "0 16px 0 rgba(0,0,0,0.35)",
         }}
       >
-        👉 Mirá la película completa en el canal
+        {text ?? "👉 Mirá la película completa en el canal"}
       </div>
     </AbsoluteFill>
   );
@@ -135,10 +146,11 @@ export const Short: React.FC<{ def: ShortDef; spec: PartSpec; audio: AudioData; 
         <CaptionsDyn words={words} />
         <Audio src={staticFile(audioFile)} trimBefore={base} />
         <Sequence from={chunkFrames - Math.round(2.8 * fps)} name="Ver completa">
-          <EndCard />
+          <EndCard text={def.end} />
         </Sequence>
       </Sequence>
       <ProgressBar total={total} part={0} />
+      {def.label ? <PartBadge text={def.label} /> : null}
     </AbsoluteFill>
   );
 };

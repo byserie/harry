@@ -3,6 +3,7 @@ import { AbsoluteFill, random } from "remotion";
 import { INK } from "../characters/cast";
 import { H, Svg } from "../scenes/bg1";
 import { FONT } from "../lib/font";
+import { LandCtx } from "../engine/layout";
 
 /** Mundos de la historia familiar. Se dibujan de x=-460 a 1540 para llenar el 16:9. */
 const L = -460;
@@ -297,15 +298,17 @@ export const ArmyBase: React.FC<{ t: number }> = ({ t }) => (
 
 /** Celular grande en pantalla. */
 export const Phone: React.FC<{ k: number; children: React.ReactNode; side?: "left" | "right" | "center" }> = ({ k, children, side = "right" }) => {
+  const land = React.useContext(LandCtx);
   if (k <= 0) return null;
-  const left = side === "left" ? 160 : side === "center" ? 700 : 1240;
+  const left = !land ? 280 : side === "left" ? 160 : side === "center" ? 700 : 1240;
+  const top = land ? 90 : 300;
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       <div
         style={{
           position: "absolute",
           left,
-          top: 90,
+          top,
           width: 520,
           height: 900,
           borderRadius: 60,
@@ -364,3 +367,32 @@ export const Paper: React.FC<{ k: number; title: string; lines: string[]; stamp?
       </div>
     </AbsoluteFill>
   );
+
+// ------------------------------------------------------------------ miniatura
+import { Figure } from "../characters/Figure";
+import { POSES } from "../lib/pose";
+
+export const MiniaturaMarines: React.FC = () => (
+  <AbsoluteFill style={{ background: "#2a1a14", overflow: "hidden" }}>
+    <div style={{ position: "absolute", left: -200, top: -560, width: 1080, height: 1920, scale: "1.25", transformOrigin: "0 0", filter: "saturate(1.25) brightness(0.9)" }}>
+      <DiningRoom t={1} />
+    </div>
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 70% 55%, rgba(255,200,80,0.25), rgba(0,0,0,0.55) 75%)" }} />
+    {/* Dani exigiendo, el hermano riéndose */}
+    <div style={{ position: "absolute", left: 300, top: -470, width: 1080, height: 1920, scale: "0.95", transformOrigin: "0 0" }}>
+      <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
+        <Figure who="dani" x={420} y={1500} scale={2.6} facing={1} pose={POSES.point(0)} expression="anger" showName={false} />
+        <Figure who="yo" x={830} y={1500} scale={2.6} facing={-1} pose={POSES.cheer(10)} expression="joy" showName={false} />
+      </svg>
+    </div>
+    {/* insignias de rango */}
+    <div style={{ position: "absolute", left: 620, top: 470, fontFamily: FONT, fontWeight: 700, fontSize: 44, color: "#fff", background: "#c0392b", border: "5px solid #1b1b2f", borderRadius: 18, padding: "4px 18px", rotate: "-6deg" }}>E1 😤</div>
+    <div style={{ position: "absolute", left: 1020, top: 430, fontFamily: FONT, fontWeight: 700, fontSize: 44, color: "#1b1b2f", background: "#7dff9a", border: "5px solid #1b1b2f", borderRadius: 18, padding: "4px 18px", rotate: "6deg" }}>E5 😂</div>
+    {/* texto */}
+    <div style={{ position: "absolute", left: 30, top: 40, width: 640, fontFamily: FONT, fontWeight: 700, lineHeight: 0.95 }}>
+      <div style={{ fontSize: 94, color: "#ffe14d", WebkitTextStroke: "14px #121220", paintOrder: "stroke fill", rotate: "-3deg" }}>"LLAMAME</div>
+      <div style={{ fontSize: 124, color: "#ffffff", WebkitTextStroke: "16px #121220", paintOrder: "stroke fill", rotate: "-3deg" }}>SEÑOR"</div>
+      <div style={{ marginTop: 26, display: "inline-block", fontSize: 50, color: "#fff", background: "#e23b3b", border: "6px solid #121220", borderRadius: 22, padding: "6px 24px", rotate: "3deg", boxShadow: "0 8px 0 rgba(0,0,0,0.45)" }}>…pero yo soy SARGENTO</div>
+    </div>
+  </AbsoluteFill>
+);

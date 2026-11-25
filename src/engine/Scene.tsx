@@ -8,7 +8,7 @@ import { kf } from "../lib/pose";
 import { charState } from "./charState";
 import { SceneSpec, Trans } from "./types";
 import { dynCam, Pops, SpeedLines } from "./Dyn";
-import { autoFrame, SCREEN_CY } from "./autoframe";
+import { autoFrame, SCREEN_CY, vFollow } from "./autoframe";
 import { BAND, LAND_SCALE, LandCtx, WideCtx } from "./layout";
 
 const TRANS_FRAMES = 12;
@@ -119,6 +119,9 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; 
   // Avatar (16:9 a lo ancho): cámara automática que encuadra a los personajes
   const af = wide ? (spec.cam && spec.autoCam === false ? { z: Math.max(1, cam0.z), cx: cam0.x, cy: cam0.y } : autoFrame(spec, t)) : { z: 1, cx: 540, cy: 1030 };
   const punch = wide ? Math.max(0, dc.zMul / (1 + 0) - 1) * 0 + punchOf(spec, t) : 0;
+  // vertical con personajes "con cuerpo" (Avatar, historias): cámara que sigue a quien habla
+  const vf = !land && spec.chars.some((c) => FIGS[c.who]) ? vFollow(spec, t) : null;
+  const punch2 = vf ? punchOf(spec, t) : 0;
   const cam = land ? { z: Math.max(1, 1 + (cam0.z - 1) * 0.75) * dc.zMul, x: cam0.x + dc.xOff, y: cam0.y } : { z: cam0.z * dc.zMul, x: cam0.x + dc.xOff, y: cam0.y };
   let shake = 0;
   for (const [st, amt, d = 0.35] of spec.shake ?? []) {
@@ -178,6 +181,13 @@ export const Scene: React.FC<{ spec: SceneSpec; first?: boolean; dyn?: boolean; 
             </div>
             {wide ? <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.42) 100%)", pointerEvents: "none" }} /> : null}
           </>
+        ) : vf ? (
+          <Camera zoom={vf.z * (1 + punch2)} fx={540} fy={960} panX={-vf.z * (1 + punch2) * (vf.cx - 540)} panY={-vf.z * (1 + punch2) * (vf.cy - 960)} shake={shake} frame={frame}>
+            <Bg t={t} />
+            {Under ? <Under t={t} /> : null}
+            <Chars spec={spec} t={t} />
+            {Fx ? <Fx t={t} /> : null}
+          </Camera>
         ) : (
           <Camera zoom={cam.z} fx={cam.x} fy={cam.y} shake={shake} frame={frame}>
             <Bg t={t} />

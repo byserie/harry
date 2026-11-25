@@ -10,6 +10,9 @@ import momentosHooks from "../data/momentos-hooks.json";
 import avShorts from "../avatar/shorts.json";
 import avHooks from "../data/av-hooks.json";
 import { av1full, av1fullAudio } from "../avatar/av1";
+import { rd2, rd2Audio } from "../rd/rd2";
+import rdShorts from "../rd/shorts.json";
+import rdHooks from "../data/rd-hooks.json";
 import { p1full, p1fullAudio } from "../peli1d/full";
 import { p2full, p2fullAudio } from "../peli2d/full";
 import { p3full, p3fullAudio } from "../peli3/full";
@@ -29,6 +32,7 @@ const FILMS: Record<number, { spec: PartSpec; audio: AudioData; file: string }> 
   7: { spec: p7full, audio: p7fullAudio, file: "audio/p7full.wav" },
   8: { spec: p8full, audio: p8fullAudio, file: "audio/p8full.wav" },
   9: { spec: av1full, audio: av1fullAudio, file: "audio/av1full.wav" },
+  10: { spec: rd2, audio: rd2Audio, file: "audio/rd2.wav" },
 };
 const hooks = hooksData as Record<string, HookAudio>;
 
@@ -44,6 +48,8 @@ const comps = [
   ...build(momentos as ShortDef[], momentosHooks as Record<string, HookAudio>, "Momento"),
   // Avatar: partes con gancho y momentos
   ...build(avShorts as ShortDef[], avHooks as Record<string, HookAudio>, "Short"),
+  // Historia de los Marines en partes
+  ...build(rdShorts as ShortDef[], rdHooks as Record<string, HookAudio>, "Short"),
 ];
 
 export const ShortCompositions: React.FC = () => (
