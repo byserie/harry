@@ -396,3 +396,46 @@ export const MiniaturaMarines: React.FC = () => (
     </div>
   </AbsoluteFill>
 );
+
+// ------------------------------------------------------------------ portadas verticales de los Shorts
+import type { Expression } from "../characters/Stickman";
+import type { PoseName } from "../lib/pose";
+import type { CharId } from "../characters/cast";
+
+export type CoverDef = {
+  part: string;
+  l1: string;
+  l2: string;
+  c1?: string;
+  emoji?: string;
+  a: { who: CharId; pose: PoseName; expr: Expression };
+  b: { who: CharId; pose: PoseName; expr: Expression };
+};
+
+export const PortadaShort: React.FC<{ d: CoverDef }> = ({ d }) => (
+  <AbsoluteFill style={{ background: "#2a1a14", overflow: "hidden" }}>
+    <div style={{ position: "absolute", inset: 0, filter: "saturate(1.3) brightness(0.85)" }}>
+      <DiningRoom t={1} />
+    </div>
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 62%, rgba(255,200,80,0.3), rgba(0,0,0,0.6) 78%)" }} />
+    <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
+      <Figure who={d.a.who} x={330} y={1700} scale={2.7} facing={1} pose={POSES[d.a.pose](8)} expression={d.a.expr} showName={false} />
+      <Figure who={d.b.who} x={770} y={1700} scale={2.7} facing={-1} pose={POSES[d.b.pose](14)} expression={d.b.expr} showName={false} />
+    </svg>
+    <div style={{ position: "absolute", left: 40, top: 60, background: "#e23b3b", color: "#fff", fontFamily: FONT, fontWeight: 700, fontSize: 64, padding: "10px 34px", borderRadius: 28, border: "7px solid #1b1b2f", rotate: "-4deg", boxShadow: "0 10px 0 rgba(0,0,0,0.4)" }}>{d.part}</div>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 230, textAlign: "center", fontFamily: FONT, fontWeight: 700, lineHeight: 0.98, padding: "0 50px" }}>
+      <div style={{ fontSize: 118, color: d.c1 ?? "#ffe14d", WebkitTextStroke: "16px #121220", paintOrder: "stroke fill", rotate: "-3deg" }}>{d.l1}</div>
+      <div style={{ marginTop: 26, display: "inline-block", fontSize: 64, color: "#1b1b2f", background: "#ffffff", border: "7px solid #121220", borderRadius: 26, padding: "8px 30px", rotate: "2deg", boxShadow: "0 10px 0 rgba(0,0,0,0.45)" }}>{d.l2}</div>
+    </div>
+    {d.emoji ? <div style={{ position: "absolute", left: 0, right: 0, top: 820, textAlign: "center", fontSize: 200 }}>{d.emoji}</div> : null}
+  </AbsoluteFill>
+);
+
+export const COVERS: CoverDef[] = [
+  { part: "PARTE 1/6", l1: "SE HIZO MARINE", l2: "solo para darme órdenes 😤", a: { who: "dani", pose: "point", expr: "anger" }, b: { who: "yo", pose: "shrug", expr: "surprise" } },
+  { part: "PARTE 2/6", l1: "YO ERA EL ORGULLO", l2: "y mi hermano no lo soportó", c1: "#7dff9a", a: { who: "dani", pose: "crossed", expr: "anger" }, b: { who: "yo", pose: "cheer", expr: "joy" } },
+  { part: "PARTE 3/6", l1: "\"LLAMAME SEÑOR\"", l2: "…pero yo soy sargento 😂", a: { who: "dani", pose: "point", expr: "anger" }, b: { who: "yo", pose: "cheer", expr: "joy" } },
+  { part: "PARTE 4/6", l1: "LA CARTA ERA FALSA", l2: "y mamá le dio $4.800 💸", c1: "#ff6b6b", emoji: "📄", a: { who: "papa", pose: "hold", expr: "surprise" }, b: { who: "dani", pose: "cower", expr: "sadness" } },
+  { part: "PARTE 5/6", l1: "¿ME PIDE PLATA?", l2: "después de humillarme 🤯", c1: "#ffb03a", a: { who: "dani", pose: "point", expr: "focus" }, b: { who: "yo", pose: "surprised", expr: "surprise" } },
+  { part: "PARTE 6/6 · FINAL", l1: "UNA DEUDA EN UNA SERVILLETA", l2: "así terminó la cena 🍗", c1: "#9ad8ff", a: { who: "mama", pose: "point", expr: "anger" }, b: { who: "dani", pose: "sad", expr: "sadness" } },
+];
