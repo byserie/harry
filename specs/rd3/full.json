@@ -2,7 +2,7 @@
  "id": "rd3",
  "part": 0,
  "style": "dyn",
- "min": 420,
+ "min": 0,
  "scenes": [
   {
    "id": "gancho",

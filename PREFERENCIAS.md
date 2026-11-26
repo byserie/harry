@@ -8,6 +8,11 @@
 - Títulos de máximo 100 caracteres, terminando en "(Parte X/N)".
 - Descripción: "Historia basada en un post de Reddit. Parte X de N 👇" + hashtags (máximo 5).
 
+## Ritmo (MUY IMPORTANTE)
+- CERO tiempo muerto: la narración va de corrido, sin estirar escenas ni dejar silencios.
+- Nunca usar el relleno "min" en los specs de audio (dejar min = 0).
+- Después del gancho, la historia arranca inmediatamente.
+
 ## Historias largas (YouTube)
 - 16:9 en 1440p, narradas, con globos de diálogo, carteles de capítulo y cámara que centra a los personajes.
 - No mencionar ni promocionar otros canales. Contar la historia con palabras propias.
