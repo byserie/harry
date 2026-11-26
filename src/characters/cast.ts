@@ -109,6 +109,12 @@ export const CAST = {
   mama: { name: "Mamá", color: "#c0607a", head: "#f3d2b6", hair: "#6a4028", hairStyle: "none", height: 0.94, width: 0.2, extras: [] },
   papa: { name: "Papá", color: "#8a6a3a", head: "#e8bf9a", hair: "#9a9a90", hairStyle: "none", height: 1.03, width: 0.6, extras: [] },
   vecino: { name: "Vecino", color: "#5a7a9a", head: "#f0c8a8", hair: "#3a2a1a", hairStyle: "none", height: 1.0, width: 0.3, extras: [] },
+  narr: { name: "Yo", color: "#3a6ab8", head: "#f1c9a5", hair: "#6a4028", hairStyle: "none", height: 1.03, width: 0.4, extras: [] },
+  ex: { name: "Mi ex", color: "#d8508a", head: "#f3d2b6", hair: "#7a4a2a", hairStyle: "none", height: 0.96, width: 0, extras: [] },
+  suegra: { name: "Su mamá", color: "#8a4ab0", head: "#e8c4a4", hair: "#5a3a2a", hairStyle: "none", height: 0.94, width: 0.5, extras: [] },
+  companero: { name: "Compañero", color: "#c8a03a", head: "#e8b48f", hair: "#1a1a1a", hairStyle: "none", height: 1.04, width: 0.3, extras: [] },
+  amigo1: { name: "Amigo", color: "#3ab88a", head: "#d9a07a", hair: "#2a1a10", hairStyle: "none", height: 1.0, width: 0.4, extras: [] },
+  amigo2: { name: "Amigo", color: "#e8803a", head: "#f1c9a5", hair: "#c8903a", hairStyle: "none", height: 1.02, width: 0.2, extras: [] },
   soldado: { name: "Soldado", color: "#5a5a3a", head: "#e8b48f", hair: "#3a3020", hairStyle: "none", height: 1, width: 0.4, extras: [] },
 } satisfies Record<string, CharDef>;
 
