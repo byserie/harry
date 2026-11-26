@@ -1,0 +1,56 @@
+[
+ {
+  "id": "MI-1",
+  "film": 11,
+  "scenes": [
+   "gancho",
+   "conocimos",
+   "trabajo",
+   "robo",
+   "rumores"
+  ],
+  "teaser": "gancho",
+  "label": "PARTE 1/4",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "¿Qué harías si tu ex te pide la mitad de las cosas… de la casa de tu mamá?"
+ },
+ {
+  "id": "MI-2",
+  "film": 11,
+  "scenes": [
+   "mexico",
+   "anillo",
+   "rupturas",
+   "secarropas"
+  ],
+  "teaser": "secarropas",
+  "label": "PARTE 2/4",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "¿Te dejarían por una ropa que estaba un poquito húmeda?"
+ },
+ {
+  "id": "MI-3",
+  "film": 11,
+  "scenes": [
+   "valentin",
+   "llegada"
+  ],
+  "teaser": "llegada",
+  "label": "PARTE 3/4",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "¿Qué harías si tu ex viene a devolverte el anillo… con su mamá?"
+ },
+ {
+  "id": "MI-4",
+  "film": 11,
+  "scenes": [
+   "mitad",
+   "madre",
+   "final"
+  ],
+  "teaser": "madre",
+  "label": "PARTE 4/4 · FINAL",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "¿Cómo reaccionarías si tu ex y su mamá empiezan a elegir muebles de tu casa?"
+ }
+]
