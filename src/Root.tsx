@@ -19,6 +19,7 @@ import { av2full, av2fullAudio } from "./avatar/av2";
 import { rd2, rd2Audio } from "./rd/rd2";
 import { rd3, rd3Audio } from "./rd/rd3";
 import { gu2, gu2Audio } from "./rd/gu2";
+import { GUERO_COVERS, MiniaturaGuero2, PortadaGuero } from "./rd/thumbs4";
 import { COVERS, MiniaturaMarines, PortadaShort } from "./rd/world";
 import { MITAD_COVERS, MiniaturaMitad, PortadaMitad } from "./rd/thumbs3";
 import { TestScene } from "./scenes/TestScene";
@@ -235,6 +236,10 @@ export const RemotionRoot: React.FC = () => {
         <Still key={i} id={`PortadaRD${i + 1}`} component={() => <PortadaShort d={d} />} width={1080} height={1920} />
       ))}
       <Still id="MiniaturaMarines" component={MiniaturaMarines} width={1280} height={720} />
+      <Still id="MiniaturaGuero2" component={MiniaturaGuero2} width={1280} height={720} />
+      {GUERO_COVERS.map((d, i) => (
+        <Still key={`gu${i}`} id={`PortadaGU${i + 1}`} component={() => <PortadaGuero d={d} />} width={1080} height={1920} />
+      ))}
       <Still id="MiniaturaMitad" component={MiniaturaMitad} width={1280} height={720} />
       {MITAD_COVERS.map((d, i) => (
         <Still key={`mi${i}`} id={`PortadaMI${i + 1}`} component={() => <PortadaMitad d={d} />} width={1080} height={1920} />
