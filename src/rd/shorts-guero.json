@@ -1,0 +1,74 @@
+[
+ {
+  "id": "GU-1",
+  "film": 12,
+  "scenes": [
+   "fiscalia1",
+   "fiscalia2",
+   "fiscalia3",
+   "noche1"
+  ],
+  "teaser": "noche1",
+  "label": "PARTE 1/5",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "Le entregaste la libreta a la fiscalía. Pensaste que se había terminado… hasta que esa noche alguien abrió tu cochera con su propia llave."
+ },
+ {
+  "id": "GU-2",
+  "film": 12,
+  "scenes": [
+   "versa1",
+   "versa2",
+   "versa3"
+  ],
+  "teaser": "versa1",
+  "label": "PARTE 2/5",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "¿Qué harías si el carro que ya se llevaron… aparece otra vez en tu cochera?"
+ },
+ {
+  "id": "GU-3",
+  "film": 12,
+  "scenes": [
+   "bodega1",
+   "bodega2",
+   "bodega3",
+   "bodega4"
+  ],
+  "teaser": "bodega2",
+  "label": "PARTE 3/5",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "Fuiste a buscar al jefe… y encontraste a alguien que le tenía más miedo que tú."
+ },
+ {
+  "id": "GU-4",
+  "film": 12,
+  "scenes": [
+   "mic1",
+   "mic2",
+   "mic3",
+   "mic4"
+  ],
+  "teaser": "mic2",
+  "label": "PARTE 4/5",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "El plan era grabar al jefe confesando… pero el que llegó a la cita fue otro."
+ },
+ {
+  "id": "GU-5",
+  "film": 12,
+  "scenes": [
+   "mapa1",
+   "mapa2",
+   "traicion",
+   "deuda",
+   "nuevo1",
+   "nuevo2",
+   "final"
+  ],
+  "teaser": "mapa1",
+  "label": "PARTE 5/5 · FINAL",
+  "end": "👉 La historia completa está en mi perfil de YouTube",
+  "hook": "Creías que era un tipo con un carro… pero era una ciudad entera."
+ }
+]

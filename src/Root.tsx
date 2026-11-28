@@ -18,6 +18,7 @@ import { av1full, av1fullAudio } from "./avatar/av1";
 import { av2full, av2fullAudio } from "./avatar/av2";
 import { rd2, rd2Audio } from "./rd/rd2";
 import { rd3, rd3Audio } from "./rd/rd3";
+import { gu2, gu2Audio } from "./rd/gu2";
 import { COVERS, MiniaturaMarines, PortadaShort } from "./rd/world";
 import { MITAD_COVERS, MiniaturaMitad, PortadaMitad } from "./rd/thumbs3";
 import { TestScene } from "./scenes/TestScene";
@@ -151,6 +152,14 @@ const RD2YT = () => (
     </WideCtx.Provider>
   </LandCtx.Provider>
 );
+const GU2 = () => <Part spec={gu2} audio={gu2Audio} audioFile="audio/gu2.wav" />;
+const GU2YT = () => (
+  <LandCtx.Provider value>
+    <WideCtx.Provider value>
+      <GU2 />
+    </WideCtx.Provider>
+  </LandCtx.Provider>
+);
 const RD3 = () => <Part spec={rd3} audio={rd3Audio} audioFile="audio/rd3.wav" />;
 const RD3YT = () => (
   <LandCtx.Provider value>
@@ -230,6 +239,7 @@ export const RemotionRoot: React.FC = () => {
       {MITAD_COVERS.map((d, i) => (
         <Still key={`mi${i}`} id={`PortadaMI${i + 1}`} component={() => <PortadaMitad d={d} />} width={1080} height={1920} />
       ))}
+      <Composition id="Guero2YT" component={GU2YT} durationInFrames={gu2Audio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="HistoriaMitadYT" component={RD3YT} durationInFrames={rd3Audio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="HistoriaMarinesYT" component={RD2YT} durationInFrames={rd2Audio.durationInFrames} fps={30} width={1920} height={1080} />
       <Composition id="AvDemoYT" component={AvDemoYT} durationInFrames={avdemoAudio.durationInFrames} fps={30} width={1920} height={1080} />

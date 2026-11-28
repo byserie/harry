@@ -68,7 +68,7 @@ const Title: React.FC<{ part: number; title: string; dyn?: boolean; badge?: stri
   );
 };
 
-const CTA: React.FC<{ part: number; cta?: string }> = ({ part, cta }) => {
+const CTA: React.FC<{ part: number; cta?: string; title?: string }> = ({ part, cta, title }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
@@ -89,7 +89,7 @@ const CTA: React.FC<{ part: number; cta?: string }> = ({ part, cta }) => {
         }}
       >
         <div style={{ fontSize: 70, fontWeight: 700, color: "#1b1b2f", lineHeight: 1.08 }}>
-          Seguí mi perfil para ver el próximo resumen
+          {title ?? "Seguí mi perfil para ver el próximo resumen"}
         </div>
         <div
           style={{
@@ -128,7 +128,7 @@ export const Part: React.FC<{ spec: PartSpec; audio: AudioData; audioFile: strin
         <Title part={spec.part} title={spec.title ?? "Harry Potter y la piedra filosofal"} dyn={spec.dyn} badge={spec.badge} />
       </Sequence>
       <Sequence from={last.voiceFrom + Math.round((last.voiceDur - 3.2) * 30)} name="Seguí mi perfil">
-        <CTA part={spec.part} cta={spec.cta} />
+        <CTA part={spec.part} cta={spec.cta} title={spec.ctaTitle} />
       </Sequence>
       {spec.dyn ? <CaptionsDyn words={audio.words} /> : <Captions words={audio.words} />}
       {spec.dyn ? <ProgressBar total={audio.durationInFrames} part={spec.part} /> : null}

@@ -16,6 +16,9 @@ import rdHooks from "../data/rd-hooks.json";
 import { rd3, rd3Audio } from "../rd/rd3";
 import miShorts from "../rd/shorts-mitad.json";
 import miHooks from "../data/mi-hooks.json";
+import guShorts from "../rd/shorts-guero.json";
+import guHooks from "../data/gu-hooks.json";
+import { gu2, gu2Audio } from "../rd/gu2";
 import { p1full, p1fullAudio } from "../peli1d/full";
 import { p2full, p2fullAudio } from "../peli2d/full";
 import { p3full, p3fullAudio } from "../peli3/full";
@@ -37,6 +40,7 @@ const FILMS: Record<number, { spec: PartSpec; audio: AudioData; file: string }> 
   9: { spec: av1full, audio: av1fullAudio, file: "audio/av1full.wav" },
   10: { spec: rd2, audio: rd2Audio, file: "audio/rd2.wav" },
   11: { spec: rd3, audio: rd3Audio, file: "audio/rd3.wav" },
+  12: { spec: gu2, audio: gu2Audio, file: "audio/gu2.wav" },
 };
 const hooks = hooksData as Record<string, HookAudio>;
 
@@ -55,6 +59,7 @@ const comps = [
   // Historia de los Marines en partes
   ...build(rdShorts as ShortDef[], rdHooks as Record<string, HookAudio>, "Short"),
   ...build(miShorts as ShortDef[], miHooks as Record<string, HookAudio>, "Short"),
+  ...build(guShorts as ShortDef[], guHooks as Record<string, HookAudio>, "Short"),
 ];
 
 export const ShortCompositions: React.FC = () => (

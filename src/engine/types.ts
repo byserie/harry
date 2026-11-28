@@ -68,6 +68,7 @@ export type PartSpec = {
   title?: string;
   dyn?: boolean;
   badge?: string; // texto del cartel del título (por defecto PARTE N / PELÍCULA COMPLETA)
+  ctaTitle?: string;
   cta?: string; // texto del botón final
   scenes: Record<string, SceneSpec>;
 };

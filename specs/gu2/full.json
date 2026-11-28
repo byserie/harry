@@ -1,0 +1,31 @@
+{
+ "id": "gu2",
+ "part": 0,
+ "style": "dyn",
+ "min": 0,
+ "scenes": [
+  {"id": "gancho", "text": "Creías que todo se había terminado cuando entregaste la libreta. Pero esto nunca fue un tipo con un carro. Era una ciudad entera. Los doscientos dólares. Temporada dos."},
+  {"id": "fiscalia1", "text": "Lunes, nueve de la mañana. Fiscalía de Tijuana. El flaco está sentado a tu lado y no deja de mover la pierna. Los atiende una licenciada. Traje gris, uñas perfectas, habla bajito. Hojea la libreta. Revisa el celular. No parece sorprendida."},
+  {"id": "fiscalia2", "text": "Esto no alcanza, te dice. Una libreta la puede escribir cualquiera. Necesito al jefe hablando, con su voz. Te da una hoja en blanco y una pluma. Escriba su declaración, con su letra. Todas las direcciones que conozca. La del joven también. Miras al flaco. Él asiente."},
+  {"id": "fiscalia3", "text": "Escribes todo. Tu casa. La del flaco. Las de la libreta. Firmas abajo. La licenciada guarda la hoja en un fólder y se levanta. Váyanse a su casa. Nosotros los buscamos."},
+  {"id": "noche1", "text": "Esa noche, a las tres de la mañana, te despierta un ruido conocido. El portón de la cochera, subiendo despacio. Nadie tocó. Alguien tiene llave."},
+  {"id": "versa1", "text": "Bajas descalzo. El corazón te pega en las orejas. La cochera está abierta. La calle, vacía. Y adentro, tapado con la lona, como si nunca se hubiera ido, está el Nissan Versa gris."},
+  {"id": "versa2", "text": "Levantas la lona. Las llantas están mojadas. Alguien lo acaba de manejar. En el clavo, otra vez, cuelga una llave. Le marcas al güero. Este número no existe. Le marcas a la licenciada. Buzón."},
+  {"id": "versa3", "text": "Abres la cajuela. No hay celulares, no hay batería. Solo una caja de tenis nueva. Adentro, un papelito con una dirección: una bodega en la salida a Tecate. Esa dirección no estaba en la libreta. Y abajo, con otra letra: si quieres saber quién manda, ven solo. El celular del jefe vibra en tu bolsillo. Mañana. Diez de la noche."},
+  {"id": "bodega1", "text": "Diez de la noche. Salida a Tecate. La bodega tiene la cortina medio abierta. Adentro, una sola lámpara. Y un hombre sentado en una silla de plástico. Panzón, camisa sudada, un celular en cada mano."},
+  {"id": "bodega2", "text": "¿Tú eres el de la cochera?, te pregunta. Es él. El jefe. El que escribía los mensajes. Pero no se ve como alguien que manda. Se ve como alguien que no ha dormido en semanas."},
+  {"id": "bodega3", "text": "¿Crees que yo invento esto?, se ríe. Yo también debo. A mí también me prestaron una cochera. Yo también firmé algo. Le preguntas a quién le debe. Se queda callado. Mira hacia la puerta. Al que te trajo el carro la primera vez."},
+  {"id": "bodega4", "text": "Afuera, un motor arranca y se aleja. El jefe se pone pálido. Ya sabe que viniste. Llévate al flaco a tu casa. Y no le abras a nadie."},
+  {"id": "mic1", "text": "La licenciada por fin te devuelve la llamada. Hagan la cita. El joven lleva un micrófono. Nosotros escuchamos desde afuera. El flaco se pega el micrófono al pecho con cinta. Le tiemblan las manos. Si sale mal, ¿quién le avisa a mi mamá?"},
+  {"id": "mic2", "text": "Viernes, once de la noche. El lugar lo eligió el jefe: tu cochera. Esperan diez minutos. Veinte. El jefe nunca llega. Se escuchan pasos. Unas botas limpias se detienen frente al portón. Camisa planchada. Habla tranquilo. El güero."},
+  {"id": "mic3", "text": "Trae las llaves del Versa colgando de un dedo. El jefe no va a venir, dice. Ya no hay jefe."},
+  {"id": "mic4", "text": "El flaco se queda helado. El güero se acerca despacito y le toca el pecho, justo donde está la cinta. Ese micrófono no está conectado a nada, flaco. ¿A quién crees que le llevaron la libreta?"},
+  {"id": "mapa1", "text": "El güero se sienta en el cofre del Versa y saca su celular. ¿Quieres ver para quién trabajas? Te enseña un mapa de Tijuana lleno de puntitos rojos. Cientos. Cada puntito es una cochera. Cada cochera, alguien como tú. Desliza el dedo. Mexicali. Ensenada. Hermosillo. Miles. Hermosillo, donde vive tu mamá."},
+  {"id": "mapa2", "text": "El jefe era uno de abajo. Yo también soy uno de abajo. Arriba de mí hay otros. Y arriba de ellos, nadie sabe. ¿Y la licenciada?, le preguntas. Ella también cobra los viernes."},
+  {"id": "traicion", "text": "Llamas a la fiscalía. Das tu nombre. No hay ninguna denuncia registrada con ese nombre, joven. Cuando levantas la vista, el flaco ya no está. Solo queda su celular en el piso, todavía prendido."},
+  {"id": "deuda", "text": "El güero se levanta y te avienta las llaves del Versa. Ya sabes cómo funciona. Le debes noventa mil pesos al banco. O los pagas tú, o te consigues una cochera. Y se va caminando."},
+  {"id": "nuevo1", "text": "Pasan dos semanas. Tienes doscientos dólares cada viernes. Ropa nueva. La renta al día. Y una libreta en la caja de tenis, con tu letra."},
+  {"id": "nuevo2", "text": "Un sábado se muda alguien a la casa del flaco. Una muchacha con dos niños. Trabaja en la maquila. Ves la nota del casero pegada en su puerta. Cruzas la calle. Camisa planchada. Hablas tranquilo. Oye, ¿tu cochera está vacía?"},
+  {"id": "final", "text": "Ella sonríe. Dice que sí, que no tiene carro. Tú ya sabes lo que sigue. Esa noche, en tu celular, el mapa de Tijuana tiene un puntito rojo nuevo. Y abajo, un mensaje: bienvenido a la familia. Te miras los pies. Traes puestas unas botas limpias. ¿Tú qué hubieras hecho? Déjalo en los comentarios."}
+ ]
+}

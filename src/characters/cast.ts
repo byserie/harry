@@ -116,6 +116,12 @@ export const CAST = {
   amigo1: { name: "Amigo", color: "#3ab88a", head: "#d9a07a", hair: "#2a1a10", hairStyle: "none", height: 1.0, width: 0.4, extras: [] },
   amigo2: { name: "Amigo", color: "#e8803a", head: "#f1c9a5", hair: "#c8903a", hairStyle: "none", height: 1.02, width: 0.2, extras: [] },
   soldado: { name: "Soldado", color: "#5a5a3a", head: "#e8b48f", hair: "#3a3020", hairStyle: "none", height: 1, width: 0.4, extras: [] },
+  prota: { name: "Tú", color: "#2f6fc0", head: "#e8b48f", hair: "#141418", hairStyle: "none", height: 1.0, width: 0.3, extras: [] },
+  guero: { name: "El Güero", color: "#f2f2ee", head: "#f3d2b6", hair: "#e8c860", hairStyle: "none", height: 1.06, width: 0.3, extras: [] },
+  flaco: { name: "El Flaco", color: "#4a9a5a", head: "#d9a07a", hair: "#1a1410", hairStyle: "none", height: 1.04, width: 0, extras: [] },
+  lic: { name: "Licenciada", color: "#6a6a72", head: "#f0c8a8", hair: "#2a1a14", hairStyle: "none", height: 0.97, width: 0.1, extras: [] },
+  jefe: { name: "El Jefe", color: "#d8c060", head: "#d9a07a", hair: "#2a2a2a", hairStyle: "none", height: 1.0, width: 0.9, extras: [] },
+  vecina: { name: "Vecina", color: "#3ab0c8", head: "#d9a07a", hair: "#1a1410", hairStyle: "none", height: 0.95, width: 0.1, extras: [] },
 } satisfies Record<string, CharDef>;
 
 export type CharId = keyof typeof CAST;
